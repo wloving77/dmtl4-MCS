@@ -1,4 +1,8 @@
-# Introduction
+# Discrete Mathematics and Theory in Lean
+
+*By Kevin Sullivan*
+
+Copyright &copy; Kevin Sullivan, 2024-2025.
 
 This course, developed and classroom tested by Kevin Sullivan at the University of Virginia,  is intended to drive the second course for undergraduate computer science majors, in discrete mathematics and theory. The transformational feature of this class that is uses the higher-order logic and toolset of Lean 4 as a vehicle to present all of the mathematical concepts typically covered in such a course using a uniform, highly expressive, and mechanically checked formal language.
 
