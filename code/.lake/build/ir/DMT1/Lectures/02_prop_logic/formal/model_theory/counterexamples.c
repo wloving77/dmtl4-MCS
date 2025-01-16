@@ -13,8 +13,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-lean_object* l_DMT1_lecture_prop__logic_semantics_findModel(lean_object*);
-lean_object* l_DMT1_lecture_prop__logic_semantics_findModels(lean_object*);
+lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModel(lean_object*);
+lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModels(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findCounterexamples(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findCounterexample(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findCounterexamples(lean_object* x_1) {
@@ -25,7 +25,7 @@ x_2 = lean_box(0);
 x_3 = lean_alloc_ctor(2, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
-x_4 = l_DMT1_lecture_prop__logic_semantics_findModels(x_3);
+x_4 = l_DMT1_lecture_prop__logic_semantics_models_findModels(x_3);
 return x_4;
 }
 }
@@ -37,7 +37,7 @@ x_2 = lean_box(0);
 x_3 = lean_alloc_ctor(2, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
-x_4 = l_DMT1_lecture_prop__logic_semantics_findModel(x_3);
+x_4 = l_DMT1_lecture_prop__logic_semantics_models_findModel(x_3);
 return x_4;
 }
 }
