@@ -2,7 +2,7 @@
 import DMT1.Lectures.«02_prop_logic».formal.syntax
 import DMT1.Lectures.«02_prop_logic».formal.domain
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.prop_logic.semantics
 ```
 
 # Semantics
@@ -58,8 +58,8 @@ def evalUnOp : UnOp → (Bool → Bool)
 def evalBinOp : BinOp → (Bool → Bool → Bool)
 | BinOp.and => Bool.and
 | BinOp.or => Bool.or
-| BinOp.imp => DMT1.lecture.prop_logic.imp
-| BinOp.iff => DMT1.lecture.prop_logic.iff
+| BinOp.imp => domain.imp   -- DMT1.lecture.prop_logic.semantics.domain.imp
+| BinOp.iff => domain.iff  -- likewise
 ```
 
 We've now understood that an "interpretation" can be understood
@@ -104,5 +104,5 @@ a justifiably confident grasp of essentially every aspect
 of the syntax and semantics of propositional logic.
 
 ```lean
-end DMT1.lecture.prop_logic
+end DMT1.lecture.prop_logic.semantics
 ```

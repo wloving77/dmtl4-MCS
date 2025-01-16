@@ -1,7 +1,7 @@
 ```lean
 import DMT1.Lectures.«02_prop_logic».formal.interpretation
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.prop_logic.semantics.models
 
 /-!
 #### Truth Table Output Column
@@ -19,5 +19,5 @@ evalBoolExpr_interps : List BoolInterp → PLExpr → List Bool
 | [], _ => []
 | h::t, e => [evalPLExpr e h] ++ evalBoolExpr_interps t e
 
-end DMT1.lecture.prop_logic
+end DMT1.lecture.prop_logic.semantics.models
 ```
