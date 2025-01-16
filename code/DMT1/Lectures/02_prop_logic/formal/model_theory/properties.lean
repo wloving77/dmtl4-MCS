@@ -42,7 +42,7 @@ def is_valid :  PLExpr → Bool :=
 def is_unsat : PLExpr → Bool :=
   λ e : PLExpr => not (is_sat e)
 
-def is_model : BoolInterp → PLExpr → Bool :=
+def is_model : Interp → PLExpr → Bool :=
   fun i e => evalPLExpr e i
 
 end DMT1.lecture.prop_logic.semantics.models

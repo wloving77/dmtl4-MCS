@@ -1,6 +1,8 @@
 import DMT1.Library.propLogic.model_theory.properties
 
-namespace DMT1.propLogic
+namespace DMT1.Library.propLogic.model_theory.models
+open propLogic.syntax
+open semantics
 
 /- @@@
 # Models
@@ -16,7 +18,7 @@ findModels. It returns a list of all models of a given expression
 grows).
 @@@ -/
 
-def findModels (e : PLExpr) : List BoolInterp :=
+def findModels (e : PLExpr) : List (Var → Bool) :=
   List.filter
     (fun i => evalPLExpr e i = true) -- given i, true iff i is model of e
     (listInterpsFromExpr e)
@@ -26,11 +28,11 @@ Finds all models, if any, and returns either none, if there
 wasn't one, or some m, where m is first in the returned list
 of models.
 @@@ -/
-def findModel :  PLExpr → Option BoolInterp
+def findModel :  PLExpr → Option (Var → Bool)
 | e =>
   let ms := findModels e
   match ms with
   | [] => none
   | h::_ => h
 
-end DMT1.propLogic
+end DMT1.Library.propLogic.model_theory.models

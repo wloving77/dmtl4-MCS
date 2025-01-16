@@ -15,8 +15,8 @@ a *counterexample* to the specification. So how might we put
 together a method for finding a counterexample if there is one?
 -/
 
-def findCounterexamples (e : PLExpr) : List BoolInterp := findModels ¬e
-def findCounterexample (e : PLExpr) : Option BoolInterp := findModel ¬e
+def findCounterexamples (e : PLExpr) : List Interp := findModels ¬e
+def findCounterexample (e : PLExpr) : Option Interp := findModel ¬e
 
 /-!
 These functions use types you don't yet know about: namely List and Option.

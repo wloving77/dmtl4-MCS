@@ -376,7 +376,7 @@ on here, with tbe evaluation of propositional logic expressions
 using the evaluation of *arithmetic* relational expressions,
 yielding Boolean values, as a subroutine.
 
-def evalPLAExpr : PLAExpr → BoolInterp → ArithInterp → Bool
+def evalPLAExpr : PLAExpr → Interp → ArithInterp → Bool
 | (PLAExpr.lit_expr b),             _, _ => b
 | (PLAExpr.var_expr v),           i, _ => i v
 | (PLAExpr.un_op_expr op e),      i, a => (evalUnOp op) (evalPLAExpr e i a)
@@ -387,7 +387,7 @@ def evalPLAExpr : PLAExpr → BoolInterp → ArithInterp → Bool
 
 As a quick reminder, our semantic evaluator for PLA expressions
 (propositions in the language of PLA) takes an expressions and
-*two* interpretation functions. The first will take BoolVars as
+*two* interpretation functions. The first will take Vars as
 arguments and return Boolean values. The second will take Vars
 (sorry, imperfect name) as defined in the natArithmetic library
 and return natural numbers. So let's get on to the examples.

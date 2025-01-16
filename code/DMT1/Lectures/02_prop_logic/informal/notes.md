@@ -59,7 +59,7 @@ We define the type of expressions in PL as follows:
 #### Concrete Syntax: Prefix, Infix, Postfix, Outfix and other Notations
 
 - We'll use ⊤ (top) and ⊥ (bottom) as notations for (lit true) and (lit false)
-- With n a natural number, we'll use \<n\> as notation for the nth variable: BoolVar.mk n
+- With n a natural number, we'll use \<n\> as notation for the nth variable: Var.mk n
 - With v=\n\> a variable, { v } is notation for the variable *expression*: PLExpr.var_expr v
 - Given an  expression, e, ¬e desugars to the expression, PLExpr.un_op_expr UnOp.not e
 - Given expressions, e1, e2, we use \and, \or, \not, \iff, and \=> as the binary connectives
