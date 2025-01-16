@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 790b142325460d0032253a1dd8e4ab4051cfb436 Kevin Sullivan <sullivan@virginia.edu> 1736542923 -0500	clone: from https://github.com/ucsd-cse230/wi25.git
-790b142325460d0032253a1dd8e4ab4051cfb436 724f796bbc8bd2432a4867623407a7fba030ded4 Kevin Sullivan <sullivan@virginia.edu> 1736916002 -0500	commit: Working but inflected
-724f796bbc8bd2432a4867623407a7fba030ded4 0c0b3cd8a1e47a6d604842ca6f85426b81a00d96 Kevin Sullivan <sullivan@virginia.edu> 1736916043 -0500	pull: Merge made by the 'ort' strategy.
-0c0b3cd8a1e47a6d604842ca6f85426b81a00d96 e7da1c9d803c9bddf050c749070e42959c818037 Kevin Sullivan <sullivan@virginia.edu> 1736988667 -0500	commit: Looks like I have a makefile that maps hierarchical Lean directories to corresponding src hierarchicies with md files.
-e7da1c9d803c9bddf050c749070e42959c818037 db0acc02aa756f4aed9ed6c10b64a7ee919d4b3a Kevin Sullivan <sullivan@virginia.edu> 1736990479 -0500	commit: All done before reboot as new Git project
