@@ -4,6 +4,9 @@ import DMT1.Lectures.«02_prop_logic».formal.model_theory.truth_table
 import DMT1.Lectures.«02_prop_logic».formal.model_theory.counterexamples
 import DMT1.Lectures.«02_prop_logic».formal.interpretation
 import DMT1.Lectures.«02_prop_logic».formal.semantics
+import DMT1.Lectures.«02_prop_logic».formal.syntax
+
+namespace DMT1.lecture.prop_logic
 
 namespace DMT1.lecture.prop_logic
 
