@@ -1,5 +1,5 @@
 ```lean
-namespace DMT1.propLogic
+namespace DMT1.Library.propLogic.syntax
 ```
 
 # Propositional Logic: Syntax
@@ -9,7 +9,7 @@ structure BoolVar : Type where
   mk :: (index: Nat)
 
 inductive UnOp : Type
-| not
+| not : UnOp
 
 inductive BinOp : Type
 | and
@@ -34,5 +34,5 @@ infixr:30 " ∨  "  => PLExpr.bin_op_expr BinOp.or
 infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
 
-end DMT1.propLogic
+end DMT1.Library.propLogic.syntax
 ```
