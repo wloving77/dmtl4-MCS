@@ -1,6 +1,6 @@
 import DMT1.Lectures.«02_prop_logic».formal.model_theory.truth_table
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.prop_logic.semantics.models
 
 /-!
 As a final chapter in our unit on propositional logic, we
@@ -38,4 +38,4 @@ def findModel :  PLExpr → Option BoolInterp
   | [] => none
   | h::_ => h
 
-end DMT1.lecture.prop_logic
+end DMT1.lecture.prop_logic.semantics.models
