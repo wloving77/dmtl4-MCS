@@ -1,0 +1,15 @@
+[book]
+authors = ["Kevin Sullivan"]
+language = "en"
+multilingual = false
+src = "src"
+title = "DMT/L4: Discrete Mathematics and Theory"
+
+[build]
+build-dir = "book"
+
+[output.html]
+additional-js = ["assets/lean.min.js"]
+
+[output.html.playground.boring-prefixes]
+lean = "# "
