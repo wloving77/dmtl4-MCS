@@ -2,8 +2,8 @@
 import DMTL4.Library.propLogic.model_theory.truth_table
 
 namespace DMTL4.propLogic
+```
 
-/-!
 ### Satisfiability
 
 We built a satisfiability checker. The procedure it implements
@@ -18,25 +18,23 @@ we will *decision procedures* that similarly answer two similar
 questions: does a given expression, e, have the *property* of
 being *unsatisfiable?* And does "e" have the property of being
 *valid*.
--/
 
-/-!
 ## Decision Procedures for Properties of PL Expressions
--/
 
+```lean
 /-!
 INTERFACE
 -/
+```
 
-/-!
 Satisfiability means there's *some* interpretation for which e is true
--/
+```lean
 def is_sat :    PLExpr → Bool :=
   λ e : PLExpr => reduce_or (truthTableOutputs e)
+```
 
-/-!
 Validity means that a proposition is true under all interpretations
--/
+```lean
 def is_valid :  PLExpr → Bool :=
   λ e : PLExpr => reduce_and (truthTableOutputs e)
 

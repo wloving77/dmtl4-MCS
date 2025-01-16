@@ -4,7 +4,7 @@ import DMTL4.Lectures.«02_prop_logic».formal.domain
 namespace DMTL4.lecture.prop_logic
 
 /- @@@
-### Semantics
+# Semantics
 
 The idea of semantics in Propositional Logic is simple:
 every expression has, as its meaning, a Boolean value.

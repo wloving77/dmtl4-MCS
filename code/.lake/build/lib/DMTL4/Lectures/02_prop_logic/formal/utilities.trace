@@ -1,0 +1,14 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMTL4/Lectures/02_prop_logic/formal/utilities.lean -R ./././. -o ././.lake/build/lib/DMTL4/Lectures/02_prop_logic/formal/utilities.olean -i ././.lake/build/lib/DMTL4/Lectures/02_prop_logic/formal/utilities.ilean -c ././.lake/build/ir/DMTL4/Lectures/02_prop_logic/formal/utilities.c --json",
+   "level": "trace"},
+  {"message":
+   "././././DMTL4/Lectures/02_prop_logic/formal/utilities.lean:26:4: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././././DMTL4/Lectures/02_prop_logic/formal/utilities.lean:26:4: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././././DMTL4/Lectures/02_prop_logic/formal/utilities.lean:26:4: declaration uses 'sorry'",
+   "level": "warning"}],
+ "depHash": "5967880818734121598"}

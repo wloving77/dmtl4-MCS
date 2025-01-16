@@ -2,9 +2,9 @@
 import DMTL4.Library.propLogic.model_theory.properties
 
 namespace DMTL4.propLogic
+```
 
-/-!
-MODELS
+# Models
 
 A model is an interpretation that makes a proposition true.
 A "SAT solver" (like is_sat) returns true if  there's at least
@@ -15,18 +15,18 @@ proposition. How would you do that? You can use the function,
 findModels. It returns a list of all models of a given expression
 (but will run out of space or time quickly as the problem size
 grows).
--/
 
+```lean
 def findModels (e : PLExpr) : List BoolInterp :=
   List.filter
     (fun i => evalPLExpr e i = true) -- given i, true iff i is model of e
     (listInterpsFromExpr e)
+```
 
-/-!
 Finds all models, if any, and returns either none, if there
 wasn't one, or some m, where m is first in the returned list
 of models.
--/
+```lean
 def findModel :  PLExpr → Option BoolInterp
 | e =>
   let ms := findModels e

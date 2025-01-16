@@ -184,10 +184,10 @@ do this if it would result in names having multiple
 different definitions being "directly visible."
 ```lean
 open PLExpr
+```
 
 
 
-/-
 ## Concrete Syntax: All the Usual Notations
 
 A well designed, user tested, concrete syntax for a
@@ -198,21 +198,21 @@ We don't expect you to have justifiable confidence
 in your deep understanding of this notation stuff at
 this point! We encourge you to follow it carefully
 to get the gist.
--/
 
+```lean
 -- (lit true) and (lit false) expressions
 -- a variable expression constructed from from a variable
 
 -- our single unary connective, *not* (¬)
 -- we set it to have maximum precedence (binding strength)
+```
 
-/-!
 Here are concrete notations for our binary connectives.
 The letter "l" after infix specifies left associativity.
 The numbers after the colons specify binding strengths.
 The de-sugared versions follow after the arrows.
--/
 
+```lean
 notation:max " ⊤ " => (PLExpr.lit_expr true)
 notation:max " ⊥ " => (lit_expr false)
 notation:max "{" v "}" => (var_expr v)
@@ -221,12 +221,12 @@ infixr:35 " ∧ "  =>  PLExpr.bin_op_expr BinOp.and
 infixr:30 " ∨  "  => PLExpr.bin_op_expr BinOp.or
 infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
+```
 
-/-
 Now head off to the Main.lean file in this same directory,
 copy it into your MyWork directory tree, and plan around with
 building expressions in our logic.
--/
 
+```lean
 end DMTL4.lecture.prop_logic
 ```

@@ -1,6 +1,13 @@
 ```lean
 import «DMTL4».Library.propLogic.model_theory.properties
+```
 
+# Identities
+
+Here are some identities that should also be valid
+if we've defined our axioms correctly. For now, we've
+more examples of proposltional logic expressions.
+```lean
 namespace DMTL4.propLogic
 
 -- Let P, Q, and R be PL variable expressions
@@ -36,7 +43,7 @@ def implication     := (P ⇒ Q) ↔ (¬P ∨ Q)
 def exportation     := ((P ∧ Q) ⇒ R) ↔ (P ⇒ Q ⇒ R)
 def absurdity       := (P ⇒ Q) ∧ (P ⇒ ¬Q) ⇒ ¬P
 
--- FYI, these "identities" really are all valid propositions
+-- FYI, these "identities" are all valid propositions
 
 #eval! is_valid andIdempotent
 #eval! is_valid orIdempotent

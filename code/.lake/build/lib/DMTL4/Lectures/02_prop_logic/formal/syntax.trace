@@ -1,0 +1,8 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMTL4/Lectures/02_prop_logic/formal/syntax.lean -R ./././. -o ././.lake/build/lib/DMTL4/Lectures/02_prop_logic/formal/syntax.olean -i ././.lake/build/lib/DMTL4/Lectures/02_prop_logic/formal/syntax.ilean -c ././.lake/build/ir/DMTL4/Lectures/02_prop_logic/formal/syntax.c --json",
+   "level": "trace"},
+  {"message":
+   "././././DMTL4/Lectures/02_prop_logic/formal/syntax.lean:113:0: { index := 3 } : BoolVar",
+   "level": "info"}],
+ "depHash": "7873916315069331867"}
