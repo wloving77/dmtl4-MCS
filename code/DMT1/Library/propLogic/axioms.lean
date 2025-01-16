@@ -1,4 +1,4 @@
-import «DMT1».Library.propLogic.model_theory.properties
+import DMT1.Library.propLogic.model_theory.properties
 
 namespace DMT1.propLogic
 

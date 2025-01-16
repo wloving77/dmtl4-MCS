@@ -13,13 +13,13 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModel(lean_object*);
 lean_object* l_DMT1_lecture_prop__logic_semantics_listInterpsFromExpr(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_findModel(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_findModels(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModels(lean_object*);
 lean_object* l_DMT1_lecture_prop__logic_semantics_evalPLExpr(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_findModels___spec__1(lean_object*, lean_object*, lean_object*);
 lean_object* l_List_reverse___rarg(lean_object*);
-LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_findModels___spec__1(lean_object* x_1, lean_object* x_2, lean_object* x_3) {
+LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_models_findModels___spec__1(lean_object*, lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_models_findModels___spec__1(lean_object* x_1, lean_object* x_2, lean_object* x_3) {
 _start:
 {
 if (lean_obj_tag(x_2) == 0)
@@ -95,21 +95,21 @@ goto _start;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_findModels(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModels(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; lean_object* x_3; lean_object* x_4; 
 x_2 = l_DMT1_lecture_prop__logic_semantics_listInterpsFromExpr(x_1);
 x_3 = lean_box(0);
-x_4 = l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_findModels___spec__1(x_1, x_2, x_3);
+x_4 = l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_models_findModels___spec__1(x_1, x_2, x_3);
 return x_4;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_findModel(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModel(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_lecture_prop__logic_semantics_findModels(x_1);
+x_2 = l_DMT1_lecture_prop__logic_semantics_models_findModels(x_1);
 if (lean_obj_tag(x_2) == 0)
 {
 lean_object* x_3; 

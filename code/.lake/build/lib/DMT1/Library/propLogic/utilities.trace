@@ -1,0 +1,14 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Library/propLogic/utilities.lean -R ./././. -o ././.lake/build/lib/DMT1/Library/propLogic/utilities.olean -i ././.lake/build/lib/DMT1/Library/propLogic/utilities.ilean -c ././.lake/build/ir/DMT1/Library/propLogic/utilities.c --json",
+   "level": "trace"},
+  {"message":
+   "././././DMT1/Library/propLogic/utilities.lean:26:4: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././././DMT1/Library/propLogic/utilities.lean:26:4: declaration uses 'sorry'",
+   "level": "warning"},
+  {"message":
+   "././././DMT1/Library/propLogic/utilities.lean:26:4: declaration uses 'sorry'",
+   "level": "warning"}],
+ "depHash": "3353828758809131296"}

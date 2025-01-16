@@ -1,4 +1,4 @@
-namespace DMT1.propLogic
+namespace DMT1.Library.propLogic.domain
 
 /- @@@
 # Boolean Algebra
@@ -39,4 +39,4 @@ def iff : Bool → Bool → Bool
 | false, false => true
 | _, _ => false
 
-end DMT1.propLogic
+end DMT1.Library.propLogic.domain
