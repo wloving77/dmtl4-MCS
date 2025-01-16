@@ -1,4 +1,4 @@
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.prop_logic.semantics.domain
 
 /-!
 # Semantic Domain: Boolean Algebra
@@ -96,4 +96,4 @@ def iff : Bool → Bool → Bool
 -- Problem #1 (combinatorics): How many binary Boolean functions are there?
 -- Problem #2 (Boolean algenra): Write a specification of the exclusive or function (xor)
 
-end DMT1.lecture.prop_logic
+end DMT1.lecture.prop_logic.semantics.domain

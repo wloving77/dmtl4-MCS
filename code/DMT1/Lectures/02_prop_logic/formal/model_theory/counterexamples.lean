@@ -1,7 +1,7 @@
 import DMT1.Lectures.«02_prop_logic».formal.model_theory.models
 
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.prop_logic.semantics.models
 
 /-
 COUNTEREXAMPLES
@@ -24,4 +24,4 @@ You should understand lists intuitively from CS1. You can think of an option
 as a list of length either zero (called none) or one (called some e), where
 e the specific value in the length-one list of values (an interpertation).
 -/
-end DMT1.lecture.prop_logic
+end DMT1.lecture.prop_logic.semantics.models
