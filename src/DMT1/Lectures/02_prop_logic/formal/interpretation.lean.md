@@ -6,7 +6,7 @@ import DMT1.Lectures.«02_prop_logic».formal.semantics
 #### Boolean Interpretation
 -/
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.prop_logic.semantics
 
 -- From interpretation, variable, and new Bool, override that interpretation to assign that new value to that variable
 def overrideVarValInInterp : BoolInterp → BoolVar → Bool → BoolInterp
@@ -105,5 +105,5 @@ def interpStringsFromInterps : List BoolInterp → Nat → List (List String)
 | [], _ => []
 | h::t, n => bitStringsFromInterp h n::interpStringsFromInterps t n
 
-end DMT1.lecture.prop_logic
+end DMT1.lecture.prop_logic.semantics
 ```
