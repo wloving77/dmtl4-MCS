@@ -1,7 +1,7 @@
 namespace DMT1.lecture.prop_logic
 
 /- @@@
-# Propositional Logic: Syntax
+# Syntax
 
 This section of the exam simply includes our formal
 definition of the syntax and semantics of propositional
@@ -23,17 +23,18 @@ as results.
 
 Remember: we're not talking about Boolean meanings of
 literals, variables, or bigger expressions here. The
-syntax of a languages defines the set of syntactically
-constructible expressions in our language, and that's
-all.
+syntax of a formal languages defines only the set of
+syntactically correct expressions in our language and
+says nothing about their intended meanings.
 
 Now what's interesting is that we formalized the set of
-all correct expressions as Expr. It's a type. And now
-any particular logical expression is just a data value of
-this Expr type. The available constructors describe all
-all and only the ways to construct a term of this type,
-that we take to encode a propositional logic expression,
-that Lean checks automatically for syntactic correctness.
+all correct expressions as Expr. It's a data type. Now
+any particular logical expression is just a value of this
+Expr type. The available constructors describe all all
+and only the ways to construct a term of this type. Lean
+automatically checks the correctness of terms declared to
+be of this type. The Lean type checker thus now provides
+us with a syntax checker for propositional logic.
 
 Let's dive down into literal, variable, and application
 (operator application, if you want) expressions and how
@@ -43,12 +44,20 @@ we represent them in Lean.
 /- @@@
 ### Literal Expressions
 
-Our implementation of propositional logic defines two
-literal values, each built (a) by a constructor called
-lit, (b) from one of the two Boolean values, provided
-as an argument (true or false). Our syntactic language
-now includes two expressions: (lit true) and (lit false).
-In concrete syntax ⊤ is (lit true) and ⊥ is (lit false).
+The term *literal expression* refers to an expression
+that directly names a value. In propositional logic the
+two values of interest are the Boolean values, *true*
+and *false*.
+
+Our implementation of propositional logic thus defines
+two literal expressions, each built by applying the
+expression constructor called *lit* to one the two
+Boolean values (Bool.true or Bool.false). Our language
+will thus include (lit true) and (lit false) as its two
+literal expressions. In logical writing it's common to
+use the *concrete* syntactic symbols ⊤ (pronounced "top"),
+as a notation   for (lit true), and ⊥ (pronounced "bottom")
+for the expression (lit false).
 @@@ -/
 
 /- @@@

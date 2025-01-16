@@ -8,16 +8,31 @@ namespace DMT1.lecture.prop_logic
 # Semantics
 
 The idea of semantics in Propositional Logic is simple:
-every expression has, as its meaning, a Boolean value.
-For literal expressions, easy. For variable expresssions,
-you need a interpretation function, then you extract the
-variable from the variable expressions, then you apply
-the interpretation function to the variable to get the
-Boolean value "assigned to it by that interpretation."
-Finally, you evaluate big expressions by evaluating the
-subexpressions, getting Bools, which you then combing
-using the Boolean function specified by the *syntactic*
-operator (logical connective): and, or, not, or whatever.
+provided that we have a function that maps each variable
+expression to a Boolean value, then  every expression in
+propositional logic has a Boolean value as its meaning.
+We will call such a function a *variable interpretation*.
+
+For literal expressions the mapping to Boolean values is
+fixed: the meaning of ⊤ is Boolean *true*, and for ⊥ it
+is Boolean *false*. For variable expresssions, given an
+additional variable interpretation function, the meaning
+of a variable expression is the meaning assigned to it
+by a variable interpretation function.
+
+Next, the connectives of propositional logic also have
+meanings, which are Boolean functions. For example, the
+syntactic symbol ∧ has as its semantic meaning the Boolean
+*and* function, often written as &&. The meanings of the
+other connectives (operators) of predicate logic are defined
+similarly: ∨ means ||, ¬ means !, and so forth.
+
+Finally, expressions built from smaller expressions using
+the logical connectives have meanings that are determined
+*compositionally*. Given an expression, *e1 op e2* (let's
+call it *e*), its meaning is determined by first getting
+the Boolean meanings of e1 and e2 and by then applying the
+Boolean function that is the designated meaning of *op*.
 That's it!
 
 #### Interpretation of Unary Connectives
@@ -37,14 +52,14 @@ def evalUnOp : UnOp → (Bool → Bool)
 #### Interpretation of Binary Connectives
 
 - takes a binary operator and returns corresponding *binary* Boolean function
-- (Bool → Bool → Bool means takes two Bools and finally returns one at the end)
+- (Bool → Bool → Bool) is the type of function that takes two Bools and returns one
 
 ```lean
 def evalBinOp : BinOp → (Bool → Bool → Bool)
-| BinOp.and => and
-| BinOp.or => or
-| BinOp.imp => imp
-| BinOp.iff => iff
+| BinOp.and => Bool.and
+| BinOp.or => Bool.or
+| BinOp.imp => DMT1.lecture.prop_logic.imp
+| BinOp.iff => DMT1.lecture.prop_logic.iff
 ```
 
 We've now understood that an "interpretation" can be understood
