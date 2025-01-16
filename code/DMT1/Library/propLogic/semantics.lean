@@ -25,16 +25,15 @@ def evalBinOp : BinOp → (Bool → Bool → Bool)
 | BinOp.imp => domain.imp
 | BinOp.iff => domain.iff
 
-open syntax.PLExpr
+open PLExpr
 
 /- @@@
 Give a name to the type of function that can
 be understood as assigning a Boolean value to
 each variable.
 @@@ -/
-abbrev BoolInterp := BoolVar → Bool
 
-def evalPLExpr : PLExpr → BoolInterp → Bool
+def evalPLExpr : PLExpr → (Var → Bool) → Bool
 | lit_expr b,             _ => b
 | (var_expr v),           i => i v
 | (un_op_expr op e),      i => (evalUnOp op) (evalPLExpr e i)

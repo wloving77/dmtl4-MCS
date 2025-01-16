@@ -4,7 +4,7 @@ namespace DMT1.Library.propLogic.syntax
 # Propositional Logic: Syntax
 @@@ -/
 
-structure BoolVar : Type where
+structure Var : Type where
   mk :: (index: Nat)
 
 inductive UnOp : Type
@@ -18,7 +18,7 @@ inductive BinOp : Type
 
 inductive PLExpr : Type
 | lit_expr (from_bool : Bool) : PLExpr
-| var_expr (from_var : BoolVar)
+| var_expr (from_var : Var)
 | un_op_expr (op : UnOp) (e : PLExpr)
 | bin_op_expr (op : BinOp) (e1 e2 : PLExpr)
 

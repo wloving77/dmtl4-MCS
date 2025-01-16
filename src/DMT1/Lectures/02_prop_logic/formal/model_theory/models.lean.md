@@ -27,12 +27,12 @@ finder. A related problem is to find *all* models of a given
 proposition. How would you do that?
 -/
 
-def findModels (e : PLExpr) : List BoolInterp :=
+def findModels (e : PLExpr) : List Interp :=
   List.filter
     (fun i => evalPLExpr e i = true) -- given i, true iff i is model of e
     (listInterpsFromExpr e)
 
-def findModel :  PLExpr → Option BoolInterp
+def findModel :  PLExpr → Option Interp
 | e =>
   let ms := findModels e
   match ms with

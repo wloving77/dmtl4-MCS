@@ -19,9 +19,9 @@ constructing operators. Here's how you do it.
 -/
 
 -- First define a disting variable for each variable expression
-def v₀ : BoolVar := BoolVar.mk 0    -- abstract syntax
-def v₁ : BoolVar := ⟨1⟩             -- Lean notation for mk
-def v₂ : BoolVar := ⟨2⟩
+def v₀ : Var := Var.mk 0    -- abstract syntax
+def v₁ : Var := ⟨1⟩             -- Lean notation for mk
+def v₂ : Var := ⟨2⟩
 
 /-!
 Now you define the variable expressions you want to use. The
@@ -112,7 +112,7 @@ def i := InterpFromRowCols 2 2
 Applying i to a *variable*, with indices 0 or 1, should
 return the values in row 2, namely 1 and 0. Does it work?
 (Remember ⟨⟩ notation for applying structure constructor,
-so here ⟨0⟩ is (BoolVar.mk 0), a "variable" in our lexicon.)
+so here ⟨0⟩ is (Var.mk 0), a "variable" in our lexicon.)
 -/
 
 #eval! i ⟨0⟩    -- expect true

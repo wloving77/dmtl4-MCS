@@ -1,6 +1,5 @@
-import DMT1.Library.propLogic.model_theory.properties
-
-namespace DMT1.propLogic
+import DMT1.Library.propLogic.syntax
+namespace DMT1.Library.propLogic.syntax
 
 /- @@@
 # Examples of Expressions
@@ -9,19 +8,29 @@ It'll suffice for our purposes to have three variable
 expressions. We'll call them P, Q, and R. The following
 definitions provide them, built on the variables indexed
 by 0, 1, and 2, resp. See our concrete syntax definitions.
+
+
+Mote that the first example is written entirely using
+abstract syntax, with the next two showing uses of our
+concrete notations. Note: (Var.mk 1) uses parentheses,
+while ⟨2⟩ uses special angle brackets. Look closely.
+Lean provides this notation as a shorthand for applying
+the "mk" constructor of any structure type, here Var.mk.
 @@@ -/
 
-def P : PLExpr := {⟨0⟩}
-def Q : PLExpr := {⟨1⟩}
-def R : PLExpr := {⟨2⟩}
+open PLExpr
+
+def P : PLExpr := var_expr (Var.mk 0)
+def Q : PLExpr := {Var.mk 1}
+def R : PLExpr := {⟨2⟩}   -- angle brackets
 
 
 /- @@@
-The examples we present comprise the special
-set of propositions that we can call the axioms
-of propositional logic. But that discussion is
-down the road. For now, at least we have some
-examples of expressions.
+Now that we have a few elementary expressions
+(we can call them propositions) we present a set
+of propositions that turn out to be important. For
+now, they're just examples of syntactically correct
+expressions in the syntax of our little language.
 @@@ -/
 
 def and_intro :=        R ⇒ Q ⇒ R ∧ Q
@@ -49,9 +58,11 @@ def false_elim := ⊥ ⇒ P
 As an aside, we can apply our validity checker
 (our *is_valid* function) to each proposition
 to confirm that each and every one of them is
-valid.
-@@@ -/
+valid. We're not there yet but will be soon. In
+the meantime, here's what it will look like to
+apply the checker we'll specify.
 
+```lean
 #eval! is_valid  and_intro
 #eval! is_valid  and_elim_left
 #eval! is_valid  and_elim_right
@@ -72,5 +83,7 @@ valid.
 
 #eval! is_valid  true_intro
 #eval! is_valid false_elim
+```
+@@@ -/
 
-end DMT1.propLogic
+end DMT1.Library.propLogic.syntax

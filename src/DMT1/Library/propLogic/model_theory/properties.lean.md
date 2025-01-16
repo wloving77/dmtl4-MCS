@@ -1,7 +1,10 @@
 ```lean
 import DMT1.Library.propLogic.model_theory.truth_table
 
-namespace DMT1.propLogic
+namespace DMT1.Library.propLogic.model_theory
+open propLogic.syntax
+open semantics
+open utilities
 ```
 
 ### Satisfiability
@@ -41,8 +44,8 @@ def is_valid :  PLExpr → Bool :=
 def is_unsat : PLExpr → Bool :=
   λ e : PLExpr => not (is_sat e)
 
-def is_model : BoolInterp → PLExpr → Bool :=
+def is_model : (Var → Bool) → PLExpr → Bool :=
   fun i e => evalPLExpr e i
 
-end DMT1.propLogic
+end DMT1.Library.propLogic.model_theory
 ```

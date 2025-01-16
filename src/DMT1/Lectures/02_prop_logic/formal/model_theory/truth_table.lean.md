@@ -15,7 +15,7 @@ of variables.
 
 def truthTableOutputs : PLExpr → List Bool
 | e =>  evalBoolExpr_interps (listInterpsFromExpr e) e where
-evalBoolExpr_interps : List BoolInterp → PLExpr → List Bool
+evalBoolExpr_interps : List Interp → PLExpr → List Bool
 | [], _ => []
 | h::t, e => [evalPLExpr e h] ++ evalBoolExpr_interps t e
 
