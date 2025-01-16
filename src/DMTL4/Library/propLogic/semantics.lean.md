@@ -3,11 +3,11 @@ import DMTL4.Library.propLogic.syntax
 import DMTL4.Library.propLogic.domain
 
 namespace DMTL4.propLogic
+```
 
-/-!
 # Semantics
--/
 
+```lean
 def evalUnOp : UnOp → (Bool → Bool)
 | (UnOp.not) => not
 

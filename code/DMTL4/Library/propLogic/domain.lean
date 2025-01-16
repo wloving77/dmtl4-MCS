@@ -1,12 +1,30 @@
 namespace DMTL4.propLogic
 
--- # Semantic Domain: Boolean Algebra
+/- @@@
+# Boolean Algebra
 
-/-!
 Lean already provides most of what we need. Here we
 define the few elements we need that are missing from
 the standard Lean libraries
--/
+
+## Boolean values
+
+They are true and false.
+
+- true
+- false
+
+## Boolean operators
+
+- && (and)
+- || (or)
+- ! (not)
+
+## We also need (but Lean doesn't define)
+
+- ⇒ (implies)
+- ↔ (equivalent to)
+@@@ -/
 
 -- Boolean Operation: Implication
 def imp : Bool → Bool → Bool

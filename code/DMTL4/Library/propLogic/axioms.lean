@@ -1,5 +1,9 @@
 import «DMTL4».Library.propLogic.model_theory.properties
 
+/- @@@
+# Examples: Propositions (Expressions) in Propositional Logic
+@@@ -/
+
 namespace DMTL4.propLogic
 
 def P : PLExpr := {⟨0⟩}
@@ -7,7 +11,7 @@ def Q : PLExpr := {⟨1⟩}
 def R : PLExpr := {⟨2⟩}
 
 
-/-!
+/- @@@
 The following *semantically* valid propositions,
 organized into subsets pertaining to corresponding
 logical connectives, provide a more informative
@@ -21,7 +25,7 @@ each true, the P ∧ Q is true; and if P ∧ Q is true,
 then so part P, and Q, individually. That's all we
 need to say to precisely define "what and means" in
 propositional, and many other, logics.
--/
+@@@ -/
 
 def and_intro := R ⇒ Q ⇒ R ∧ Q
 def and_elim_left := R ∧ Q ⇒ R
@@ -44,12 +48,12 @@ def equiv_elim_right := (R ↔ P) ⇒ (P ⇒ R)
 def true_intro := ⊤
 def false_elim := ⊥ ⇒ P
 
-/-!
+/- @@@
 As an aside, we can apply our validity checker
 (our *is_valid* function) to each proposition
 to confirm that each and every one of them is
 valid.
--/
+@@@ -/
 
 #eval! is_valid  and_intro
 #eval! is_valid  and_elim_left

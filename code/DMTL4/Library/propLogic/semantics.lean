@@ -3,9 +3,9 @@ import DMTL4.Library.propLogic.domain
 
 namespace DMTL4.propLogic
 
-/-!
+/- @@@
 # Semantics
--/
+@@@ -/
 
 def evalUnOp : UnOp → (Bool → Bool)
 | (UnOp.not) => not
