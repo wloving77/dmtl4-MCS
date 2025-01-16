@@ -74,7 +74,7 @@ Bool value. Here we just give this *type* a name to make subsequent
 code just a easier for people to read and understand.
 @@@ -/
 
-abbrev BoolInterp := BoolVar → Bool
+abbrev Interp := Var → Bool
 
 open PLExpr
 
@@ -93,7 +93,7 @@ returning the Boolean meaining of e in the "world" (binding
 of all variables to Boolean values) expressed by that i.
 @@@ -/
 
-def evalPLExpr : PLExpr → BoolInterp → Bool
+def evalPLExpr : PLExpr → Interp → Bool
 | lit_expr b,             _ => b
 | (var_expr v),           i => i v
 | (un_op_expr op e),      i => (evalUnOp op) (evalPLExpr e i)

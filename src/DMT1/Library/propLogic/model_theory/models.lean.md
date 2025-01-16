@@ -17,7 +17,7 @@ findModels. It returns a list of all models of a given expression
 grows).
 
 ```lean
-def findModels (e : PLExpr) : List BoolInterp :=
+def findModels (e : PLExpr) : List Interp :=
   List.filter
     (fun i => evalPLExpr e i = true) -- given i, true iff i is model of e
     (listInterpsFromExpr e)
@@ -27,7 +27,7 @@ Finds all models, if any, and returns either none, if there
 wasn't one, or some m, where m is first in the returned list
 of models.
 ```lean
-def findModel :  PLExpr → Option BoolInterp
+def findModel :  PLExpr → Option Interp
 | e =>
   let ms := findModels e
   match ms with

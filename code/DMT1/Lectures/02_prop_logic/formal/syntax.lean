@@ -87,10 +87,10 @@ but are necessary values for making variable expressions.
 ##### abstract syntax for variables (var)
 
 The idea is that eventually an interpretation function
-will take a BoolVar object as arguments and return the
+will take a Var object as arguments and return the
 Boolean values that that interpretation assigns to it.
 @@@ -/
-structure BoolVar : Type :=
+structure Var : Type :=
   mk :: (index: Nat)
 deriving Repr
 
@@ -119,9 +119,9 @@ build a value of such a type you can use ⟨ a, b, c,... ⟩
 notation as a shorthand for, say, "var.mk a b c ....".
 We do need to let Lean know the result show be a "var".
 @@@ -/
-#check (⟨3⟩ : BoolVar)    -- it's a variable (var)
+#check (⟨3⟩ : Var)    -- it's a variable (var)
 -- #check ⟨3⟩             -- not unique constructor expr
--- But where Lean can infer BoolVar type ⟨3⟩ will suffice
+-- But where Lean can infer Var type ⟨3⟩ will suffice
 
 
 /- @@@
@@ -180,7 +180,7 @@ the expressions legal in propositional logic.
 
 inductive PLExpr : Type
 | lit_expr (from_bool : Bool) : PLExpr
-| var_expr (from_var : BoolVar)
+| var_expr (from_var : Var)
 | un_op_expr (op : UnOp) (e : PLExpr)
 | bin_op_expr (op : BinOp) (e1 e2 : PLExpr)
 deriving Repr
