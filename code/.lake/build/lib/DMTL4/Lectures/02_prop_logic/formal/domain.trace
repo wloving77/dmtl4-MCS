@@ -1,17 +1,17 @@
 {"log":
  [{"message":
-   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMTL4/Lectures/02_prop_logic/formal/domain.lean -R ./././. -o ././.lake/build/lib/DMTL4/Lectures/02_prop_logic/formal/domain.olean -i ././.lake/build/lib/DMTL4/Lectures/02_prop_logic/formal/domain.ilean -c ././.lake/build/ir/DMTL4/Lectures/02_prop_logic/formal/domain.c --json",
+   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Lectures/02_prop_logic/formal/domain.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/02_prop_logic/formal/domain.olean -i ././.lake/build/lib/DMT1/Lectures/02_prop_logic/formal/domain.ilean -c ././.lake/build/ir/DMT1/Lectures/02_prop_logic/formal/domain.c --json",
    "level": "trace"},
   {"message":
-   "././././DMTL4/Lectures/02_prop_logic/formal/domain.lean:27:0: \"F\"",
+   "././././DMT1/Lectures/02_prop_logic/formal/domain.lean:27:0: \"F\"",
    "level": "info"},
   {"message":
-   "././././DMTL4/Lectures/02_prop_logic/formal/domain.lean:28:0: \"T\"",
+   "././././DMT1/Lectures/02_prop_logic/formal/domain.lean:28:0: \"T\"",
    "level": "info"},
   {"message":
-   "././././DMTL4/Lectures/02_prop_logic/formal/domain.lean:41:0: \"T\"",
+   "././././DMT1/Lectures/02_prop_logic/formal/domain.lean:41:0: \"T\"",
    "level": "info"},
   {"message":
-   "././././DMTL4/Lectures/02_prop_logic/formal/domain.lean:42:0: \"F\"",
+   "././././DMT1/Lectures/02_prop_logic/formal/domain.lean:42:0: \"F\"",
    "level": "info"}],
  "depHash": "12004391042627145209"}

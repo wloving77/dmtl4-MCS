@@ -1,5 +1,7 @@
-{"version": "1.0.0",
- "packagesDir": ".lake/packages",
- "packages": [],
- "name": "DMTL4",
- "lakeDir": ".lake"}
+{
+  "version": "1.0.0",
+  "packagesDir": ".lake/packages",
+  "packages": [],
+  "name": "DMT1",
+  "lakeDir": ".lake"
+}

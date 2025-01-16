@@ -1,1 +1,1 @@
-# DMTL4: Discrete Math and Theory (in Lean 4)
+# DMT1: Discrete Math and Theory (in Lean 4)

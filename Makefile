@@ -1,6 +1,6 @@
 # Source and target directories
-SRC_DIR := code/DMTL4
-BUILD_DIR := src/DMTL4
+SRC_DIR := code/DMT1
+BUILD_DIR := src/DMT1
 
 # Find all source files recursively
 SRC_FILES := $(shell find $(SRC_DIR) -type f -name '*.lean')

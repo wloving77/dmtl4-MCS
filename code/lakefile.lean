@@ -1,12 +1,12 @@
 import Lake
 open Lake DSL
 
-package «dmtl4» where
+package «DMT1» where
   -- add package configuration options here
 
-lean_lib «DMTL4» where
+lean_lib «DMT1» where
   -- add library configuration options here
 
 @[default_target]
-lean_exe «dmtl4»  where
+lean_exe «DMT1»  where
   root := `Main

@@ -1,6 +1,6 @@
 // Lean compiler output
-// Module: DMTL4.Lectures.«02_prop_logic».formal.model_theory.truth_table
-// Imports: Init DMTL4.Lectures.«02_prop_logic».formal.interpretation
+// Module: DMT1.Lectures.«02_prop_logic».formal.model_theory.truth_table
+// Imports: Init DMT1.Lectures.«02_prop_logic».formal.interpretation
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -13,12 +13,12 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(lean_object*, lean_object*);
 lean_object* l_List_appendTR___rarg(lean_object*, lean_object*);
-lean_object* l_DMTL4_lecture_prop__logic_evalPLExpr(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_truthTableOutputs(lean_object*);
-lean_object* l_DMTL4_lecture_prop__logic_listInterpsFromExpr(lean_object*);
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(lean_object* x_1, lean_object* x_2) {
+lean_object* l_DMT1_lecture_prop__logic_evalPLExpr(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_truthTableOutputs(lean_object*);
+lean_object* l_DMT1_lecture_prop__logic_listInterpsFromExpr(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 if (lean_obj_tag(x_1) == 0)
@@ -38,14 +38,14 @@ lean_object* x_5; lean_object* x_6; lean_object* x_7; uint8_t x_8; lean_object* 
 x_5 = lean_ctor_get(x_1, 0);
 x_6 = lean_ctor_get(x_1, 1);
 lean_inc(x_2);
-x_7 = l_DMTL4_lecture_prop__logic_evalPLExpr(x_2, x_5);
+x_7 = l_DMT1_lecture_prop__logic_evalPLExpr(x_2, x_5);
 x_8 = lean_unbox(x_7);
 lean_dec(x_7);
 x_9 = lean_box(0);
 x_10 = lean_box(x_8);
 lean_ctor_set(x_1, 1, x_9);
 lean_ctor_set(x_1, 0, x_10);
-x_11 = l_DMTL4_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(x_6, x_2);
+x_11 = l_DMT1_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(x_6, x_2);
 x_12 = l_List_appendTR___rarg(x_1, x_11);
 return x_12;
 }
@@ -58,7 +58,7 @@ lean_inc(x_14);
 lean_inc(x_13);
 lean_dec(x_1);
 lean_inc(x_2);
-x_15 = l_DMTL4_lecture_prop__logic_evalPLExpr(x_2, x_13);
+x_15 = l_DMT1_lecture_prop__logic_evalPLExpr(x_2, x_13);
 x_16 = lean_unbox(x_15);
 lean_dec(x_15);
 x_17 = lean_box(0);
@@ -66,33 +66,33 @@ x_18 = lean_box(x_16);
 x_19 = lean_alloc_ctor(1, 2, 0);
 lean_ctor_set(x_19, 0, x_18);
 lean_ctor_set(x_19, 1, x_17);
-x_20 = l_DMTL4_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(x_14, x_2);
+x_20 = l_DMT1_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(x_14, x_2);
 x_21 = l_List_appendTR___rarg(x_19, x_20);
 return x_21;
 }
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_truthTableOutputs(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_truthTableOutputs(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; lean_object* x_3; 
-x_2 = l_DMTL4_lecture_prop__logic_listInterpsFromExpr(x_1);
-x_3 = l_DMTL4_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(x_2, x_1);
+x_2 = l_DMT1_lecture_prop__logic_listInterpsFromExpr(x_1);
+x_3 = l_DMT1_lecture_prop__logic_truthTableOutputs_evalBoolExpr__interps(x_2, x_1);
 return x_3;
 }
 }
 lean_object* initialize_Init(uint8_t builtin, lean_object*);
-lean_object* initialize_DMTL4_Lectures_02__prop__logic_formal_interpretation(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_Lectures_02__prop__logic_formal_interpretation(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
-LEAN_EXPORT lean_object* initialize_DMTL4_Lectures_02__prop__logic_formal_model__theory_truth__table(uint8_t builtin, lean_object* w) {
+LEAN_EXPORT lean_object* initialize_DMT1_Lectures_02__prop__logic_formal_model__theory_truth__table(uint8_t builtin, lean_object* w) {
 lean_object * res;
 if (_G_initialized) return lean_io_result_mk_ok(lean_box(0));
 _G_initialized = true;
 res = initialize_Init(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMTL4_Lectures_02__prop__logic_formal_interpretation(builtin, lean_io_mk_world());
+res = initialize_DMT1_Lectures_02__prop__logic_formal_interpretation(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 return lean_io_result_mk_ok(lean_box(0));

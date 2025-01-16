@@ -1,6 +1,6 @@
 // Lean compiler output
-// Module: DMTL4.Lectures.«02_prop_logic».formal.model_theory.counterexamples
-// Imports: Init DMTL4.Lectures.«02_prop_logic».formal.model_theory.models
+// Module: DMT1.Lectures.«02_prop_logic».formal.model_theory.counterexamples
+// Imports: Init DMT1.Lectures.«02_prop_logic».formal.model_theory.models
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -13,11 +13,11 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_findCounterexamples(lean_object*);
-lean_object* l_DMTL4_lecture_prop__logic_findModels(lean_object*);
-lean_object* l_DMTL4_lecture_prop__logic_findModel(lean_object*);
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_findCounterexample(lean_object*);
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_findCounterexamples(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_findCounterexamples(lean_object*);
+lean_object* l_DMT1_lecture_prop__logic_findModels(lean_object*);
+lean_object* l_DMT1_lecture_prop__logic_findModel(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_findCounterexample(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_findCounterexamples(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; lean_object* x_3; lean_object* x_4; 
@@ -25,11 +25,11 @@ x_2 = lean_box(0);
 x_3 = lean_alloc_ctor(2, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
-x_4 = l_DMTL4_lecture_prop__logic_findModels(x_3);
+x_4 = l_DMT1_lecture_prop__logic_findModels(x_3);
 return x_4;
 }
 }
-LEAN_EXPORT lean_object* l_DMTL4_lecture_prop__logic_findCounterexample(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_findCounterexample(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; lean_object* x_3; lean_object* x_4; 
@@ -37,21 +37,21 @@ x_2 = lean_box(0);
 x_3 = lean_alloc_ctor(2, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
-x_4 = l_DMTL4_lecture_prop__logic_findModel(x_3);
+x_4 = l_DMT1_lecture_prop__logic_findModel(x_3);
 return x_4;
 }
 }
 lean_object* initialize_Init(uint8_t builtin, lean_object*);
-lean_object* initialize_DMTL4_Lectures_02__prop__logic_formal_model__theory_models(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_Lectures_02__prop__logic_formal_model__theory_models(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
-LEAN_EXPORT lean_object* initialize_DMTL4_Lectures_02__prop__logic_formal_model__theory_counterexamples(uint8_t builtin, lean_object* w) {
+LEAN_EXPORT lean_object* initialize_DMT1_Lectures_02__prop__logic_formal_model__theory_counterexamples(uint8_t builtin, lean_object* w) {
 lean_object * res;
 if (_G_initialized) return lean_io_result_mk_ok(lean_box(0));
 _G_initialized = true;
 res = initialize_Init(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMTL4_Lectures_02__prop__logic_formal_model__theory_models(builtin, lean_io_mk_world());
+res = initialize_DMT1_Lectures_02__prop__logic_formal_model__theory_models(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 return lean_io_result_mk_ok(lean_box(0));

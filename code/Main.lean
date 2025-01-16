@@ -1,4 +1,4 @@
-import DMTL4
+import DMT1
 
 def hello := "Friend"
 def main : IO Unit :=

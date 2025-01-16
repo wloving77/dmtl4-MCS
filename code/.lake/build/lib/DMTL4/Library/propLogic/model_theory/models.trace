@@ -1,5 +1,5 @@
 {"log":
  [{"message":
-   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMTL4/Library/propLogic/model_theory/models.lean -R ./././. -o ././.lake/build/lib/DMTL4/Library/propLogic/model_theory/models.olean -i ././.lake/build/lib/DMTL4/Library/propLogic/model_theory/models.ilean -c ././.lake/build/ir/DMTL4/Library/propLogic/model_theory/models.c --json",
+   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Library/propLogic/model_theory/models.lean -R ./././. -o ././.lake/build/lib/DMT1/Library/propLogic/model_theory/models.olean -i ././.lake/build/lib/DMT1/Library/propLogic/model_theory/models.ilean -c ././.lake/build/ir/DMT1/Library/propLogic/model_theory/models.c --json",
    "level": "trace"}],
  "depHash": "8857063014925628397"}
