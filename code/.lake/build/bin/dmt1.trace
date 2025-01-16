@@ -2,4 +2,4 @@
  [{"message":
    ".> /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/leanc -o ././.lake/build/bin/dmt1 ././.lake/build/ir/Main.c.o.export ././.lake/build/ir/DMT1/Library/propLogic/syntax.c.o.export ././.lake/build/ir/DMT1.c.o.export",
    "level": "trace"}],
- "depHash": "1727337681642689437"}
+ "depHash": "8031647381582425592"}
