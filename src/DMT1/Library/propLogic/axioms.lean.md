@@ -1,5 +1,5 @@
 ```lean
-import «DMT1».Library.propLogic.model_theory.properties
+import «DMT1».Library.propLogic.semantics.model_theory.properties
 
 namespace DMT1.propLogic
 ```

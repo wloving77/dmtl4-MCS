@@ -230,12 +230,6 @@ infixr:35 " ∧ "  =>  PLExpr.bin_op_expr BinOp.and
 infixr:30 " ∨  "  => PLExpr.bin_op_expr BinOp.or
 infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
-```
 
-Now head off to the Main.lean file in this same directory,
-copy it into your MyWork directory tree, and plan around with
-building expressions in our logic.
-
-```lean
 end DMT1.lecture.prop_logic
 ```

@@ -1,16 +1,16 @@
 import DMT1.Lectures.«02_prop_logic».formal.model_theory.properties
--- Lectures.02_prop_logic.formal.model_theory.properties
---.modelTheory.properties
---import DMT1.Library.modelTheory
+import DMT1.Lectures.«02_prop_logic».formal.model_theory.truth_table
+import DMT1.Lectures.«02_prop_logic».formal.model_theory.counterexamples
+import DMT1.Lectures.«02_prop_logic».formal.interpretation
+import DMT1.Lectures.«02_prop_logic».formal.semantics
 
-namespace DMT1.lecture.prop_logic.semantics
+namespace DMT1.lecture.prop_logic
 
-open PLExpr
+open semantics
+open models
 
--- error: ././././DMT1/Lectures/02_prop_logic/formal/model_theory/
--- truth_table.lean:16:30: unknown identifier 'listInterpsFromExpr'
 /-!
-SYNTAX
+# Syntax
 
 Suppose I want to write some propositional logic expressions
 using the variable expressions, P, Q, and R, and building up
@@ -327,4 +327,4 @@ meaning that P is assigned 0; Q, 1; R, 1, by that interpretation.
           ((P ⇒ Q) ⇒ (¬P ⇒ ¬Q)))  -- this proposition (parens needed)
         2                         -- number of variables in result strings
 
-end DMT1.lecture.prop_logic.semantics
+end DMT1.lecture.prop_logic
