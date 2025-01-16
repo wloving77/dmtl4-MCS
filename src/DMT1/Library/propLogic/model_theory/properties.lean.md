@@ -1,8 +1,8 @@
 ```lean
 import DMT1.Library.propLogic.model_theory.truth_table
-
 namespace DMT1.Library.propLogic.model_theory
 open propLogic.syntax
+open truth_table
 open semantics
 open utilities
 ```
@@ -29,6 +29,8 @@ being *unsatisfiable?* And does "e" have the property of being
 INTERFACE
 -/
 ```
+
+
 
 Satisfiability means there's *some* interpretation for which e is true
 ```lean
