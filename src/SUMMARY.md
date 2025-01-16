@@ -1,11 +1,11 @@
 
-# Summary
+# Smmary
 
-[DMT/L4: Discrete Mathematics and Theory](./index.md)
+[Introduction](./introduction.md)
 
-# Lectures
-
-- [Syntax](./DMTL4/Library/propLogic/syntax.lean.md)
+- [Propositional Logic]()
+  - [Syntax](./DMTL4/Lectures/02_prop_logic/formal/syntax.lean.md)
+  - [Semantics](./DMTL4/Lectures/02_prop_logic/formal/semantics.lean.md)
 
 [Assignments](./assignments.md)
-
+[Resources](./resources.md)
