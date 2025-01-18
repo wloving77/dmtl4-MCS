@@ -47,10 +47,12 @@ day of class.
             4. Expressiveness vs Solvability tradeoffs 
             5. Even decidability of validity of arbitrary expressions  
    4. Formal Language Case Study: Propositional Logic
-      1. Syntax
-      2. Domain
+      1. Syntax (literal, variable, and operator expressions)
+      2. Semantic Domain (Boolean algebra)
       3. Interpretations
-      4. Evaluation
+         1. fixed symbols to Boolean functions
+         2. variables to Boolean values
+      4. Semantic Evaluation: expressions to Boolean values
       5. Properties of Expressions
          1. validity
          2. satisfiability
@@ -59,4 +61,4 @@ day of class.
          1. model finding
          2. model checking
          3. validity checking
-         4. counter-example finding 
+         4. counter-example finding
