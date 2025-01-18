@@ -1,11 +1,12 @@
-import DMT1.Lectures.«02_propLogic».formal.utilities
-import DMT1.Lectures.«02_propLogic».formal.semantics
+import DMT1.Lectures.L02_propLogic.formal.utilities
+import DMT1.Lectures.L02_propLogic.formal.semantics
 
 /-!
 #### Boolean Interpretation
 -/
 
 namespace DMT1.lecture.propLogic.semantics
+open propLogic.syntax
 
 -- From interpretation, variable, and new Bool, override that interpretation to assign that new value to that variable
 def overrideVarValInInterp : Interp → Var → Bool → Interp

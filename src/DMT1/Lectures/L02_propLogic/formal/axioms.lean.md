@@ -14,8 +14,11 @@ Lean provides this notation as a shorthand for applying
 the "mk" constructor of any structure type, here Var.mk.
 
 ```lean
-import DMT1.Library.propLogic.syntax
-namespace DMT1.Library.propLogic.syntax
+import DMT1.Lectures.L02_propLogic.formal.syntax
+
+namespace DMT1.lecture.propLogic.axioms
+
+open propLogic.syntax
 
 open Expr
 
@@ -85,5 +88,5 @@ apply the checker we'll specify.
 ```
 
 ```lean
-end DMT1.Library.propLogic.syntax
+end DMT1.lecture.propLogic.axioms
 ```

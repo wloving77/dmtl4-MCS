@@ -1,4 +1,5 @@
-import DMT1.Lectures.«02_propLogic».formal.model_theory.truth_table
+```lean
+import DMT1.Lectures.L02_propLogic.formal.model_theory.truth_table
 
 namespace DMT1.lecture.propLogic.semantics.models
 
@@ -39,3 +40,4 @@ def findModel :  Expr → Option Interp
   | h::_ => h
 
 end DMT1.lecture.propLogic.semantics.models
+```

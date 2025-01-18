@@ -1,5 +1,4 @@
-```lean
-import DMT1.Lectures.«02_propLogic».formal.model_theory.truth_table
+import DMT1.Lectures.L02_propLogic.formal.model_theory.truth_table
 
 namespace DMT1.lecture.propLogic.semantics.models
 
@@ -47,4 +46,3 @@ def is_model : Interp → Expr → Bool :=
   fun i e => evalExpr e i
 
 end DMT1.lecture.propLogic.semantics.models
-```

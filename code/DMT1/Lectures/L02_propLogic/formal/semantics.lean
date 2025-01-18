@@ -30,8 +30,8 @@ Boolean function that is the designated meaning of *op*.
 That's it!
 @@@ -/
 
-import DMT1.Lectures.«02_propLogic».formal.syntax
-import DMT1.Lectures.«02_propLogic».formal.domain
+import DMT1.Lectures.L02_propLogic.formal.syntax
+import DMT1.Lectures.L02_propLogic.formal.domain
 
 namespace DMT1.lecture.propLogic.semantics
 open propLogic.syntax

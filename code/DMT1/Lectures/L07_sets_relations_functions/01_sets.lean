@@ -1,7 +1,7 @@
 import Mathlib.Data.Set.Basic
 import Mathlib.Logic.Relation
 
-#eval "src/DMT1/Lectures/07_sets_relations_functions/03_properties_of_relations.md".length
+#eval "src/DMT1/Lectures/L07_sets_relations_functions/L03_properties_of_relations.md".length
 
 
 /-!

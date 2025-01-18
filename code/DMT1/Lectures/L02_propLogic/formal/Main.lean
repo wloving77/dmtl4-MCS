@@ -1,10 +1,9 @@
-```lean
-import DMT1.Lectures.«02_propLogic».formal.model_theory.properties
-import DMT1.Lectures.«02_propLogic».formal.model_theory.truth_table
-import DMT1.Lectures.«02_propLogic».formal.model_theory.counterexamples
-import DMT1.Lectures.«02_propLogic».formal.interpretation
-import DMT1.Lectures.«02_propLogic».formal.semantics
-import DMT1.Lectures.«02_propLogic».formal.syntax
+import DMT1.Lectures.L02_propLogic.formal.model_theory.properties
+import DMT1.Lectures.L02_propLogic.formal.model_theory.truth_table
+import DMT1.Lectures.L02_propLogic.formal.model_theory.counterexamples
+import DMT1.Lectures.L02_propLogic.formal.interpretation
+import DMT1.Lectures.L02_propLogic.formal.semantics
+import DMT1.Lectures.L02_propLogic.formal.syntax
 
 namespace DMT1.lecture.propLogic
 
@@ -332,4 +331,3 @@ meaning that P is assigned 0; Q, 1; R, 1, by that interpretation.
         2                         -- number of variables in result strings
 
 end DMT1.lecture.propLogic
-```

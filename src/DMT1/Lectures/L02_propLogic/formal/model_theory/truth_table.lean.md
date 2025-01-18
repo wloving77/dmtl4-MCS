@@ -1,5 +1,5 @@
 ```lean
-import DMT1.Lectures.«02_propLogic».formal.interpretation
+import DMT1.Lectures.L02_propLogic.formal.interpretation
 
 namespace DMT1.lecture.propLogic.semantics.models
 

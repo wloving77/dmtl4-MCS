@@ -1,5 +1,4 @@
-```lean
-import DMT1.Lectures.«07_sets_relations_functions».«03_properties_of_relations»
+import DMT1.Lectures.«L07_sets_relations_functions».«L03_properties_of_relations»
 
 /-
 Homework #8 Properties of Relations.
@@ -16,7 +15,7 @@ or two for each person.
 
 /-!
 We've importd all of the definitions of properties of relations
-from 03_properties_of_relations so you can use them here with no
+from L03_properties_of_relations so you can use them here with no
 problem. Use View > Editor Layout > Split Down to have two panes
 open, one looking at the property definitions file and one open
 on this one.
@@ -173,4 +172,3 @@ on the natural numbers  m and n are congruent mod k
 Formally state and prove the proposition that
 
 -/
-```

@@ -1,4 +1,5 @@
-import DMT1.Lectures.«02_propLogic».formal.model_theory.models
+```lean
+import DMT1.Lectures.L02_propLogic.formal.model_theory.models
 
 
 namespace DMT1.lecture.propLogic.semantics.models
@@ -25,3 +26,4 @@ as a list of length either zero (called none) or one (called some e), where
 e the specific value in the length-one list of values (an interpertation).
 -/
 end DMT1.lecture.propLogic.semantics.models
+```

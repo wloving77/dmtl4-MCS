@@ -1,5 +1,4 @@
-```lean
-import «DMT1».Lectures.«02_propLogic».formal.syntax
+import «DMT1».Lectures.L02_propLogic.formal.syntax
 
 namespace DMT1.lecture.propLogic
 
@@ -34,4 +33,3 @@ def exportation     := ((P ∧ Q) ⇒ R) ↔ (P ⇒ Q ⇒ R)
 def absurdity       := (P ⇒ Q) ∧ (P ⇒ ¬Q) ⇒ ¬P
 
 end DMT1.lecture.propLogic
-```

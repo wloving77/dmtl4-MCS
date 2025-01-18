@@ -1,3 +1,4 @@
+/- @@@
 # Examples of Expressions
 
 It'll suffice for our purposes to have three variable
@@ -12,26 +13,29 @@ concrete notations. Note: (Var.mk 1) uses parentheses,
 while ⟨2⟩ uses special angle brackets. Look closely.
 Lean provides this notation as a shorthand for applying
 the "mk" constructor of any structure type, here Var.mk.
+@@@ -/
 
-```lean
-import DMT1.Library.propLogic.syntax
-namespace DMT1.Library.propLogic.syntax
+import DMT1.Lectures.L02_propLogic.formal.syntax
+
+namespace DMT1.lecture.propLogic.axioms
+
+open propLogic.syntax
 
 open Expr
 
 def P : Expr := var_expr (Var.mk 0)
 def Q : Expr := {Var.mk 1}
 def R : Expr := {⟨2⟩}   -- angle brackets
-```
 
 
+/- @@@
 Now that we have a few elementary expressions
 (we can call them propositions) we present a set
 of propositions that turn out to be important. For
 now, they're just examples of syntactically correct
 expressions in the syntax of our little language.
+@@@ -/
 
-```lean
 def and_intro :=        R ⇒ Q ⇒ R ∧ Q
 def and_elim_left :=    R ∧ Q ⇒ R
 def and_elim_right :=   R ∧ Q ⇒ Q
@@ -52,8 +56,8 @@ def equiv_elim_right := (R ↔ P) ⇒ (P ⇒ R)
 
 def true_intro := ⊤
 def false_elim := ⊥ ⇒ P
-```
 
+/- @@@
 As an aside, we can apply our validity checker
 (our *is_valid* function) to each proposition
 to confirm that each and every one of them is
@@ -83,7 +87,6 @@ apply the checker we'll specify.
 #eval! is_valid  true_intro
 #eval! is_valid false_elim
 ```
+@@@ -/
 
-```lean
-end DMT1.Library.propLogic.syntax
-```
+end DMT1.lecture.propLogic.axioms
