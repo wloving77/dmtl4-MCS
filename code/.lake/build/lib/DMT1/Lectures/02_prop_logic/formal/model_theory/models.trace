@@ -1,5 +1,0 @@
-{"log":
- [{"message":
-   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Lectures/02_propLogic/formal/model_theory/models.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/02_propLogic/formal/model_theory/models.olean -i ././.lake/build/lib/DMT1/Lectures/02_propLogic/formal/model_theory/models.ilean -c ././.lake/build/ir/DMT1/Lectures/02_propLogic/formal/model_theory/models.c --json",
-   "level": "trace"}],
- "depHash": "11471939665113136638"}
