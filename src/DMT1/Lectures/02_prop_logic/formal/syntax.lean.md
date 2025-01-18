@@ -232,6 +232,16 @@ infixr:35 " ∧ "  =>  Expr.bin_op_expr BinOp.and
 infixr:30 " ∨  "  => Expr.bin_op_expr BinOp.or
 infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
+```
 
+That's it. That's the entire abstract and concrete
+syntax for predicate logic. Note that some definitions
+of the syntax of propositional logic do not include the
+literal expressions, ⊤ and ⊥. In that case one will just
+use variable expressions instead, taking care to fix the
+interpretations of these variables as unvaryingly either
+true or false.
+
+```lean
 end DMT1.lecture.prop_logic.syntax
 ```
