@@ -1,8 +1,8 @@
-namespace DMT1.Library.propLogic.syntax
-
 /- @@@
 # Propositional Logic: Syntax
 @@@ -/
+
+namespace DMT1.Library.propLogic.syntax
 
 structure Var : Type where
   mk :: (index: Nat)
