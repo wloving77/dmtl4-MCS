@@ -6,7 +6,7 @@ definition of the syntax and semantics of propositional
 logic and of functions that determine whether a given
 expression is valid, satisfiable, or unsatisfiable.
 @@@ -/
-namespace DMT1.lecture.prop_logic.syntax
+namespace DMT1.lecture.propLogic.syntax
 
 
 
@@ -256,4 +256,4 @@ interpretations of these variables as unvaryingly either
 true or false.
 @@@ -/
 
-end DMT1.lecture.prop_logic.syntax
+end DMT1.lecture.propLogic.syntax

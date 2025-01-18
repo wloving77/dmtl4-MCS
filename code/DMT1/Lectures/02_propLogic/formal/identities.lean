@@ -1,6 +1,6 @@
-import «DMT1».Lectures.«02_prop_logic».formal.syntax
+import «DMT1».Lectures.«02_propLogic».formal.syntax
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.propLogic
 
 def P := {⟨0⟩}
 def Q := {⟨1⟩}
@@ -32,4 +32,4 @@ def implication     := (P ⇒ Q) ↔ (¬P ∨ Q)
 def exportation     := ((P ∧ Q) ⇒ R) ↔ (P ⇒ Q ⇒ R)
 def absurdity       := (P ⇒ Q) ∧ (P ⇒ ¬Q) ⇒ ¬P
 
-end DMT1.lecture.prop_logic
+end DMT1.lecture.propLogic

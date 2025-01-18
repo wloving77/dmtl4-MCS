@@ -1,7 +1,7 @@
 ```lean
-import DMT1.Lectures.«02_prop_logic».formal.model_theory.truth_table
+import DMT1.Lectures.«02_propLogic».formal.model_theory.truth_table
 
-namespace DMT1.lecture.prop_logic.semantics.models
+namespace DMT1.lecture.propLogic.semantics.models
 
 /-!
 ### Satisfiability
@@ -46,5 +46,5 @@ def is_unsat : Expr → Bool :=
 def is_model : Interp → Expr → Bool :=
   fun i e => evalExpr e i
 
-end DMT1.lecture.prop_logic.semantics.models
+end DMT1.lecture.propLogic.semantics.models
 ```

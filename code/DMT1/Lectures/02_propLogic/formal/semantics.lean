@@ -1,3 +1,4 @@
+/- @@@
 # Semantics
 
 The idea of semantics in Propositional Logic is simple:
@@ -27,43 +28,44 @@ call it *e*), its meaning is determined by first getting
 the Boolean meanings of e1 and e2 and by then applying the
 Boolean function that is the designated meaning of *op*.
 That's it!
+@@@ -/
 
-```lean
-import DMT1.Lectures.«02_prop_logic».formal.syntax
-import DMT1.Lectures.«02_prop_logic».formal.domain
+import DMT1.Lectures.«02_propLogic».formal.syntax
+import DMT1.Lectures.«02_propLogic».formal.domain
 
-namespace DMT1.lecture.prop_logic.semantics
-```
-
+namespace DMT1.lecture.propLogic.semantics
+open propLogic.syntax
 
 
+
+/- @@@
 #### Interpretation of Unary Connectives
 
 The first thing we'll do is define what Boolean operators
 we mean by the names of our unary and binary "conenctives".
+@@@ -/
 
-```lean
 -- function takes unary operator and returns *unary* Boolean function
 -- (Bool -> Bool) means takes *one* Bool argument and "returns" a Bool
 
 def evalUnOp : UnOp → (Bool → Bool)
 | (UnOp.not) => not
-```
 
 
+/- @@@
 #### Interpretation of Binary Connectives
 
 - takes a binary operator and returns corresponding *binary* Boolean function
 - (Bool → Bool → Bool) is the type of function that takes two Bools and returns one
+@@@ -/
 
-```lean
 def evalBinOp : BinOp → (Bool → Bool → Bool)
 | BinOp.and => Bool.and
 | BinOp.or => Bool.or
-| BinOp.imp => domain.imp   -- DMT1.lecture.prop_logic.semantics.domain.imp
+| BinOp.imp => domain.imp   -- DMT1.lecture.propLogic.semantics.domain.imp
 | BinOp.iff => domain.iff  -- likewise
-```
 
+/- @@@
 We've now understood that an "interpretation" can be understood
 to be and can at least here actually be *used* as a function that
 takes a variable (var) as an argument and that returns the Boolean
@@ -73,13 +75,13 @@ To understand the next line, understand that (var → Bool) in Lean
 is the type of any function that takes a var argument and returns a
 Bool value. Here we just give this *type* a name to make subsequent
 code just a easier for people to read and understand.
+@@@ -/
 
-```lean
 abbrev Interp := Var → Bool
 
 open Expr
-```
 
+/- @@@
 #### Operational Semantics of Propositional Logic
 
 NB: This is the material you most need and want to grok.
@@ -92,19 +94,18 @@ The first line defines evalBoolExpr to be some function taking
 an expression, e, and an interpretation, i, as arguments and
 returning the Boolean meaining of e in the "world" (binding
 of all variables to Boolean values) expressed by that i.
+@@@ -/
 
-```lean
 def evalExpr : Expr → Interp → Bool
 | lit_expr b,             _ => b
 | (var_expr v),           i => i v
 | (un_op_expr op e),      i => (evalUnOp op) (evalExpr e i)
 | (bin_op_expr op e1 e2), i => (evalBinOp op) (evalExpr e1 i) (evalExpr e2 i)
-```
 
+/- @@@
 That's it. From this material you should be able to aquire
 a justifiably confident grasp of essentially every aspect
 of the syntax and semantics of propositional logic.
+@@@ -/
 
-```lean
-end DMT1.lecture.prop_logic.semantics
-```
+end DMT1.lecture.propLogic.semantics

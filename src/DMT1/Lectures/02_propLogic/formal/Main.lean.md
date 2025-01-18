@@ -1,13 +1,14 @@
-import DMT1.Lectures.«02_prop_logic».formal.model_theory.properties
-import DMT1.Lectures.«02_prop_logic».formal.model_theory.truth_table
-import DMT1.Lectures.«02_prop_logic».formal.model_theory.counterexamples
-import DMT1.Lectures.«02_prop_logic».formal.interpretation
-import DMT1.Lectures.«02_prop_logic».formal.semantics
-import DMT1.Lectures.«02_prop_logic».formal.syntax
+```lean
+import DMT1.Lectures.«02_propLogic».formal.model_theory.properties
+import DMT1.Lectures.«02_propLogic».formal.model_theory.truth_table
+import DMT1.Lectures.«02_propLogic».formal.model_theory.counterexamples
+import DMT1.Lectures.«02_propLogic».formal.interpretation
+import DMT1.Lectures.«02_propLogic».formal.semantics
+import DMT1.Lectures.«02_propLogic».formal.syntax
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.propLogic
 
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.propLogic
 
 open semantics
 open models
@@ -330,4 +331,5 @@ meaning that P is assigned 0; Q, 1; R, 1, by that interpretation.
           ((P ⇒ Q) ⇒ (¬P ⇒ ¬Q)))  -- this proposition (parens needed)
         2                         -- number of variables in result strings
 
-end DMT1.lecture.prop_logic
+end DMT1.lecture.propLogic
+```
