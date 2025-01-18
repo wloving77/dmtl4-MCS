@@ -34,3 +34,5 @@ infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
 
 end DMT1.Library.propLogic.syntax
+
+-- TODO: change PLExpr to Expr
