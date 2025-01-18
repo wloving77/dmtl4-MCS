@@ -37,9 +37,9 @@ small design glitch that could be cleaned up. We comment them
 out for now so as not to introduce conflicting definitions.
 -/
 
-def P : PLExpr := PLExpr.var_expr v₀
-def Q : PLExpr := { v₁ }  -- our notation for var_expr constructor
-def R : PLExpr := { v₂ }
+def P : Expr := Expr.var_expr v₀
+def Q : Expr := { v₁ }  -- our notation for var_expr constructor
+def R : Expr := { v₂ }
 
 /-
 Now that you have three variable expressions to work with,
@@ -52,11 +52,11 @@ then using concrete syntax.
 /-!
 Here we show the equivalence of abstract and concrete syntax.
 -/
-def P_and_Q_abstract : PLExpr :=
-  (PLExpr.bin_op_expr BinOp.and P Q)
+def P_and_Q_abstract : Expr :=
+  (Expr.bin_op_expr BinOp.and P Q)
 
 /-!
-Standard concrete infix notation for (PLExpr.bin_op_expr BinOp.and
+Standard concrete infix notation for (Expr.bin_op_expr BinOp.and
 That is the actual desugarad representation of ∧. Other propositional
 logic concrete notations (and the concepts they represent) reduce to
 these abstract sybtax repreesentations.
@@ -132,7 +132,7 @@ of the variables in the expression.
 
 def e := P_and_Q_concrete
 
-#eval! evalPLExpr e i
+#eval! evalExpr e i
 
 /-!
 Given the semantic meanings (Boolean functions) that

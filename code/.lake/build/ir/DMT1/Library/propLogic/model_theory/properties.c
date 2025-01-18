@@ -15,7 +15,6 @@ extern "C" {
 #endif
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_model__theory_is__valid(lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_model__theory_is__unsat(lean_object*);
-lean_object* l_DMT1_Library_propLogic_semantics_evalPLExpr(lean_object*, lean_object*);
 uint8_t l_DMT1_Library_propLogic_utilities_reduce__or(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__sat___boxed(lean_object*);
 lean_object* l_DMT1_Library_propLogic_model__theory_truth__table_truthTableOutputs(lean_object*);
@@ -24,6 +23,7 @@ LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__unsat___boxe
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__valid___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__model(lean_object*, lean_object*);
 uint8_t l_DMT1_Library_propLogic_utilities_reduce__and(lean_object*);
+lean_object* l_DMT1_Library_propLogic_semantics_evalExpr(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_model__theory_is__sat(lean_object* x_1) {
 _start:
 {
@@ -94,7 +94,7 @@ LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__model(lean_o
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_Library_propLogic_semantics_evalPLExpr(x_2, x_1);
+x_3 = l_DMT1_Library_propLogic_semantics_evalExpr(x_2, x_1);
 return x_3;
 }
 }

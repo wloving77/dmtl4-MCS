@@ -1,10 +1,3 @@
-import DMT1.Library.propLogic.model_theory.truth_table
-namespace DMT1.Library.propLogic.model_theory
-open propLogic.syntax
-open truth_table
-open semantics
-open utilities
-
 /- @@@
 ### Satisfiability
 
@@ -22,6 +15,13 @@ being *unsatisfiable?* And does "e" have the property of being
 *valid*.
 @@@ -/
 
+import DMT1.Library.propLogic.model_theory.truth_table
+namespace DMT1.Library.propLogic.model_theory
+open propLogic.syntax
+open truth_table
+open semantics
+open utilities
+
 /- @@@
 ## Decision Procedures for Properties of PL Expressions
 @@@ -/
@@ -35,19 +35,19 @@ INTERFACE
 /- @@@
 Satisfiability means there's *some* interpretation for which e is true
 @@@ -/
-def is_sat :    PLExpr → Bool :=
-  λ e : PLExpr => reduce_or (truthTableOutputs e)
+def is_sat :    Expr → Bool :=
+  λ e : Expr => reduce_or (truthTableOutputs e)
 
 /- @@@
 Validity means that a proposition is true under all interpretations
 @@@ -/
-def is_valid :  PLExpr → Bool :=
-  λ e : PLExpr => reduce_and (truthTableOutputs e)
+def is_valid :  Expr → Bool :=
+  λ e : Expr => reduce_and (truthTableOutputs e)
 
-def is_unsat : PLExpr → Bool :=
-  λ e : PLExpr => not (is_sat e)
+def is_unsat : Expr → Bool :=
+  λ e : Expr => not (is_sat e)
 
-def is_model : (Var → Bool) → PLExpr → Bool :=
-  fun i e => evalPLExpr e i
+def is_model : (Var → Bool) → Expr → Bool :=
+  fun i e => evalExpr e i
 
 end DMT1.Library.propLogic.model_theory

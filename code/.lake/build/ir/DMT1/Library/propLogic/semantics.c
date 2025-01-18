@@ -15,13 +15,13 @@ extern "C" {
 #endif
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalBinOp___boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalUnOp(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalPLExpr(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalUnOp___rarg___boxed(lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_semantics_evalBinOp(uint8_t, uint8_t, uint8_t);
 uint8_t l_DMT1_Library_propLogic_domain_iff(uint8_t, uint8_t);
 uint8_t l_DMT1_Library_propLogic_domain_imp(uint8_t, uint8_t);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalUnOp___boxed(lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_semantics_evalUnOp___rarg(uint8_t);
+LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalExpr(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_semantics_evalUnOp___rarg(uint8_t x_1) {
 _start:
 {
@@ -127,7 +127,7 @@ x_8 = lean_box(x_7);
 return x_8;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalPLExpr(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_semantics_evalExpr(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 switch (lean_obj_tag(x_1)) {
@@ -155,7 +155,7 @@ lean_object* x_7; lean_object* x_8; uint8_t x_9; uint8_t x_10; lean_object* x_11
 x_7 = lean_ctor_get(x_1, 1);
 lean_inc(x_7);
 lean_dec(x_1);
-x_8 = l_DMT1_Library_propLogic_semantics_evalPLExpr(x_7, x_2);
+x_8 = l_DMT1_Library_propLogic_semantics_evalExpr(x_7, x_2);
 x_9 = lean_unbox(x_8);
 lean_dec(x_8);
 x_10 = l_DMT1_Library_propLogic_semantics_evalUnOp___rarg(x_9);
@@ -172,10 +172,10 @@ x_14 = lean_ctor_get(x_1, 1);
 lean_inc(x_14);
 lean_dec(x_1);
 lean_inc(x_2);
-x_15 = l_DMT1_Library_propLogic_semantics_evalPLExpr(x_13, x_2);
+x_15 = l_DMT1_Library_propLogic_semantics_evalExpr(x_13, x_2);
 x_16 = lean_unbox(x_15);
 lean_dec(x_15);
-x_17 = l_DMT1_Library_propLogic_semantics_evalPLExpr(x_14, x_2);
+x_17 = l_DMT1_Library_propLogic_semantics_evalExpr(x_14, x_2);
 x_18 = lean_unbox(x_17);
 lean_dec(x_17);
 x_19 = l_DMT1_Library_propLogic_semantics_evalBinOp(x_12, x_16, x_18);
