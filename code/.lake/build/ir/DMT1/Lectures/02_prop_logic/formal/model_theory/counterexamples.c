@@ -1,6 +1,6 @@
 // Lean compiler output
-// Module: DMT1.Lectures.«02_prop_logic».formal.model_theory.counterexamples
-// Imports: Init DMT1.Lectures.«02_prop_logic».formal.model_theory.models
+// Module: DMT1.Lectures.«02_propLogic».formal.model_theory.counterexamples
+// Imports: Init DMT1.Lectures.«02_propLogic».formal.model_theory.models
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"

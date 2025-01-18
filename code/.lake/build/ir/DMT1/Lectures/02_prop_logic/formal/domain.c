@@ -1,5 +1,5 @@
 // Lean compiler output
-// Module: DMT1.Lectures.«02_prop_logic».formal.domain
+// Module: DMT1.Lectures.«02_propLogic».formal.domain
 // Imports: Init
 #include <lean/lean.h>
 #if defined(__clang__)
