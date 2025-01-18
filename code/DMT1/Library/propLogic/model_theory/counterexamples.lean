@@ -11,7 +11,7 @@ any given expression. These operations find models of the negation
 of the given expression, which amount to counterexamples for it.
 @@@ -/
 
-def findCounterexamples (e : PLExpr) : List (Var → Bool) := findModels ¬e
-def findCounterexample (e : PLExpr) : Option (Var → Bool) := findModel ¬e
+def findCounterexamples (e : Expr) : List (Var → Bool) := findModels ¬e
+def findCounterexample (e : Expr) : Option (Var → Bool) := findModel ¬e
 
 end DMT1.Library.propLogic.model_theory.models

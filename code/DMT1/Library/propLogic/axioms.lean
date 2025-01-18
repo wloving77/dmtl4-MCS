@@ -1,6 +1,3 @@
-import DMT1.Library.propLogic.syntax
-namespace DMT1.Library.propLogic.syntax
-
 /- @@@
 # Examples of Expressions
 
@@ -18,11 +15,14 @@ Lean provides this notation as a shorthand for applying
 the "mk" constructor of any structure type, here Var.mk.
 @@@ -/
 
-open PLExpr
+import DMT1.Library.propLogic.syntax
+namespace DMT1.Library.propLogic.syntax
 
-def P : PLExpr := var_expr (Var.mk 0)
-def Q : PLExpr := {Var.mk 1}
-def R : PLExpr := {⟨2⟩}   -- angle brackets
+open Expr
+
+def P : Expr := var_expr (Var.mk 0)
+def Q : Expr := {Var.mk 1}
+def R : Expr := {⟨2⟩}   -- angle brackets
 
 
 /- @@@

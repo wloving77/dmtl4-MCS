@@ -5,9 +5,9 @@ import «DMT1».Library.propLogic.model_theory.properties
 
 namespace DMT1.propLogic
 
-def P : PLExpr := {⟨0⟩}
-def Q : PLExpr := {⟨1⟩}
-def R : PLExpr := {⟨2⟩}
+def P : Expr := {⟨0⟩}
+def Q : Expr := {⟨1⟩}
+def R : Expr := {⟨2⟩}
 
 
 /-!

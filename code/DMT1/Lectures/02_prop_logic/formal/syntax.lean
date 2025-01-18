@@ -1,5 +1,3 @@
-namespace DMT1.lecture.prop_logic
-
 /- @@@
 # Syntax
 
@@ -7,7 +5,12 @@ This section of the exam simply includes our formal
 definition of the syntax and semantics of propositional
 logic and of functions that determine whether a given
 expression is valid, satisfiable, or unsatisfiable.
+@@@ -/
+namespace DMT1.lecture.prop_logic
 
+
+
+/- @@@
 ## Abstract Syntax
 
 The syntax specifies the set of all and only syntactically
@@ -178,11 +181,11 @@ the expressions legal in propositional logic.
 ### Formal Syntax of Propositional Logic
 @@@ -/
 
-inductive PLExpr : Type
-| lit_expr (from_bool : Bool) : PLExpr
+inductive Expr : Type
+| lit_expr (from_bool : Bool) : Expr
 | var_expr (from_var : Var)
-| un_op_expr (op : UnOp) (e : PLExpr)
-| bin_op_expr (op : BinOp) (e1 e2 : PLExpr)
+| un_op_expr (op : UnOp) (e : Expr)
+| bin_op_expr (op : BinOp) (e1 e2 : Expr)
 deriving Repr
 
 /- @@@
@@ -203,7 +206,7 @@ the time, one can "open" the namespace. Just don't
 do this if it would result in names having multiple
 different definitions being "directly visible."
 @@@ -/
-open PLExpr
+open Expr
 
 
 
@@ -233,12 +236,12 @@ The numbers after the colons specify binding strengths.
 The de-sugared versions follow after the arrows.
 @@@ -/
 
-notation:max " ⊤ " => (PLExpr.lit_expr true)
+notation:max " ⊤ " => (Expr.lit_expr true)
 notation:max " ⊥ " => (lit_expr false)
 notation:max "{" v "}" => (var_expr v)
 notation:max "¬" p:40 => un_op_expr UnOp.not p
-infixr:35 " ∧ "  =>  PLExpr.bin_op_expr BinOp.and
-infixr:30 " ∨  "  => PLExpr.bin_op_expr BinOp.or
+infixr:35 " ∧ "  =>  Expr.bin_op_expr BinOp.and
+infixr:30 " ∨  "  => Expr.bin_op_expr BinOp.or
 infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
 

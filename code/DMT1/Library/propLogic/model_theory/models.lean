@@ -18,9 +18,9 @@ findModels. It returns a list of all models of a given expression
 grows).
 @@@ -/
 
-def findModels (e : PLExpr) : List (Var → Bool) :=
+def findModels (e : Expr) : List (Var → Bool) :=
   List.filter
-    (fun i => evalPLExpr e i = true) -- given i, true iff i is model of e
+    (fun i => evalExpr e i = true) -- given i, true iff i is model of e
     (listInterpsFromExpr e)
 
 /- @@@
@@ -28,7 +28,7 @@ Finds all models, if any, and returns either none, if there
 wasn't one, or some m, where m is first in the returned list
 of models.
 @@@ -/
-def findModel :  PLExpr → Option (Var → Bool)
+def findModel :  Expr → Option (Var → Bool)
 | e =>
   let ms := findModels e
   match ms with

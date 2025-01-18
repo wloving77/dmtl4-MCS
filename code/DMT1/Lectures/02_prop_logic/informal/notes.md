@@ -60,8 +60,8 @@ We define the type of expressions in PL as follows:
 
 - We'll use ⊤ (top) and ⊥ (bottom) as notations for (lit true) and (lit false)
 - With n a natural number, we'll use \<n\> as notation for the nth variable: Var.mk n
-- With v=\n\> a variable, { v } is notation for the variable *expression*: PLExpr.var_expr v
-- Given an  expression, e, ¬e desugars to the expression, PLExpr.un_op_expr UnOp.not e
+- With v=\n\> a variable, { v } is notation for the variable *expression*: Expr.var_expr v
+- Given an  expression, e, ¬e desugars to the expression, Expr.un_op_expr UnOp.not e
 - Given expressions, e1, e2, we use \and, \or, \not, \iff, and \=> as the binary connectives
 
 ##### Operator Precedence
@@ -177,7 +177,7 @@ also check them for validity, satisfiability, unsatisfiability.
 ### Proof of Validity by Case Analysis
 
 Up until now, if we've wanted to know if a proposition, e, is
-valid, we did it by running (evalPLExpr e i) to get an answer for
+valid, we did it by running (evalExpr e i) to get an answer for
 each and every possible value of i. If e evaluates to true under
 all possible values of i, then by our definition, it's valid. We
 thus *prove* the validity of e by *case analysis on i*. The famous

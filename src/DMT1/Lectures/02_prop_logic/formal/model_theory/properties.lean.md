@@ -31,20 +31,20 @@ INTERFACE
 /-!
 Satisfiability means there's *some* interpretation for which e is true
 -/
-def is_sat :    PLExpr → Bool :=
-  λ e : PLExpr => reduce_or (truthTableOutputs e)
+def is_sat :    Expr → Bool :=
+  λ e : Expr => reduce_or (truthTableOutputs e)
 
 /-!
 Validity means that a proposition is true under all interpretations
 -/
-def is_valid :  PLExpr → Bool :=
-  λ e : PLExpr => reduce_and (truthTableOutputs e)
+def is_valid :  Expr → Bool :=
+  λ e : Expr => reduce_and (truthTableOutputs e)
 
-def is_unsat : PLExpr → Bool :=
-  λ e : PLExpr => not (is_sat e)
+def is_unsat : Expr → Bool :=
+  λ e : Expr => not (is_sat e)
 
-def is_model : Interp → PLExpr → Bool :=
-  fun i e => evalPLExpr e i
+def is_model : Interp → Expr → Bool :=
+  fun i e => evalExpr e i
 
 end DMT1.lecture.prop_logic.semantics.models
 ```
