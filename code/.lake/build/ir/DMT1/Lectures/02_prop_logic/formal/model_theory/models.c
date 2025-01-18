@@ -16,7 +16,7 @@ extern "C" {
 LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModel(lean_object*);
 lean_object* l_DMT1_lecture_prop__logic_semantics_listInterpsFromExpr(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_findModels(lean_object*);
-lean_object* l_DMT1_lecture_prop__logic_semantics_evalPLExpr(lean_object*, lean_object*);
+lean_object* l_DMT1_lecture_prop__logic_semantics_evalExpr(lean_object*, lean_object*);
 lean_object* l_List_reverse___rarg(lean_object*);
 LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_models_findModels___spec__1(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_prop__logic_semantics_models_findModels___spec__1(lean_object* x_1, lean_object* x_2, lean_object* x_3) {
@@ -40,7 +40,7 @@ x_6 = lean_ctor_get(x_2, 0);
 x_7 = lean_ctor_get(x_2, 1);
 lean_inc(x_6);
 lean_inc(x_1);
-x_8 = l_DMT1_lecture_prop__logic_semantics_evalPLExpr(x_1, x_6);
+x_8 = l_DMT1_lecture_prop__logic_semantics_evalExpr(x_1, x_6);
 x_9 = lean_unbox(x_8);
 lean_dec(x_8);
 if (x_9 == 0)
@@ -72,7 +72,7 @@ lean_inc(x_12);
 lean_dec(x_2);
 lean_inc(x_12);
 lean_inc(x_1);
-x_14 = l_DMT1_lecture_prop__logic_semantics_evalPLExpr(x_1, x_12);
+x_14 = l_DMT1_lecture_prop__logic_semantics_evalExpr(x_1, x_12);
 x_15 = lean_unbox(x_14);
 lean_dec(x_14);
 if (x_15 == 0)

@@ -63,20 +63,20 @@ where mk_interps_helper : (rows : Nat) → (numvars : Nat) → List (Var → Boo
 Given an expression, e, return the number of distinct variable expressions
 it contains.
 @@@ -/
-def numVarsFromExpr : PLExpr → Nat := (fun e => max_variable_index e + 1) where
-max_variable_index : PLExpr → Nat
-| PLExpr.lit_expr _ => 0
-| PLExpr.var_expr (Var.mk i) => i
-| PLExpr.un_op_expr _ e => max_variable_index e
-| PLExpr.bin_op_expr _ e1 e2 => max (max_variable_index e1) (max_variable_index e2)
+def numVarsFromExpr : Expr → Nat := (fun e => max_variable_index e + 1) where
+max_variable_index : Expr → Nat
+| Expr.lit_expr _ => 0
+| Expr.var_expr (Var.mk i) => i
+| Expr.un_op_expr _ e => max_variable_index e
+| Expr.bin_op_expr _ e1 e2 => max (max_variable_index e1) (max_variable_index e2)
 
 
 /- @@@
-Given a PLExpr, e, reduces to a list of its 2^n interpretations,
+Given a Expr, e, reduces to a list of its 2^n interpretations,
 where n is the number of semantically distinct variable expressions
 in e.
 @@@ -/
-def listInterpsFromExpr : PLExpr → List (Var → Bool)
+def listInterpsFromExpr : Expr → List (Var → Bool)
 | e => interpsFromNumVars (numVarsFromExpr e)
 
 /- @@@

@@ -9,7 +9,7 @@ open propLogic.syntax
 @@@ -/
 
 -- variable expressions
-def P := PLExpr.var_expr (Var.mk 0)
+def P := Expr.var_expr (Var.mk 0)
 def Q := {(Var.mk 1)}
 def R := {⟨2⟩}
 

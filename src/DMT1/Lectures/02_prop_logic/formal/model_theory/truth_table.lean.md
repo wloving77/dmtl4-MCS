@@ -13,11 +13,11 @@ arithmetic up to the row at index 2^n-1, where n is the number
 of variables.
 -/
 
-def truthTableOutputs : PLExpr → List Bool
+def truthTableOutputs : Expr → List Bool
 | e =>  evalBoolExpr_interps (listInterpsFromExpr e) e where
-evalBoolExpr_interps : List Interp → PLExpr → List Bool
+evalBoolExpr_interps : List Interp → Expr → List Bool
 | [], _ => []
-| h::t, e => [evalPLExpr e h] ++ evalBoolExpr_interps t e
+| h::t, e => [evalExpr e h] ++ evalBoolExpr_interps t e
 
 end DMT1.lecture.prop_logic.semantics.models
 ```

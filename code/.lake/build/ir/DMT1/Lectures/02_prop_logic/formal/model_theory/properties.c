@@ -14,10 +14,10 @@
 extern "C" {
 #endif
 LEAN_EXPORT uint8_t l_DMT1_lecture_prop__logic_semantics_models_is__sat(lean_object*);
+lean_object* l_DMT1_lecture_prop__logic_semantics_evalExpr(lean_object*, lean_object*);
 uint8_t l_DMT1_lecture_prop__logic_reduce__and(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_is__valid___boxed(lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_lecture_prop__logic_semantics_models_is__valid(lean_object*);
-lean_object* l_DMT1_lecture_prop__logic_semantics_evalPLExpr(lean_object*, lean_object*);
 lean_object* l_DMT1_lecture_prop__logic_semantics_models_truthTableOutputs(lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_lecture_prop__logic_semantics_models_is__unsat(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_is__unsat___boxed(lean_object*);
@@ -94,7 +94,7 @@ LEAN_EXPORT lean_object* l_DMT1_lecture_prop__logic_semantics_models_is__model(l
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_lecture_prop__logic_semantics_evalPLExpr(x_2, x_1);
+x_3 = l_DMT1_lecture_prop__logic_semantics_evalExpr(x_2, x_1);
 return x_3;
 }
 }

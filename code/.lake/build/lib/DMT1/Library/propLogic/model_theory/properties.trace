@@ -2,4 +2,4 @@
  [{"message":
    ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Library/propLogic/model_theory/properties.lean -R ./././. -o ././.lake/build/lib/DMT1/Library/propLogic/model_theory/properties.olean -i ././.lake/build/lib/DMT1/Library/propLogic/model_theory/properties.ilean -c ././.lake/build/ir/DMT1/Library/propLogic/model_theory/properties.c --json",
    "level": "trace"}],
- "depHash": "6175973300815693698"}
+ "depHash": "17804391573250542359"}
