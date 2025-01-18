@@ -1,10 +1,3 @@
-```lean
-import DMT1.Lectures.«02_prop_logic».formal.syntax
-import DMT1.Lectures.«02_prop_logic».formal.domain
-
-namespace DMT1.lecture.prop_logic.semantics
-```
-
 # Semantics
 
 The idea of semantics in Propositional Logic is simple:
@@ -34,6 +27,15 @@ call it *e*), its meaning is determined by first getting
 the Boolean meanings of e1 and e2 and by then applying the
 Boolean function that is the designated meaning of *op*.
 That's it!
+
+```lean
+import DMT1.Lectures.«02_prop_logic».formal.syntax
+import DMT1.Lectures.«02_prop_logic».formal.domain
+
+namespace DMT1.lecture.prop_logic.semantics
+```
+
+
 
 #### Interpretation of Unary Connectives
 
