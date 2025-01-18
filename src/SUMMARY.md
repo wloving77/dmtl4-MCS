@@ -4,10 +4,10 @@
 [Introduction](./introduction.md)
 - [Languages](./languages.md)
 - [Propositional Logic]()
-  - [Syntax](./DMT1/Lectures/02_propLogic/formal/syntax.lean.md)
+  - [Syntax](./DMT1/Lectures/L02_propLogic/formal/syntax.lean.md)
   - [Bare Code](./DMT1/Library/propLogic/syntax.lean.md)
   - [Examples](./DMT1/Library/propLogic/axioms.lean.md)
-  - [Semantics](./DMT1/Lectures/02_propLogic/formal/semantics.lean.md)
+  - [Semantics](./DMT1/Lectures/L02_propLogic/formal/semantics.lean.md)
   - [Properties of Expressions]()
   - [Decision Procedures]()
 
