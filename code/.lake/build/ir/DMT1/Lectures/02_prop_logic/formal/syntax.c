@@ -1,5 +1,5 @@
 // Lean compiler output
-// Module: DMT1.Lectures.«02_prop_logic».formal.syntax
+// Module: DMT1.Lectures.«02_propLogic».formal.syntax
 // Imports: Init
 #include <lean/lean.h>
 #if defined(__clang__)
@@ -571,7 +571,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.UnOp.not", 39, 39);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.UnOp.not", 39, 39);
 return x_1;
 }
 }
@@ -812,7 +812,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.BinOp.and", 40, 40);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.BinOp.and", 40, 40);
 return x_1;
 }
 }
@@ -878,7 +878,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.BinOp.or", 39, 39);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.BinOp.or", 39, 39);
 return x_1;
 }
 }
@@ -944,7 +944,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.BinOp.imp", 40, 40);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.BinOp.imp", 40, 40);
 return x_1;
 }
 }
@@ -1010,7 +1010,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.BinOp.iff", 40, 40);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.BinOp.iff", 40, 40);
 return x_1;
 }
 }
@@ -1190,7 +1190,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.Expr.lit_expr", 44, 44);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.Expr.lit_expr", 44, 44);
 return x_1;
 }
 }
@@ -1376,7 +1376,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.Expr.var_expr", 44, 44);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.Expr.var_expr", 44, 44);
 return x_1;
 }
 }
@@ -1406,7 +1406,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.Expr.un_op_expr", 46, 46);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.Expr.un_op_expr", 46, 46);
 return x_1;
 }
 }
@@ -1469,7 +1469,7 @@ static lean_object* _init_l___private_DMT1_Lectures_02__prop__logic_formal_synta
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("DMT1.lecture.prop_logic.syntax.Expr.bin_op_expr", 47, 47);
+x_1 = lean_mk_string_unchecked("DMT1.lecture.propLogic.syntax.Expr.bin_op_expr", 47, 47);
 return x_1;
 }
 }
@@ -1780,7 +1780,7 @@ static lean_object* _init_l_DMT1_lecture_prop__logic_syntax_term_u22a4___closed_
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("prop_logic", 10, 10);
+x_1 = lean_mk_string_unchecked("propLogic", 10, 10);
 return x_1;
 }
 }
