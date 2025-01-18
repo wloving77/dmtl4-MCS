@@ -1,8 +1,3 @@
-import DMT1.Lectures.«02_prop_logic».formal.syntax
-import DMT1.Lectures.«02_prop_logic».formal.domain
-
-namespace DMT1.lecture.prop_logic.semantics
-
 /- @@@
 # Semantics
 
@@ -34,6 +29,14 @@ the Boolean meanings of e1 and e2 and by then applying the
 Boolean function that is the designated meaning of *op*.
 That's it!
 @@@ -/
+
+import DMT1.Lectures.«02_prop_logic».formal.syntax
+import DMT1.Lectures.«02_prop_logic».formal.domain
+
+namespace DMT1.lecture.prop_logic.semantics
+open prop_logic.syntax
+
+
 
 /- @@@
 #### Interpretation of Unary Connectives
