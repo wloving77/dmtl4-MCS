@@ -5,7 +5,7 @@ definition of the syntax and semantics of propositional
 logic and of functions that determine whether a given
 expression is valid, satisfiable, or unsatisfiable.
 ```lean
-namespace DMT1.lecture.prop_logic
+namespace DMT1.lecture.prop_logic.syntax
 ```
 
 
@@ -102,6 +102,13 @@ Here's a shorthand notation we just made up. You can use
 var_[3], for example, to mean (var.mk 3). It't not a lot
 of help, but
 
+The "deriving Repr" construct is a detail you can ignore for
+now. In a nutshell it tells Lean to try to define a function
+to convert any value of this type to a string for presenting
+values as properly formatted output strings. Anyway, a detail.
+
+
+
 ##### Concrete syntax for variables (var)
 
 We could define our own concrete notation for variables,
@@ -178,12 +185,6 @@ inductive Expr : Type
 deriving Repr
 ```
 
-The "deriving Repr" here is a detail you can ignore for
-now. It's explained in the book. In a nutshell it causes
-Lean to try to synthesize a function to convert any value
-of this type to a string to help in presenting values as
-properly formatted output strings. Anyway, a detail.
-
 Every type encloses the names of its constructors
 in a snamespace with the same name as the type. So
 Expr is now a namespace, and the constructor names
@@ -232,5 +233,5 @@ infixr:30 " ∨  "  => Expr.bin_op_expr BinOp.or
 infixr:20 " ↔ " => bin_op_expr BinOp.iff
 infixr:25 " ⇒ " => bin_op_expr BinOp.imp
 
-end DMT1.lecture.prop_logic
+end DMT1.lecture.prop_logic.syntax
 ```
