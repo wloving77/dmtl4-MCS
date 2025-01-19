@@ -267,11 +267,9 @@ list of 0/1 natural numbers reflecting the values assigned to
 the variables with corresponding indices.
 
 ```lean
-private def bitListFromInterpHelper : (i : Interp) → (w : Nat) → List Nat
+private def bitListFromInterpHelper : (i : Interp) → (w : Nat) → List Bool
 | _, 0 => []
-| i, (w' + 1) =>
-  let b := (if (i ⟨w'⟩ ) then 1 else 0)
-  bitListFromInterpHelper i w' ++ [b]  -- ++ here is binary List.append
+| i, (w' + 1) => bitListFromInterpHelper i w' ++ [(i ⟨w'⟩)]  -- ++ is List.append
 
 #reduce bitListFromInterpHelper allFalse 3 -- expect [0, 0, 0]
 ```
@@ -279,7 +277,7 @@ private def bitListFromInterpHelper : (i : Interp) → (w : Nat) → List Nat
 This function takes any list of interpretations and returns
 a list of bit lists, one for each of the interpretation.
 ```lean
-private def bitListsFromInterpsHelper : List Interp → Nat → List (List Nat)
+private def bitListsFromInterpsHelper : List Interp → Nat → List (List Bool)
 | [], _ => []
 | h::t, n => bitListFromInterpHelper h n::bitListsFromInterpsHelper t n
 ```
