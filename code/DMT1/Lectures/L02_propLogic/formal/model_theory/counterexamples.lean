@@ -2,6 +2,7 @@ import DMT1.Lectures.L02_propLogic.formal.model_theory.models
 
 
 namespace DMT1.lecture.propLogic.semantics.models
+open propLogic.syntax
 
 /-
 COUNTEREXAMPLES
