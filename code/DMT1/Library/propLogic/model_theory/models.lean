@@ -21,7 +21,7 @@ grows).
 
 def findModels (e : Expr) : List Interp :=
   List.filter
-    (fun i => evalExpr e i = true) -- given i, true iff i is model of e
+    (fun i => eval e i = true) -- given i, true iff i is model of e
     (listInterpsFromExpr e)
 
 /- @@@

@@ -9,7 +9,7 @@ now present the concepts of models and counter-examples.
 
 Given a proposition (Expr), e, and an interpretation for
 the variables in e, we can apply our semantic evalation
-function, evalExpr, to e and i, to compute the truth
+function, eval, to e and i, to compute the truth
 value of the proposition, e, when understood to be about
 the "situation" or "world" or "state of affairs" described
 by i.
@@ -28,7 +28,7 @@ proposition. How would you do that?
 
 def findModels (e : Expr) : List Interp :=
   List.filter
-    (fun i => evalExpr e i = true) -- given i, true iff i is model of e
+    (fun i => eval e i = true) -- given i, true iff i is model of e
     (listInterpsFromExpr e)
 
 def findModel :  Expr → Option Interp

@@ -45,7 +45,7 @@ def is_unsat : Expr → Bool :=
   λ e : Expr => not (is_sat e)
 
 def is_model : Interp → Expr → Bool :=
-  fun i e => evalExpr e i
+  fun i e => eval e i
 
 end DMT1.lecture.propLogic.semantics.models
 ```

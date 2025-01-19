@@ -96,18 +96,18 @@ returning the Boolean meaining of e in the "world" (binding
 of all variables to Boolean values) expressed by that i.
 @@@ -/
 
-def evalExpr : Expr → Interp → Bool
+def eval : Expr → Interp → Bool
 | lit_expr b,             _ => b
 | (var_expr v),           i => i v
-| (un_op_expr op e),      i => (evalUnOp op) (evalExpr e i)
-| (bin_op_expr op e1 e2), i => (evalBinOp op) (evalExpr e1 i) (evalExpr e2 i)
+| (un_op_expr op e),      i => (evalUnOp op) (eval e i)
+| (bin_op_expr op e1 e2), i => (evalBinOp op) (eval e1 i) (eval e2 i)
 
 
 /- @@@
 The standard notation for (eval e i) is
 @@@ -/
 
-notation "⟦" e "⟧" i => (evalExpr e i)
+notation "⟦" e "⟧" i => (eval e i)
 #check (e : Expr) → (i : Interp) → ⟦e⟧i
 
 /- @@@
