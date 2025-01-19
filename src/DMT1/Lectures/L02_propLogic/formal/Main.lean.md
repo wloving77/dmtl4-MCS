@@ -10,6 +10,7 @@ namespace DMT1.lecture.propLogic
 
 namespace DMT1.lecture.propLogic
 
+open propLogic.syntax
 open semantics
 open models
 
