@@ -1,10 +1,8 @@
 /- @@@
 # Syntax
 
-This section of the exam simply includes our formal
-definition of the syntax and semantics of propositional
-logic and of functions that determine whether a given
-expression is valid, satisfiable, or unsatisfiable.
+This chapter presents our formal definition of the
+syntax propositional logic.
 @@@ -/
 namespace DMT1.lecture.propLogic.syntax
 
