@@ -103,7 +103,9 @@ def eval : Expr → Interp → Bool
 ```
 
 
-The standard notation for (eval e i) is
+The standard notation for (eval e i) is ⟦e⟧ᵢ, where ⟦⬝⟧
+is notation for the semantic evaluation function, eval.
+In Lean we'll write ⟦e⟧i, without *i* being a subscript.
 
 ```lean
 notation "⟦" e "⟧" i => (eval e i)
