@@ -9,17 +9,18 @@ of variables.
 ```lean
 import DMT1.Library.propLogic.semantics
 import DMT1.Library.propLogic.interpretation
+
 namespace DMT1.Library.propLogic.model_theory.truth_table
-open DMT1.Library.propLogic.syntax
-open DMT1.Library.propLogic.semantics
-open DMT1.Library.propLogic.interpretation
+open propLogic.syntax
+open semantics
+open interpretation
 
 
 def truthTableOutputs : syntax.Expr → List Bool
 | e =>  evalBoolExpr_interps (listInterpsFromExpr e) e where
 evalBoolExpr_interps : List (syntax.Var → Bool) → Expr → List Bool
 | [], _ => []
-| h::t, e => [semantics.eval e h] ++ evalBoolExpr_interps t e
+| h::t, e => [eval e h] ++ evalBoolExpr_interps t e
 
 end DMT1.Library.propLogic.model_theory.truth_table
 ```

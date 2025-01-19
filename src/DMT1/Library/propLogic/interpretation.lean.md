@@ -15,7 +15,7 @@ open semantics
 
 ```lean
 -- From interpretation, variable, and new Bool, override that interpretation to assign that new value to that variable
-def overrideVarValInInterp : Interp → Var → Bool → Interp
+private def overrideVarValInInterp : Interp → Var → Bool → Interp
 | i, v, b =>
   λ (v' : Var) =>
     if (v'.index == v.index)  -- if index is variables overridden

@@ -19,11 +19,9 @@ LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_listInterpsFrom
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_interpsFromNumVars_mk__interps__helper___elambda__1(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_listInterpsFromExpr(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_interpsFromNumVars_mk__interps__helper___elambda__1___boxed(lean_object*, lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_overrideVarValInInterp___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_interpFromBools_bools__to__interp__helper(lean_object*, lean_object*, lean_object*);
 static lean_object* l_DMT1_Library_propLogic_interpretation_bitStringsFromInterp___closed__4;
 lean_object* l_List_appendTR___rarg(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_overrideVarValInInterp(lean_object*, lean_object*, uint8_t, lean_object*);
 uint8_t lean_nat_dec_eq(lean_object*, lean_object*);
 static lean_object* l_DMT1_Library_propLogic_interpretation_bitStringsFromInterp___closed__2;
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_interpStringsFromInterps(lean_object*, lean_object*);
@@ -44,12 +42,14 @@ LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_interpStringsFr
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_interpsFromNumVars(lean_object*);
 lean_object* lean_nat_sub(lean_object*, lean_object*);
 static lean_object* l_DMT1_Library_propLogic_interpretation_bitStringsFromInterp___closed__3;
+LEAN_EXPORT lean_object* l___private_DMT1_Library_propLogic_interpretation_0__DMT1_Library_propLogic_interpretation_overrideVarValInInterp(lean_object*, lean_object*, uint8_t, lean_object*);
 uint8_t lean_nat_dec_le(lean_object*, lean_object*);
 lean_object* lean_nat_add(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_InterpFromRowCols(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_numVarsFromExpr_max__variable__index___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_numVarsFromExpr_max__variable__index(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_overrideVarValInInterp(lean_object* x_1, lean_object* x_2, uint8_t x_3, lean_object* x_4) {
+LEAN_EXPORT lean_object* l___private_DMT1_Library_propLogic_interpretation_0__DMT1_Library_propLogic_interpretation_overrideVarValInInterp___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l___private_DMT1_Library_propLogic_interpretation_0__DMT1_Library_propLogic_interpretation_overrideVarValInInterp(lean_object* x_1, lean_object* x_2, uint8_t x_3, lean_object* x_4) {
 _start:
 {
 uint8_t x_5; 
@@ -70,13 +70,13 @@ return x_7;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_interpretation_overrideVarValInInterp___boxed(lean_object* x_1, lean_object* x_2, lean_object* x_3, lean_object* x_4) {
+LEAN_EXPORT lean_object* l___private_DMT1_Library_propLogic_interpretation_0__DMT1_Library_propLogic_interpretation_overrideVarValInInterp___boxed(lean_object* x_1, lean_object* x_2, lean_object* x_3, lean_object* x_4) {
 _start:
 {
 uint8_t x_5; lean_object* x_6; 
 x_5 = lean_unbox(x_3);
 lean_dec(x_3);
-x_6 = l_DMT1_Library_propLogic_interpretation_overrideVarValInInterp(x_1, x_2, x_5, x_4);
+x_6 = l___private_DMT1_Library_propLogic_interpretation_0__DMT1_Library_propLogic_interpretation_overrideVarValInInterp(x_1, x_2, x_5, x_4);
 lean_dec(x_2);
 return x_6;
 }
@@ -116,7 +116,7 @@ lean_dec(x_10);
 lean_dec(x_1);
 x_13 = lean_unbox(x_7);
 lean_dec(x_7);
-x_14 = l_DMT1_Library_propLogic_interpretation_overrideVarValInInterp(x_11, x_12, x_13, x_3);
+x_14 = l___private_DMT1_Library_propLogic_interpretation_0__DMT1_Library_propLogic_interpretation_overrideVarValInInterp(x_11, x_12, x_13, x_3);
 lean_dec(x_12);
 return x_14;
 }
@@ -145,7 +145,7 @@ lean_dec(x_19);
 lean_dec(x_1);
 x_22 = lean_unbox(x_15);
 lean_dec(x_15);
-x_23 = l_DMT1_Library_propLogic_interpretation_overrideVarValInInterp(x_20, x_21, x_22, x_3);
+x_23 = l___private_DMT1_Library_propLogic_interpretation_0__DMT1_Library_propLogic_interpretation_overrideVarValInInterp(x_20, x_21, x_22, x_3);
 lean_dec(x_21);
 return x_23;
 }

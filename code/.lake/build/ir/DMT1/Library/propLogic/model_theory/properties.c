@@ -21,9 +21,9 @@ lean_object* l_DMT1_Library_propLogic_model__theory_truth__table_truthTableOutpu
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_model__theory_is__sat(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__unsat___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__valid___boxed(lean_object*);
+lean_object* l_DMT1_Library_propLogic_semantics_eval(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_is__model(lean_object*, lean_object*);
 uint8_t l_DMT1_Library_propLogic_utilities_reduce__and(lean_object*);
-lean_object* l_DMT1_Library_propLogic_semantics_eval(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_Library_propLogic_model__theory_is__sat(lean_object* x_1) {
 _start:
 {
