@@ -25,14 +25,13 @@ LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_zeroPadListLeft___boxed(lean_o
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_rightBit(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_zeroPadListLeft_zero__pad__recursive(lean_object*, lean_object*);
 lean_object* lean_nat_div(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_list__bool__from__row__index__and__cols(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_binaryFromNat(lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_reduce__or(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_list__bool__from__row__index__and__cols___boxed(lean_object*, lean_object*);
 lean_object* l_List_lengthTRAux___rarg(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_binaryFromNat___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_reduce__or___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_indexFirstTrue_foo___boxed(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_listBoolFromRowIndexForNumVars___boxed(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_binaryFromRowCols(lean_object*, lean_object*);
 uint8_t lean_nat_dec_eq(lean_object*, lean_object*);
 lean_object* lean_nat_mod(lean_object*, lean_object*);
@@ -44,6 +43,7 @@ LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_BitFromNat___boxed(lean_object
 lean_object* lean_nat_add(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_zeroPadListLeft(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_shiftRight___boxed(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_listBoolFromRowIndexForNumVars(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_rightBit(lean_object* x_1) {
 _start:
 {
@@ -264,7 +264,7 @@ lean_dec(x_1);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_list__bool__from__row__index__and__cols(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_listBoolFromRowIndexForNumVars(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
@@ -272,11 +272,11 @@ x_3 = l_DMT1_lecture_propLogic_binaryFromRowCols(x_1, x_2);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_list__bool__from__row__index__and__cols___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_listBoolFromRowIndexForNumVars___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_lecture_propLogic_list__bool__from__row__index__and__cols(x_1, x_2);
+x_3 = l_DMT1_lecture_propLogic_listBoolFromRowIndexForNumVars(x_1, x_2);
 lean_dec(x_2);
 lean_dec(x_1);
 return x_3;

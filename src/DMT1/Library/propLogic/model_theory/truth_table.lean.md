@@ -15,10 +15,9 @@ open propLogic.syntax
 open semantics
 open interpretation
 
-
-def truthTableOutputs : syntax.Expr → List Bool
+def truthTableOutputs : Expr → List Bool
 | e =>  evalBoolExpr_interps (listInterpsFromExpr e) e where
-evalBoolExpr_interps : List (syntax.Var → Bool) → Expr → List Bool
+evalBoolExpr_interps : List (Interp) → Expr → List Bool
 | [], _ => []
 | h::t, e => [eval e h] ++ evalBoolExpr_interps t e
 
