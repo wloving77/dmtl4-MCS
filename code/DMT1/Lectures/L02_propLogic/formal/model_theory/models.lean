@@ -1,6 +1,7 @@
 import DMT1.Lectures.L02_propLogic.formal.model_theory.truth_table
 
 namespace DMT1.lecture.propLogic.semantics.models
+open propLogic.syntax
 
 /-!
 As a final chapter in our unit on propositional logic, we
