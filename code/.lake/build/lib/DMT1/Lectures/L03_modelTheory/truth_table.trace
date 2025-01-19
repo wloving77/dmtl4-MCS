@@ -2,4 +2,4 @@
  [{"message":
    ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Lectures/L03_modelTheory/truth_table.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L03_modelTheory/truth_table.olean -i ././.lake/build/lib/DMT1/Lectures/L03_modelTheory/truth_table.ilean -c ././.lake/build/ir/DMT1/Lectures/L03_modelTheory/truth_table.c --json",
    "level": "trace"}],
- "depHash": "17743165309683294802"}
+ "depHash": "8091468556632392248"}

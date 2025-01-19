@@ -45,25 +45,25 @@ def i123 : Var → Nat
 #eval i123 ⟨ 3 ⟩
 
 -- predict values of our six expressions under this interpretation
-#eval semantics.evalExpr e0 i123    -- expect 5
-#eval semantics.evalExpr e1 i123    -- expect 2
-#eval semantics.evalExpr e2 i123    -- expect 5
-#eval semantics.evalExpr e3 i123    -- expect 11
-#eval semantics.evalExpr e4 i123    -- expect 2 + 2 = 4
-#eval semantics.evalExpr e5 i123    -- expect 10
-#eval semantics.evalExpr e6 i123    -- expect 10
-#eval semantics.evalExpr e7 i123    -- expect 10
-#eval semantics.evalExpr e8 i123    -- expect 6
-#eval semantics.evalExpr e9 i123    -- expect 6
+#eval semantics.eval e0 i123    -- expect 5
+#eval semantics.eval e1 i123    -- expect 2
+#eval semantics.eval e2 i123    -- expect 5
+#eval semantics.eval e3 i123    -- expect 11
+#eval semantics.eval e4 i123    -- expect 2 + 2 = 4
+#eval semantics.eval e5 i123    -- expect 10
+#eval semantics.eval e6 i123    -- expect 10
+#eval semantics.eval e7 i123    -- expect 10
+#eval semantics.eval e8 i123    -- expect 6
+#eval semantics.eval e9 i123    -- expect 6
 
 -- an interpretation: all variables evaluate to zero
 def i0 (_ : Var) := 0
-#eval semantics.evalExpr e0 i0
-#eval semantics.evalExpr e1 i0
-#eval semantics.evalExpr e2 i0
-#eval semantics.evalExpr e3 i0
-#eval semantics.evalExpr e4 i0
-#eval semantics.evalExpr e5 i0
+#eval semantics.eval e0 i0
+#eval semantics.eval e1 i0
+#eval semantics.eval e2 i0
+#eval semantics.eval e3 i0
+#eval semantics.eval e4 i0
+#eval semantics.eval e5 i0
 
 -- function: first six *variables* go to given values, rest to 0
 def i230463 : Var → Nat
@@ -75,12 +75,12 @@ def i230463 : Var → Nat
 | ⟨ 5 ⟩  => 3          -- P := 3
 | _ => 0               -- any other variable := 0
 
-#eval semantics.evalExpr e0 i230463
-#eval semantics.evalExpr e1 i230463
-#eval semantics.evalExpr e2 i230463
-#eval semantics.evalExpr e3 i230463
-#eval semantics.evalExpr e4 i230463
-#eval semantics.evalExpr e5 i230463
+#eval semantics.eval e0 i230463
+#eval semantics.eval e1 i230463
+#eval semantics.eval e2 i230463
+#eval semantics.eval e3 i230463
+#eval semantics.eval e4 i230463
+#eval semantics.eval e5 i230463
 
 end DMT1.natArithmetic
 ```

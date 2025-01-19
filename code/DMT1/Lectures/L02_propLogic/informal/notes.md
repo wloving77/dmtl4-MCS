@@ -177,7 +177,7 @@ also check them for validity, satisfiability, unsatisfiability.
 ### Proof of Validity by Case Analysis
 
 Up until now, if we've wanted to know if a proposition, e, is
-valid, we did it by running (evalExpr e i) to get an answer for
+valid, we did it by running (eval e i) to get an answer for
 each and every possible value of i. If e evaluates to true under
 all possible values of i, then by our definition, it's valid. We
 thus *prove* the validity of e by *case analysis on i*. The famous

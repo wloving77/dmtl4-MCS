@@ -18,6 +18,6 @@ def truthTableOutputs : Expr → List Bool
 | e =>  evalBoolExpr_interps (listInterpsFromExpr e) e where
 evalBoolExpr_interps : List Interp → Expr → List Bool
 | [], _ => []
-| h::t, e => [evalExpr e h] ++ evalBoolExpr_interps t e
+| h::t, e => [eval e h] ++ evalBoolExpr_interps t e
 
 end DMT1.lecture.propLogic.semantics.models

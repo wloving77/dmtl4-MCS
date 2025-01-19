@@ -3,6 +3,6 @@
    ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Lectures/L02_propLogic/formal/semantics.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/semantics.olean -i ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/semantics.ilean -c ././.lake/build/ir/DMT1/Lectures/L02_propLogic/formal/semantics.c --json",
    "level": "trace"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/semantics.lean:111:0: ∀ (e : Expr) (i : Interp), evalExpr e i = true : Prop",
+   "././././DMT1/Lectures/L02_propLogic/formal/semantics.lean:111:0: ∀ (e : Expr) (i : Interp), eval e i = true : Prop",
    "level": "info"}],
- "depHash": "9436800037244820311"}
+ "depHash": "7542698104713482601"}

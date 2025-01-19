@@ -125,20 +125,20 @@ applying interpretation functions to variables.
 Remember: variables are not variable *expressions*. The latter are
 elements in our language, each of which "contains" (is constructed
 from) a variable. To evaluate a variable *expression* we apply our
-*expression* evaluation function (here called evalExpr). Here we
+*expression* evaluation function (here called eval). Here we
 evaluate the same *expression* using our different interpretations.
 -/
 
 -- Examples: evaluating variable expressions
--- DMT1.natArithmetic.semantics.EvalExpr
-#reduce evalExpr M i1
-#reduce evalExpr M i2
-#reduce evalExpr M i3
+-- DMT1.natArithmetic.semantics.eval
+#reduce eval M i1
+#reduce eval M i2
+#reduce eval M i3
 
 -- Examples: evaluating operator expressions
-#reduce evalExpr e1 i1    -- DMT1.natArithmetic.semantics.EvalExpr
-#reduce evalExpr e1 i2
-#reduce evalExpr e1 i3
+#reduce eval e1 i1    -- DMT1.natArithmetic.semantics.eval
+#reduce eval e1 i2
+#reduce eval e1 i3
 
 def e4 : Expr := sorry + sorry  -- the arguments can by any *expressions*
 def e4' : Expr := (M + N) + P
