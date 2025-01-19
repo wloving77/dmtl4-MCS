@@ -3,6 +3,8 @@
 
 [Introduction](./introduction.md)
 
+---
+
 - [Languages](./languages.md)
   
 - [Propositional Logic]()
@@ -11,12 +13,20 @@
   - [Bare Code](./DMT1/Library/propLogic/syntax.lean.md)
   - [Examples](./DMT1/Lectures/L02_propLogic/formal/axioms.lean.md)
   - [Semantics](./DMT1/Lectures/L02_propLogic/formal/semantics.lean.md)
-  - [Properties of Expressions]()
-  - [Decision Procedures]()
+<!-- This is a comment and will not appear in the rendered book. - [Model Theory](./modelTheory.md)
+  - [Truth Tables](./DMT1/Lectures/L03_modelTheory/truth_table.lean.md)
+  - [Models](./DMT1/Lectures/L03_modelTheory/models.lean.md)
+  - [Counterexamples](./DMT1/Lectures/L03_modelTheory/counterexamples.lean.md)
+  - [Properties](./DMT1/Lectures/L03_modelTheory/properties.lean.md)
+-->
+
+---
 
 - [Assignments](){-}
 
   - [Lean and VSCode](./Assignments/a1.md)
   - [Abstract and Concrete Syntax](./Assignments/a2.md)
-  
-[Resources](./resources.md)
+
+---
+
+[Readings](./resources.md)
