@@ -49,7 +49,7 @@ def binaryFromRowCols : (row : Nat) → (cols: Nat) → Binary
 /-!
 Make row'th row of truth table with vars variable columns
 -/
-def list_bool_from_row_index_and_cols : (row : Nat) → (vars : Nat) → List Bool
+def listBoolFromRowIndexForNumVars : (row : Nat) → (vars : Nat) → List Bool
 | index, cols => (binaryFromRowCols index cols)
 
 
