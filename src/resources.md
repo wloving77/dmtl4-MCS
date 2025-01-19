@@ -1,4 +1,11 @@
-# Resources
+# Learning Resources
+
+There are pretty good learning resources for Lean 4. Here we
+connect you to both written documentation for Lean 4 and to two
+online communities where you can follow the leaders in the field
+and ask questions, often getting answers very quickly.
+
+## Written Documentation on Lean 4 and Related Tools and Ideas
 
 - [Lean Language Site](https://lean-lang.org/)
 - [Lean Documentation Overview](https://lean-lang.org/lean4/doc/)
@@ -12,8 +19,16 @@
 - [Kevin Buzzard's Intro](https://leanprover-community.github.io/lean-perfectoid-spaces/type_theory.html)
 - [Lean for the Curious Mathematician (2023 edition)](https://lftcm2023.github.io/tutorial/index.html)
 - [Learning Resources](https://leanprover-community.github.io/learn.html)
-- [Hitchhikers Guide to Logical Verification](https://lean-forward.github.io/hitchhikers-guide/2023/)
+- [Hitchhikers Guide to Logical Verification](https://raw.githubusercontent.com/blanchette/logical_verification_2023/main/hitchhikers_guide.pdf)
 - [Software Foundations](https://softwarefoundations.cis.upenn.edu/)
 - [The Mechanics of Proof](https://hrmacbeth.github.io/math2001/)
 - [Homotopy Type Theory, Chapter 1](https://hott.github.io/book/hott-online-15-ge428abf.pdf)
 - [Survey of Logic Symbols](https://mathvault.ca/hub/higher-math/math-symbols/logic-symbols/)
+- [Certified Programming with Dependent Types](http://adam.chlipala.net/cpdt/)
+- [Software Foundations](https://softwarefoundations.cis.upenn.edu/)
+
+## Community Resources
+
+- [Lean Zulipchat](https://leanprover.zulipchat.com/)
+- [Lean Discord Channel](https://discord.gg/WZ9bs9UCvx)
+- [Functional Programming Discord Channel with Lean Topic](https://discord.gg/FUKKjpzq)
