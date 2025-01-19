@@ -11,6 +11,7 @@ build-dir = "book"
 [output.html]
 additional-js = ["assets/lean.min.js"]
 mathjax-support = true
+git-repository-url = "https://github.com/kevinsullivan/dmtl4"
 
 [output.html.playground.boring-prefixes]
 lean = "# "
