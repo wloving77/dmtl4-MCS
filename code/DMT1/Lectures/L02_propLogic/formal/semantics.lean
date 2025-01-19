@@ -102,6 +102,14 @@ def evalExpr : Expr → Interp → Bool
 | (un_op_expr op e),      i => (evalUnOp op) (evalExpr e i)
 | (bin_op_expr op e1 e2), i => (evalBinOp op) (evalExpr e1 i) (evalExpr e2 i)
 
+
+/- @@@
+The standard notation for (eval e i) is
+@@@ -/
+
+notation "⟦" e "⟧" i => (evalExpr e i)
+#check (e : Expr) → (i : Interp) → ⟦e⟧i
+
 /- @@@
 That's it. From this material you should be able to aquire
 a justifiably confident grasp of essentially every aspect
