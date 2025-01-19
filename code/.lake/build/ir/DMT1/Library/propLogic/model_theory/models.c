@@ -15,10 +15,10 @@ extern "C" {
 #endif
 lean_object* l_DMT1_Library_propLogic_interpretation_listInterpsFromExpr(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_models_findModels(lean_object*);
+lean_object* l_DMT1_Library_propLogic_semantics_eval(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_Library_propLogic_model__theory_models_findModel(lean_object*);
 lean_object* l_List_reverse___rarg(lean_object*);
 LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_Library_propLogic_model__theory_models_findModels___spec__1(lean_object*, lean_object*, lean_object*);
-lean_object* l_DMT1_Library_propLogic_semantics_eval(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_Library_propLogic_model__theory_models_findModels___spec__1(lean_object* x_1, lean_object* x_2, lean_object* x_3) {
 _start:
 {
