@@ -44,7 +44,7 @@ to answer the question, does *i* satisfy *e*?
 ```lean
 private def e : Expr := {⟨0⟩}  -- expression on 0th variable
 #reduce eval e allFalse        -- expect false
-#reduce ⟦(¬e)⟧ allFalse         -- expect true (using notation)
+#reduce ⟦(¬e)⟧ allFalse         -- expect true (our notation)
 #reduce ⟦(e ∨ ¬e)⟧ allFalse     -- expect true
 #reduce ⟦(e ∧ ¬e)⟧ allFalse     -- expect false
 ```
@@ -52,7 +52,7 @@ private def e : Expr := {⟨0⟩}  -- expression on 0th variable
 We can also easily define the all-true interpretation,
 
 ```lean
-private def allTrue : Interp := λ _ => true
+private def allTrue : Interp := λ _ => true   -- _ for don't care
 #reduce ⟦e⟧ allTrue            -- expect true
 #reduce ⟦(¬e)⟧ allTrue         -- expect false
 #reduce ⟦(e ∨ ¬e)⟧ allTrue     -- expect true
@@ -154,13 +154,19 @@ variable.
     if (v'.index == v.index)  -- if index is variables overridden
         then b                -- return new value
         else (i v')           -- else value under old interp
-
-#reduce ⟦e⟧ allFalse                           -- expect false
--- override the value bound to variable ⟨0⟩ with the value, true
-def newInterp := overrideValue allFalse ⟨0⟩ true  -- here we go
-#reduce ⟦e⟧ newInterp                          -- expect true
 ```
 
+Here's an example. Remember that *e* is a variable
+expression build on the variable *(Var.mk 0)* with
+index 0. Here we start with *allFalse* and override
+it to assign *true* as the value of this variable.
+When we evaluate *e* on the resulting interpretation
+we'll see that we get the value, true.
+```lean
+#reduce ⟦e⟧ allFalse                           -- expect false
+def newInterp := overrideValue allFalse ⟨0⟩ true  -- override
+#reduce ⟦e⟧ newInterp                          -- expect true
+```
 
 
 ### Constructing an Interpretation from a List of Bools
@@ -187,15 +193,26 @@ be possible to improve this definition. If you do that, please
 send a pull request.
 ```lean
 private def interpFromBools : List Bool → Interp
-  | l => bools_to_interp_helper l.length l
-where bools_to_interp_helper : (vars : Nat) → (vals : List Bool) → Interp
+  | l => boolListToInterp l.length l
+where boolListToInterp : (vars : Nat) → (vals : List Bool) → Interp
   | _, [] => (λ _ => false)
   | vars, h::t =>
     let len := (h::t).length
     overrideValue
-      (bools_to_interp_helper vars t)
+      (boolListToInterp vars t)
       (Var.mk (vars - len)) h
 ```
+
+Here's an example, where nextInterp assigns true to
+the variable with index *0* (and thus as the value it
+assigns to *e*), false to the variable with index *1*,
+and then false to every variable at any higher index.
+```lean
+def nextInterp : Interp := interpFromBools [true, false]
+#eval ⟦e⟧ nextInterp    -- expect e to evaluate to true
+```
+
+### Nth Interpretation for Expression With k Variables
 
 A key insight behind our design is that each row of a
 truth table (without the final column containing the
@@ -219,16 +236,19 @@ row (computed by another helper function) and converting
 it to an interpretation as described above.
 
 ```lean
-private def interpFromRowNumVars : (row: Nat) → (numVars: Nat) → Interp
+private def interpFromRowNumVars : (nth: Nat) → (numVars: Nat) → Interp
 | index, vars =>
   interpFromBools
     (listBoolFromRowIndexForNumVars index vars)
 ```
 
+
+### All Interpretations for Expression With k Variables
+
 The next function takes a number of variables in an expression
 and returns a list of all 2^n interpretations for that number
-of variables. Watch out, as the size of the constsructed list
-grows exponentially in the number of variables.
+of variables. Be careful as the size of the constsructed list
+is exponential in length in the number of variables.
 
 ```lean
 private def interpsFromNumVars (numVars : Nat) : List Interp :=
@@ -236,6 +256,58 @@ private def interpsFromNumVars (numVars : Nat) : List Interp :=
 where mk_interps_helper : (rows : Nat) → (numvars : Nat) → List Interp
   | 0,        _  => []
   | (n' + 1), v  => (interpFromRowNumVars n' v)::(mk_interps_helper n' v)
+```
+
+### Printable Representation for Interpretation Functions
+
+Next we define two helper functions, available for use
+by clients of this module, for mapping an interpretation (which
+as a function is unprintable) to printable forms, namely to a
+list of 0/1 natural numbers reflecting the values assigned to
+the variables with corresponding indices.
+
+```lean
+private def bitListFromInterpHelper : (i : Interp) → (w : Nat) → List Nat
+| _, 0 => []
+| i, (w' + 1) =>
+  let b := (if (i ⟨w'⟩ ) then 1 else 0)
+  bitListFromInterpHelper i w' ++ [b]  -- ++ here is binary List.append
+
+#reduce bitListFromInterpHelper allFalse 3 -- expect [0, 0, 0]
+```
+
+This function takes any list of interpretations and returns
+a list of bit lists, one for each of the interpretation.
+```lean
+private def bitListsFromInterpsHelper : List Interp → Nat → List (List Nat)
+| [], _ => []
+| h::t, n => bitListFromInterpHelper h n::bitListsFromInterpsHelper t n
+```
+
+Lean knows how to print lists of natural numbers, and lists
+of lists of natural numbers, so these functions can be used
+to derive printable forms of interpretation and lists thereof.
+Remember that an interpretation in our design binds values to
+an infinite number of variables, of which only a finite initial
+sub-list of variable-to-value bindings is relevant. We provide
+the number of *relevant* variable bindings for which outputs
+should be generated as the second argument to this function.
+
+```lean
+#reduce bitListsFromInterpsHelper (interpsFromNumVars 3) 3
+```
+
+By can ask for bindings for more variables than are relevant,
+and in this case, we'll get default values from the initial
+interpretation that was overriden with new values for all of
+the relevant (first *n*) variables. Here, we started with the
+*allFalse* interpretation, so the values beyond the three that
+we care about in this example will be false. These values are
+ignored during evaluation and so are irrelevant and should be
+considered as an implementation detail in our design.
+
+```lean
+#reduce bitListsFromInterpsHelper (interpsFromNumVars 3) 5
 ```
 
 ### Counting the Number of Variables in an Expression
@@ -255,61 +327,13 @@ unary operator expression, *(op e)*, it's the number of variables
 in *e*. And for a binary operator expression, *(op e1 e2)* it's
 the maximum of the number of variables in each of *e1* and *e2*.
 ```lean
-private def numVarsFromExpr : Expr → Nat := (fun e => max_variable_index e + 1) where
-max_variable_index : Expr → Nat
+private def numVarsFromExpr : Expr → Nat :=
+  (fun e => maxVariableIndex e + 1) where
+maxVariableIndex : Expr → Nat
 | Expr.lit_expr _ => 0
 | Expr.var_expr (Var.mk i) => i
-| Expr.un_op_expr _ e => max_variable_index e
-| Expr.bin_op_expr _ e1 e2 => max (max_variable_index e1) (max_variable_index e2)
-```
-
-Finally we define two helper functions, available for use
-by clients of this module, for mapping an interpretation (which
-as a function is unprintable) to printable forms, namely to a
-list of 0/1 natural numbers reflecting the values assigned to
-the variables with corresponding indices.
-```lean
-def bitListFromInterp : (i : Interp) → (w : Nat) → List Nat
-| _, 0 => []
-| i, (w' + 1) =>
-  let b := (if (i ⟨w'⟩ ) then 1 else 0)
-  bitListFromInterp i w' ++ [b]  -- ++ here is binary List.append
-
-#reduce bitListFromInterp allFalse 3 -- expect [0, 0, 0]
-```
-
-Finally, this function takes any list of interpretations and
-returns a list of bit lists, one for each of the interpretation.
-```lean
-def bitListsFromInterps : List Interp → Nat → List (List Nat)
-| [], _ => []
-| h::t, n => bitListFromInterp h n::bitListsFromInterps t n
-```
-
-Lean knows how to print lists of natural numbers, and lists
-of lists of natural numbers, so these functions can be used
-to derive printable forms of interpretation and lists thereof.
-Remember that an interpretation in our design binds values to
-an infinite number of variables, of which only a finite initial
-sub-list of variable-to-value bindings is relevant. We provide
-the number of *relevant* variable bindings for which outputs
-should be generated as the second argument to this function.
-
-```lean
-#reduce bitListsFromInterps (interpsFromNumVars 3) 3
-```
-
-By can ask for bindings for more variables than are relevant,
-and in this case, we'll get default values from the initial
-interpretation that was overriden with new values for all of
-the relevant (first *n*) variables. Here, we started with the
-*allFalse* interpretation, so the values beyond the three that
-we care about in this example will be false. These values are
-ignored during evaluation and so are irrelevant and should be
-considered as an implementation detail in our design.
-
-```lean
-#reduce bitListsFromInterps (interpsFromNumVars 3) 5
+| Expr.un_op_expr _ e => maxVariableIndex e
+| Expr.bin_op_expr _ e1 e2 => max (maxVariableIndex e1) (maxVariableIndex e2)
 ```
 
 ## API: Get List of All Interprations for Expression
@@ -322,16 +346,22 @@ number of variables in *e*.
 ```lean
 def interpsFromExpr : Expr → List Interp
 | e => interpsFromNumVars (numVarsFromExpr e)
+```
+
+In addition we provide public versions of the functions
+for deriving printable representations of interpretations.
+```lean
+def bitListFromInterp :=  bitListFromInterpHelper
+def bitListsFromInterps :=  bitListsFromInterpsHelper
 
 -- Example
 def anExpr := ({⟨0⟩} ∧ {⟨1⟩} ∨ {⟨2⟩})  -- P ∧ Q ∨ R
-#reduce numVarsFromExpr anExpr   -- expect 3
--- expect a list of 8 interpretations
 #reduce bitListsFromInterps (interpsFromExpr anExpr) 3
 ```
 
+
 As a final note, if you improve this module's
-implementation, send me a pull request!
+implementation, please send me a pull request!
 
 ```lean
 end DMT1.lecture.propLogic.semantics
