@@ -14,6 +14,7 @@
   - [Examples](./DMT1/Lectures/L02_propLogic/formal/axioms.lean.md)
   - [Semantics](./DMT1/Lectures/L02_propLogic/formal/semantics.lean.md)
   - [Interpretations](./DMT1/Lectures/L02_propLogic/formal/interpretation.lean.md)
+  - 
 <!-- This is a comment and will not appear in the rendered book. - [Model Theory](./modelTheory.md)
   - [Truth Tables](./DMT1/Lectures/L03_modelTheory/truth_table.lean.md)
   - [Models](./DMT1/Lectures/L03_modelTheory/models.lean.md)
