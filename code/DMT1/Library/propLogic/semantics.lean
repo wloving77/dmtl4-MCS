@@ -6,7 +6,7 @@ import DMT1.Library.propLogic.syntax
 import DMT1.Library.propLogic.domain
 
 namespace DMT1.Library.propLogic.semantics
-open DMT1.Library.propLogic.syntax
+open propLogic.syntax
 
 /- @@@
 Give each syntactic unary operator a meaning
@@ -28,12 +28,13 @@ def evalBinOp : BinOp → (Bool → Bool → Bool)
 open Expr
 
 /- @@@
-Give a name to the type of function that can
-be understood as assigning a Boolean value to
-each variable.
+Give a name to the type of function that will
+represent an interpretation.
 @@@ -/
 
-def evalExpr : Expr → (Var → Bool) → Bool
+def Interp := (Var → Bool)
+
+def evalExpr : Expr → Interp → Bool
 | lit_expr b,             _ => b
 | (var_expr v),           i => i v
 | (un_op_expr op e),      i => (evalUnOp op) (evalExpr e i)
