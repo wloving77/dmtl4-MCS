@@ -1,7 +1,10 @@
 import DMT1.Library.propLogic.model_theory.models
+import DMT1.Library.propLogic.semantics
 
 namespace DMT1.Library.propLogic.model_theory.models
 open propLogic.syntax
+open semantics
+
 
 /- @@@
 # Counterexamples
@@ -11,7 +14,8 @@ any given expression. These operations find models of the negation
 of the given expression, which amount to counterexamples for it.
 @@@ -/
 
-def findCounterexamples (e : Expr) : List (Var → Bool) := findModels ¬e
-def findCounterexample (e : Expr) : Option (Var → Bool) := findModel ¬e
+def findCounterexamples (e : Expr) : List Interp := findModels ¬e
+
+def findCounterexample (e : Expr) : Option Interp := findModel ¬e
 
 end DMT1.Library.propLogic.model_theory.models
