@@ -12,6 +12,8 @@ import DMT1.Library.propLogic.interpretation
 namespace DMT1.Library.propLogic.model_theory.truth_table
 open DMT1.Library.propLogic.syntax
 open DMT1.Library.propLogic.semantics
+open DMT1.Library.propLogic.interpretation
+
 
 def truthTableOutputs : syntax.Expr → List Bool
 | e =>  evalBoolExpr_interps (listInterpsFromExpr e) e where
