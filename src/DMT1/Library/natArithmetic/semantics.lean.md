@@ -37,15 +37,15 @@ def evalVar : Var → Interp → Nat  -- evalVar is a function
 | v, i => i v   -- apply interpretation i to variable v to get value
 
 -- Semantic evaluation of arithmetic expression, yielding its Nat value
-def evalExpr : Expr → Interp → Nat
+def eval : Expr → Interp → Nat
 | Expr.lit n,          _   => (evalLit n)
 | Expr.var v,          i   => (evalVar v i)
-| Expr.unOp op e,      i   => (evalUnOp op) (evalExpr e i)
-| Expr.binOp op e1 e2, i   => (evalBinOp op) (evalExpr e1 i) (evalExpr e2 i)
+| Expr.unOp op e,      i   => (evalUnOp op) (eval e i)
+| Expr.binOp op e1 e2, i   => (evalBinOp op) (eval e1 i) (eval e2 i)
 
 -- Semantic evaluation of a relational expression, with a Boolean indication
 def evalRelExpr : RelExpr → Interp → Bool
-| RelExpr.mk op e1 e2, i =>  (evalRelOp op) (evalExpr e1 i) (evalExpr e2 i)
+| RelExpr.mk op e1 e2, i =>  (evalRelOp op) (eval e1 i) (eval e2 i)
 
 
 end DMT1.natArithmetic.semantics

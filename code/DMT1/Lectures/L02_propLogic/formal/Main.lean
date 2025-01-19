@@ -133,7 +133,7 @@ of the variables in the expression.
 
 def e := P_and_Q_concrete
 
-#eval! evalExpr e i
+#eval! eval e i
 
 /-!
 Given the semantic meanings (Boolean functions) that

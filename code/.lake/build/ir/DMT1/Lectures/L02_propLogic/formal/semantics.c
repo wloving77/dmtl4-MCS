@@ -15,6 +15,7 @@ extern "C" {
 #endif
 static lean_object* l_DMT1_lecture_propLogic_semantics___aux__DMT1__Lectures__L02__propLogic__formal__semantics______macroRules__DMT1__lecture__propLogic__semantics__term_u27e6___u27e7____1___closed__2;
 static lean_object* l_DMT1_lecture_propLogic_semantics_term_u27e6___u27e7_____closed__17;
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_eval(lean_object*, lean_object*);
 static lean_object* l_DMT1_lecture_propLogic_semantics___aux__DMT1__Lectures__L02__propLogic__formal__semantics______macroRules__DMT1__lecture__propLogic__semantics__term_u27e6___u27e7____1___closed__15;
 static lean_object* l_DMT1_lecture_propLogic_semantics_term_u27e6___u27e7_____closed__6;
 static lean_object* l_DMT1_lecture_propLogic_semantics___aux__DMT1__Lectures__L02__propLogic__formal__semantics______macroRules__DMT1__lecture__propLogic__semantics__term_u27e6___u27e7____1___closed__5;
@@ -71,7 +72,6 @@ static lean_object* l_DMT1_lecture_propLogic_semantics___aux__DMT1__Lectures__L0
 static lean_object* l_DMT1_lecture_propLogic_semantics___aux__DMT1__Lectures__L02__propLogic__formal__semantics______macroRules__DMT1__lecture__propLogic__semantics__term_u27e6___u27e7____1___closed__17;
 static lean_object* l_DMT1_lecture_propLogic_semantics___aux__DMT1__Lectures__L02__propLogic__formal__semantics______macroRules__DMT1__lecture__propLogic__semantics__term_u27e6___u27e7____1___closed__1;
 lean_object* l_String_toSubstring_x27(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_evalExpr(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_semantics_evalUnOp___rarg(uint8_t x_1) {
 _start:
 {
@@ -177,7 +177,7 @@ x_8 = lean_box(x_7);
 return x_8;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_evalExpr(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_eval(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 switch (lean_obj_tag(x_1)) {
@@ -205,7 +205,7 @@ lean_object* x_7; lean_object* x_8; uint8_t x_9; uint8_t x_10; lean_object* x_11
 x_7 = lean_ctor_get(x_1, 1);
 lean_inc(x_7);
 lean_dec(x_1);
-x_8 = l_DMT1_lecture_propLogic_semantics_evalExpr(x_7, x_2);
+x_8 = l_DMT1_lecture_propLogic_semantics_eval(x_7, x_2);
 x_9 = lean_unbox(x_8);
 lean_dec(x_8);
 x_10 = l_DMT1_lecture_propLogic_semantics_evalUnOp___rarg(x_9);
@@ -222,10 +222,10 @@ x_14 = lean_ctor_get(x_1, 1);
 lean_inc(x_14);
 lean_dec(x_1);
 lean_inc(x_2);
-x_15 = l_DMT1_lecture_propLogic_semantics_evalExpr(x_13, x_2);
+x_15 = l_DMT1_lecture_propLogic_semantics_eval(x_13, x_2);
 x_16 = lean_unbox(x_15);
 lean_dec(x_15);
-x_17 = l_DMT1_lecture_propLogic_semantics_evalExpr(x_14, x_2);
+x_17 = l_DMT1_lecture_propLogic_semantics_eval(x_14, x_2);
 x_18 = lean_unbox(x_17);
 lean_dec(x_17);
 x_19 = l_DMT1_lecture_propLogic_semantics_evalBinOp(x_12, x_16, x_18);
@@ -512,7 +512,7 @@ static lean_object* _init_l_DMT1_lecture_propLogic_semantics___aux__DMT1__Lectur
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("evalExpr", 8, 8);
+x_1 = lean_mk_string_unchecked("eval", 4, 4);
 return x_1;
 }
 }

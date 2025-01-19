@@ -19,7 +19,7 @@ def truthTableOutputs : syntax.Expr → List Bool
 | e =>  evalBoolExpr_interps (listInterpsFromExpr e) e where
 evalBoolExpr_interps : List (syntax.Var → Bool) → Expr → List Bool
 | [], _ => []
-| h::t, e => [semantics.evalExpr e h] ++ evalBoolExpr_interps t e
+| h::t, e => [semantics.eval e h] ++ evalBoolExpr_interps t e
 
 end DMT1.Library.propLogic.model_theory.truth_table
 ```

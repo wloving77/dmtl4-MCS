@@ -14,6 +14,7 @@
 extern "C" {
 #endif
 uint8_t l_DMT1_lecture_propLogic_reduce__and(lean_object*);
+lean_object* l_DMT1_lecture_propLogic_semantics_eval(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_is__model(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_semantics_models_is__valid(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_is__unsat___boxed(lean_object*);
@@ -23,7 +24,6 @@ LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_semantics_models_is__unsat(lean_obj
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_is__sat___boxed(lean_object*);
 lean_object* l_DMT1_lecture_propLogic_semantics_models_truthTableOutputs(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_is__valid___boxed(lean_object*);
-lean_object* l_DMT1_lecture_propLogic_semantics_evalExpr(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_DMT1_lecture_propLogic_semantics_models_is__sat(lean_object* x_1) {
 _start:
 {
@@ -94,7 +94,7 @@ LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_is__model(lea
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_lecture_propLogic_semantics_evalExpr(x_2, x_1);
+x_3 = l_DMT1_lecture_propLogic_semantics_eval(x_2, x_1);
 return x_3;
 }
 }
