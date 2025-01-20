@@ -11,7 +11,7 @@ of variables.
 import DMT1.Library.propLogic.semantics
 import DMT1.Library.propLogic.interpretation
 
-namespace DMT1.Library.propLogic.model_theory.truth_table
+namespace DMT1.Library.propLogic.model_theory.truthTable
 open propLogic.syntax
 open semantics
 open interpretation
@@ -22,4 +22,4 @@ evalBoolExpr_interps : List (Interp) → Expr → List Bool
 | [], _ => []
 | h::t, e => [eval e h] ++ evalBoolExpr_interps t e
 
-end DMT1.Library.propLogic.model_theory.truth_table
+end DMT1.Library.propLogic.model_theory.truthTable

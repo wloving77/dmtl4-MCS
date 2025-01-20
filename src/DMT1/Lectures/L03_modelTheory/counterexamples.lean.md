@@ -1,11 +1,11 @@
+# Counterexamples
+
 ```lean
 import DMT1.Lectures.L03_modelTheory.models
 
 namespace DMT1.lecture.propLogic.semantics.models
 open propLogic.syntax
 ```
-
-# Counterexamples
 
 A counterexample is an interpretation that makes a proposition
 false. If you write a *specification*, S, about a system in the

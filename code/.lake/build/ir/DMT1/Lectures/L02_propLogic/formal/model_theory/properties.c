@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: DMT1.Lectures.L02_propLogic.formal.model_theory.properties
-// Imports: Init DMT1.Lectures.L02_propLogic.formal.model_theory.truth_table
+// Imports: Init DMT1.Lectures.L02_propLogic.formal.model_theory.truthTable
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"

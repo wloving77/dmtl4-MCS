@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: DMT1.Lectures.L03_modelTheory.models
-// Imports: Init DMT1.Lectures.L03_modelTheory.truth_table
+// Imports: Init DMT1.Lectures.L03_modelTheory.truthTable
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -138,7 +138,7 @@ return x_5;
 }
 }
 lean_object* initialize_Init(uint8_t builtin, lean_object*);
-lean_object* initialize_DMT1_Lectures_L03__modelTheory_truth__table(uint8_t builtin, lean_object*);
+lean_object* initialize_DMT1_Lectures_L03__modelTheory_truthTable(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_DMT1_Lectures_L03__modelTheory_models(uint8_t builtin, lean_object* w) {
 lean_object * res;
@@ -147,7 +147,7 @@ _G_initialized = true;
 res = initialize_Init(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_DMT1_Lectures_L03__modelTheory_truth__table(builtin, lean_io_mk_world());
+res = initialize_DMT1_Lectures_L03__modelTheory_truthTable(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 return lean_io_result_mk_ok(lean_box(0));

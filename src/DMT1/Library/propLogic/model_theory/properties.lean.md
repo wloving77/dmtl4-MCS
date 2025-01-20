@@ -14,10 +14,10 @@ being *unsatisfiable?* And does "e" have the property of being
 *valid*.
 
 ```lean
-import DMT1.Library.propLogic.model_theory.truth_table
+import DMT1.Library.propLogic.model_theory.truthTable
 namespace DMT1.Library.propLogic.model_theory
 open propLogic.syntax
-open truth_table
+open truthTable
 open semantics
 open utilities
 ```
