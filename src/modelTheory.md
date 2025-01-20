@@ -1,5 +1,7 @@
 # Model Theory
 
+THIS SECTION IS UNDER CONSTRUCTION.
+
 The semantics of propositional logic enable the
 evaluation an expression under an interpretation.
 An interpretation for proposition logic, in turn,
@@ -20,7 +22,7 @@ evaluated over a different kind of structure, called
 a Kripke structure. Nevertheless, key idea remain the
 same, particularly the notion that an interpretation
 under which an expression is true is called a model
-for that expression. 
+for that expression.
 
 In this chapter we stick to evaluating expressions
 in propositional logic over interpretation functions.

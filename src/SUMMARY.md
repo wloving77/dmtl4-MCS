@@ -16,8 +16,8 @@
   - [Interpretations](./DMT1/Lectures/L02_propLogic/formal/interpretation.lean.md)
 
 - [Model Theory](./modelTheory.md)
-  - [Truth Tables](./DMT1/Lectures/L03_modelTheory/truthTable.lean.md)
   - [Models](./DMT1/Lectures/L03_modelTheory/models.lean.md)
+  - [Truth Tables](./DMT1/Lectures/L03_modelTheory/truthTable.lean.md)
   - [Counterexamples](./DMT1/Lectures/L03_modelTheory/counterexamples.lean.md)
   - [Properties of Expressions](./DMT1/Lectures/L03_modelTheory/properties.lean.md)
   
