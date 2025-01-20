@@ -70,12 +70,14 @@ given proposition can be evaluated.
 We've now given as much of an introduction as we
 can in this setting to the topic of model theory
 in teneral. Interested students might look at the
-Kripke structure over which propositions in some
-temporal logics are evaluated. For now, we will
-keep our focus on basic concepts in model theory
-for proposition logic, in particular.
+*Kripke structure* over which propositions in some
+temporal logics are evaluated. 
 
-In this chapter we stick to evaluating expressions
-in propositional logic over interpretation functions.
-The reader should however be aware of the fact that
-the ideas presented here are more broadly relevant.
+For now, we'll keep our focus on basic concepts in
+model theory for proposition logic, in particular.
+
+## Exercise
+
+How many worlds are there in the *space of worlds*
+contemplated by an expression in propositional logic
+with *n* distint variable expressions?
