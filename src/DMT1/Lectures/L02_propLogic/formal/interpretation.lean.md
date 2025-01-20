@@ -349,12 +349,12 @@ def interpsFromExpr : Expr → List Interp
 In addition we provide public versions of the functions
 for deriving printable representations of interpretations.
 ```lean
-def bitListFromInterp :=  bitListFromInterpHelper
-def bitListsFromInterps :=  bitListsFromInterpsHelper
+def boolListFromInterp :=  bitListFromInterpHelper
+def boolListsFromInterps :=  bitListsFromInterpsHelper
 
 -- Example
 def anExpr := ({⟨0⟩} ∧ {⟨1⟩} ∨ {⟨2⟩})  -- P ∧ Q ∨ R
-#reduce bitListsFromInterps (interpsFromExpr anExpr) 3
+#reduce boolListsFromInterps (interpsFromExpr anExpr) 3
 ```
 
 
