@@ -16,7 +16,6 @@ extern "C" {
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_numVarsFromExpr(lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_f;
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_interpsFromExpr___boxed(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListsFromInterps___boxed(lean_object*, lean_object*);
 static lean_object* l_DMT1_lecture_propLogic_semantics_f___closed__1;
 static lean_object* l_DMT1_lecture_propLogic_semantics_newInterp___closed__1;
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_anExpr;
@@ -31,10 +30,10 @@ uint8_t lean_nat_dec_eq(lean_object*, lean_object*);
 static lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_e___closed__1;
 static lean_object* l_DMT1_lecture_propLogic_semantics_anExpr___closed__1;
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_interpFromBools_boolListToInterp(lean_object*, lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListsFromInterps___boxed(lean_object*, lean_object*);
 static lean_object* l_DMT1_lecture_propLogic_semantics_nextInterp___closed__2;
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_allFalse___boxed(lean_object*);
 LEAN_EXPORT uint8_t l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_allTrue(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListFromInterp___boxed(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_e;
 lean_object* l_List_lengthTRAux___rarg(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_interpFromRowNumVars___boxed(lean_object*, lean_object*, lean_object*);
@@ -47,19 +46,20 @@ LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpr
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_numVarsFromExpr_maxVariableIndex(lean_object*);
 lean_object* l_DMT1_lecture_propLogic_binaryFromRowCols(lean_object*, lean_object*);
 lean_object* lean_nat_pow(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListFromInterp___boxed(lean_object*, lean_object*);
 uint8_t lean_nat_dec_eq(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_interpsFromNumVars_mk__interps__helper___elambda__1(lean_object*, lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListFromInterp(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListsFromInterps(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_interpsFromNumVars_mk__interps__helper___boxed(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_allFalse(lean_object*);
 lean_object* lean_nat_sub(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_interpsFromNumVars_mk__interps__helper___elambda__1___boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_bitListFromInterpHelper___boxed(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListFromInterp(lean_object*, lean_object*);
 static lean_object* l_DMT1_lecture_propLogic_semantics_anExpr___closed__3;
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_interpFromBools(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_bitListFromInterpHelper(lean_object*, lean_object*);
 uint8_t lean_nat_dec_le(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListsFromInterps(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_nextInterp(lean_object*);
 lean_object* lean_nat_add(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lecture_propLogic_semantics_bitListsFromInterpsHelper___boxed(lean_object*, lean_object*);
@@ -622,7 +622,7 @@ lean_dec(x_1);
 return x_2;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListFromInterp(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListFromInterp(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
@@ -630,16 +630,16 @@ x_3 = l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lec
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListFromInterp___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListFromInterp___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_lecture_propLogic_semantics_bitListFromInterp(x_1, x_2);
+x_3 = l_DMT1_lecture_propLogic_semantics_boolListFromInterp(x_1, x_2);
 lean_dec(x_2);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListsFromInterps(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListsFromInterps(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
@@ -647,11 +647,11 @@ x_3 = l___private_DMT1_Lectures_L02__propLogic_formal_interpretation_0__DMT1_lec
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_bitListsFromInterps___boxed(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_boolListsFromInterps___boxed(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_lecture_propLogic_semantics_bitListsFromInterps(x_1, x_2);
+x_3 = l_DMT1_lecture_propLogic_semantics_boolListsFromInterps(x_1, x_2);
 lean_dec(x_2);
 return x_3;
 }

@@ -26,19 +26,16 @@ INTERFACE
 Satisfiability means there's *some* interpretation for which e is true
 ```lean
 def is_sat :    Expr → Bool :=
-  λ e : Expr => reduce_or (truthTableOutputs e)
+  λ e => reduce_or (truthTableOutputs e)
 ```
 
 Validity means that a proposition is true under all interpretations
 ```lean
 def is_valid :  Expr → Bool :=
-  λ e : Expr => reduce_and (truthTableOutputs e)
+  λ e => reduce_and (truthTableOutputs e)
 
 def is_unsat : Expr → Bool :=
-  λ e : Expr => not (is_sat e)
-
-def is_model : Interp → Expr → Bool :=
-  fun i e => eval e i
+  λ e => not (is_sat e)
 
 end DMT1.lecture.propLogic.semantics.models
 ```
