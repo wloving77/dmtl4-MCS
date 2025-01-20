@@ -30,7 +30,7 @@ proposition. How would you do that?
 def findModels (e : Expr) : List Interp :=
   List.filter
     (fun i => eval e i = true) -- given i, true iff i is model of e
-    (listInterpsFromExpr e)
+    (interpsFromExpr e)
 
 def findModel :  Expr → Option Interp
 | e =>
