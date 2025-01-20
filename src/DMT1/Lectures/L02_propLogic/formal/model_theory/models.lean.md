@@ -1,5 +1,5 @@
 ```lean
-import DMT1.Lectures.L02_propLogic.formal.model_theory.truth_table
+import DMT1.Lectures.L02_propLogic.formal.model_theory.truthTable
 
 namespace DMT1.lecture.propLogic.semantics.models
 open propLogic.syntax

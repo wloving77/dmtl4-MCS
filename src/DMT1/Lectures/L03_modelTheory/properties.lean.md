@@ -1,4 +1,4 @@
-### Satisfiability
+# Properties of Propositions
 
 We built a satisfiability checker. The procedure it implements
 *decides* whether any propositional logic expression, e, has at
@@ -14,7 +14,7 @@ being *unsatisfiable?* And does "e" have the property of being
 *valid*.
 
 ```lean
-import DMT1.Lectures.L03_modelTheory.truth_table
+import DMT1.Lectures.L03_modelTheory.truthTable
 namespace DMT1.lecture.propLogic.semantics.models
 open propLogic.syntax
 ```

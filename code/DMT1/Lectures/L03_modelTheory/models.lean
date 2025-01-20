@@ -1,31 +1,28 @@
 /- @@@
+
+# Models
+
 As a final chapter in our unit on propositional logic, we
 now present the concepts of models and counter-examples.
 @@@ -/
 
-import DMT1.Lectures.L03_modelTheory.truth_table
+import DMT1.Lectures.L03_modelTheory.truthTable
 
 namespace DMT1.lecture.propLogic.semantics.models
 open propLogic.syntax
 
 /- @@@
-Given a proposition (Expr), e, and an interpretation for
-the variables in e, we can apply our semantic evalation
-function, eval, to e and i, to compute the truth
-value of the proposition, e, when understood to be about
-the "situation" or "world" or "state of affairs" described
-by i.
-@@@ -/
-
-/- @@@
-MODELS
+Given a proposition (Expr), *e*, and an interpretation for
+the variables in *e*, we can apply our semantic evalation
+function, ⟦⬝⟧, to e and i, to compute the truth of *e* under
+*i*.
 
 A model is an interpretation that makes a proposition true.
-This function returns true just when *e* evaluates to true
-under *i*, which is exactly what it means for *i* to be a
-model for *e*.
+This function takes an interpretation, *i* and an
+expression, *e* and returns true if *i* is a model for
+*e*, otherwise it returns false.
 @@@ -/
-def isModel (i : Interp) (e : Expr) : Bool := ⟦e⟧ i
+def isModel (i : Interp) (e : Expr) : Bool := ⟦e⟧i
 
 /- @@@
 A "SAT solver" returns true for an expression, *e*, just
