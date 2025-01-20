@@ -1,5 +1,5 @@
 // Lean compiler output
-// Module: DMT1.Library.propLogic.model_theory.truth_table
+// Module: DMT1.Library.propLogic.model_theory.truthTable
 // Imports: Init DMT1.Library.propLogic.semantics DMT1.Library.propLogic.interpretation
 #include <lean/lean.h>
 #if defined(__clang__)

@@ -1,5 +1,5 @@
 import DMT1.Lectures.L02_propLogic.formal.model_theory.properties
-import DMT1.Lectures.L02_propLogic.formal.model_theory.truth_table
+import DMT1.Lectures.L02_propLogic.formal.model_theory.truthTable
 import DMT1.Lectures.L02_propLogic.formal.model_theory.counterexamples
 import DMT1.Lectures.L02_propLogic.formal.interpretation
 import DMT1.Lectures.L02_propLogic.formal.semantics
