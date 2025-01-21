@@ -91,6 +91,7 @@ The idea is that eventually an interpretation function
 will take a Var object as arguments and return the
 Boolean values that that interpretation assigns to it.
 @@@ -/
+
 structure Var : Type :=
   mk :: (index: Nat)
 deriving Repr
