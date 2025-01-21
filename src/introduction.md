@@ -1,4 +1,4 @@
-# Discrete Mathematics and Theory in Lean
+# Discrete Mathematics and Theory in Lean 4
 
 *By Kevin Sullivan*
 
