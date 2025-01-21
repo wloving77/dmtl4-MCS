@@ -83,6 +83,7 @@ but are necessary values for making variable expressions.
 The idea is that eventually an interpretation function
 will take a Var object as arguments and return the
 Boolean values that that interpretation assigns to it.
+
 ```lean
 structure Var : Type :=
   mk :: (index: Nat)
