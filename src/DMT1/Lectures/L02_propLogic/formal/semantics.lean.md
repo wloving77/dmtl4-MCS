@@ -38,7 +38,7 @@ open propLogic.syntax
 
 
 
-#### Interpretation of Unary Connectives
+#### Fixed Interpretation of Unary Connectives
 
 The first thing we'll do is define what Boolean operators
 we mean by the names of our unary and binary "conenctives".
@@ -48,11 +48,11 @@ we mean by the names of our unary and binary "conenctives".
 -- (Bool -> Bool) means takes *one* Bool argument and "returns" a Bool
 
 def evalUnOp : UnOp → (Bool → Bool)
-| (UnOp.not) => not
+| (UnOp.not) => Bool.not
 ```
 
 
-#### Interpretation of Binary Connectives
+#### Fixed Interpretation of Binary Connectives
 
 - takes a binary operator and returns corresponding *binary* Boolean function
 - (Bool → Bool → Bool) is the type of function that takes two Bools and returns one
