@@ -1,13 +1,13 @@
 
 # Summary
 
-[Introduction](./introduction.md)
+[Preface](./introduction.md)
 
 ---
 
 - [Languages](./languages.md)
   
-- [Propositional Logic]()
+- [Propositional Logic](./propLogic.md)
 
   - [Syntax](./DMT1/Lectures/L02_propLogic/formal/syntax.lean.md)
   - [Bare Code](./DMT1/Library/propLogic/syntax.lean.md)
