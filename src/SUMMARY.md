@@ -27,6 +27,7 @@
 
   - [Lean and VSCode](./Assignments/a1.md)
   - [Abstract and Concrete Syntax](./Assignments/a2.md)
+  - [Operational Semantics](./Assignments/a3.md)
 
 ---
 
