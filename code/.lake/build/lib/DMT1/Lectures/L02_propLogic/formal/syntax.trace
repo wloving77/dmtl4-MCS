@@ -1,8 +1,8 @@
 {"log":
  [{"message":
-   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---stable/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Lectures/L02_propLogic/formal/syntax.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/syntax.olean -i ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/syntax.ilean -c ././.lake/build/ir/DMT1/Lectures/L02_propLogic/formal/syntax.c --json",
+   ".> LEAN_PATH=././.lake/build/lib DYLD_LIBRARY_PATH= /Users/sullivan/.elan/toolchains/leanprover--lean4---stable/bin/lean ././././DMT1/Lectures/L02_propLogic/formal/syntax.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/syntax.olean -i ././.lake/build/lib/DMT1/Lectures/L02_propLogic/formal/syntax.ilean -c ././.lake/build/ir/DMT1/Lectures/L02_propLogic/formal/syntax.c --json",
    "level": "trace"},
   {"message":
-   "././././DMT1/Lectures/L02_propLogic/formal/syntax.lean:132:0: { index := 3 } : Var",
+   "././././DMT1/Lectures/L02_propLogic/formal/syntax.lean:133:0: { index := 3 } : Var",
    "level": "info"}],
- "depHash": "4750404999497005688"}
+ "depHash": "1682888084691387161"}
