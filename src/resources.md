@@ -5,6 +5,11 @@ connect you to both written documentation for Lean 4 and to two
 online communities where you can follow the leaders in the field
 and ask questions, often getting answers very quickly.
 
+## Help Searching Mathlib for Relevant Definitions
+
+- [Mathlib Documentation](https://leanprover-community.github.io/mathlib4_docs/index.html)
+- [Loogle online](https://loogle.lean-lang.org/). Also see the Loogle VSCode extension.
+
 ## Written Documentation on Lean 4 and Related Tools and Ideas
 
 - [Lean Language Site](https://lean-lang.org/)
@@ -21,7 +26,8 @@ and ask questions, often getting answers very quickly.
 - [Learning Resources](https://leanprover-community.github.io/learn.html)
 - [Hitchhikers Guide to Logical Verification](https://raw.githubusercontent.com/blanchette/logical_verification_2023/main/hitchhikers_guide.pdf)
 
-# Books on Closely Related Concepts and Tools (mainly Coq)
+## Books on Closely Related Concepts and Tools (mainly Coq)
+
 - [Software Foundations](https://softwarefoundations.cis.upenn.edu/)
 - [The Mechanics of Proof](https://hrmacbeth.github.io/math2001/)
 - [Homotopy Type Theory, Chapter 1](https://hott.github.io/book/hott-online-15-ge428abf.pdf)
@@ -35,6 +41,3 @@ and ask questions, often getting answers very quickly.
 - [Lean Discord Channel](https://discord.gg/WZ9bs9UCvx)
 - [Functional Programming Discord Channel with Lean Topic](https://discord.gg/FUKKjpzq)
 
-## Help Searching Mathlib for Relevant Definitions
-
-- [Loogle online](https://loogle.lean-lang.org/). Also see the Loogle VSCode extension.
