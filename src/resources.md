@@ -20,6 +20,8 @@ and ask questions, often getting answers very quickly.
 - [Lean for the Curious Mathematician (2023 edition)](https://lftcm2023.github.io/tutorial/index.html)
 - [Learning Resources](https://leanprover-community.github.io/learn.html)
 - [Hitchhikers Guide to Logical Verification](https://raw.githubusercontent.com/blanchette/logical_verification_2023/main/hitchhikers_guide.pdf)
+
+# Books on Closely Related Concepts and Tools (mainly Coq)
 - [Software Foundations](https://softwarefoundations.cis.upenn.edu/)
 - [The Mechanics of Proof](https://hrmacbeth.github.io/math2001/)
 - [Homotopy Type Theory, Chapter 1](https://hott.github.io/book/hott-online-15-ge428abf.pdf)
@@ -27,8 +29,12 @@ and ask questions, often getting answers very quickly.
 - [Certified Programming with Dependent Types](http://adam.chlipala.net/cpdt/)
 - [Software Foundations](https://softwarefoundations.cis.upenn.edu/)
 
-## Community Resources
+## Community Resources (Recommended to Join These Groups!)
 
 - [Lean Zulipchat](https://leanprover.zulipchat.com/)
 - [Lean Discord Channel](https://discord.gg/WZ9bs9UCvx)
 - [Functional Programming Discord Channel with Lean Topic](https://discord.gg/FUKKjpzq)
+
+## Help Searching Mathlib for Relevant Definitions
+
+- [Loogle online](https://loogle.lean-lang.org/). Also see the Loogle VSCode extension.
