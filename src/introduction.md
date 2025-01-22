@@ -4,22 +4,17 @@
 
 Copyright &copy; Kevin Sullivan, 2024-2025.
 
-This course, developed and tested by Kevin Sullivan at the University of Virginia. It is
-offered as a model for replacing the typical (with exceptions) second course for undergraduate
-computer science (CS) students, discrete mathematics and theory (DMT). The typical course employs quasi-formal, paper-and-pencil presentations generally limited to first-order logic and set theory, and induction over natural numbers. No automated tools are needed or used to handle propositions or proofs as mathematical objects, e.g., to provide immediate feedback to students on flawed reasoning.
+This course, developed and tested by Kevin Sullivan at the University of Virginia, is
+offered as a possible model for replacing the traditional (with exceptions) second course for undergraduate computer science (CS) students, namely discrete mathematics and theory (DMT). The typical course employs mixed formal and informal, often mostly quasi-formal, paper-and-pencil presentations generally limited to first-order theory and induction over the natural numbers. These courses sometimes do provide experience with some automated tooling and demonstrations but they are rarely employed to establish a unifying framework for the formal, checked, abstract definitions and uses of all of the essential concepts in a DMT course for CS students.
 
-For many computer science students who go on to further studies, these paper-and-pencil courses in first order predicate logic and set theory no longer appear to be serving their goals  given the now undeniable importance of cutting-edge tools for advanced logical, abstract mathematical, and efficient computational expression and reasoning. Moreover, the traditional course doesn't appear memorable to
-students, Anecdotally from where I sit, few of the incoming graduate students I encounter would be able to say with justifiable confidence whether (0=1 -> 2=3) is true or false.
+My judgemts tends toward the view that even for many computer science students who go on to graduate studies, these paper-and-pencil courses in first order theory do not seem to be achieving their long term learning goals. From anecdotal data, it seems the traditional course doesn't appear memorable. Very few incoming graduate students I encounter could say with justifiable confidence whether (0=1 -> 2=3) is true or false in propositional logic (with natural number arithmetic). Of course it's not their faults: our field has not yet caught up to the availability of a compelling new alternative.
 
-Finally, this course is also intended as a first major part of an early graduate course in
-the same material. As I noted, most graduate students at least from where I sit do not appear
-to have strong backgrounds in this material. Whatever DMT courses they might have had, they 
-seem long forgotten. Of course it's not their faults: our field has not yet caught up to the availability of a compelling new alternative.
+So, at bottom, this course is offered as a significant replacement of the traditional CS2
+course in DMT. Beyond that, it is also intended, and is currently being used, as a "crash course" first part of a first graduate course to provide MS and PhD students with a broad set of Lean 4 concepts and mechanisms and their uses.
 
 ## Hypothesis
 
-The motivating hypothesis for this public book draft is that switching our students, in CS2, from
-the traditional first-order, at most quasi-formal, paper-and-pencile course to one something like this this one would engage students in their main are of interest (computation and really cool languages and tools) and re-establish this material as an essential and practical foundation of our discipline, while also getting a small jump on what I believe will be rapidly growing industrial demand for people who developed the intellectual skills they will learn if they're diligent in studying this material.
+The hypothesis for this boook draft is thus roughly that switching CS students from courses around traditional first-order theory using quasi-formal presentations, to one something like this this one, would: engage students first in their main area of interest: computation and cool languages and tools;re-establish the ability to use expressive logic and abstract mathematics as an essential foundation for any computer scientist; provide students with conceptual foundations that are also seeing rapidly growing industrial demand.
 
 ## Ask
 
