@@ -4,21 +4,28 @@
 
 Copyright &copy; Kevin Sullivan, 2024-2025.
 
-This course, developed and tested by Kevin Sullivan at the University of Virginia, is intended as the second course for undergraduate computer science majors in discrete mathematics and theory. The potentially transformational feature of this class that is that it delivers essentially all of the logical and mathematical concepts typically covered in such a course using the higher-order, mechanically checked logic and toolset of Lean 4. Among other things, this course will prepare students to jobs in the small but now rapidly growing, and vastly underserved market for Lean 4 programmers.
+This course, developed and tested by Kevin Sullivan at the University of Virginia. It is
+intended as a model for replacing the second course for undergraduate computer science (CS)
+majors--a course typically in discrete mathematics and theory--across the board. Such a course
+typically covered propositional and first-order predicate logic and set theory eextended with
+natural number arithmetic and maybe a few other such theories.
 
-Key differences between this course and a traditional one in discrete mathematics include the follwing:
 
-- whereas a traditional course uses paper-and-pencil methods, this class uses an automated constructive logic proof assistant, providing students with immediate feedback on the syntax of formal expressions and proof correctness
-- whereas a traditional course uses first-order logic and set theory, this course teaches higher-order predicate logic, in which it's possible to formal define much of the content of a DMT course in more sophisticated and powerful ways than is possible in first-order logic (e.g., generalized properties of relations). 
-  
-We believe it's important for students learn to think in higher-level, generalized mathematical concepts. For example, the property of a binary relation on a set "being symmetric" generalizes across all binary relations on all sets. But this idea is not first-order, as it involves universal generalization (quantification) over binary relations. The higher order logic of the Lean prover, on the other hand, has been embraced by a small but important group of mathematicians, who presumably have found it expressive enough to express very complex ideas (see Massot on sphere eversion), check proofs about them, do it all in the many and diverse mathematical notations employed across subfields of the discipline.
+This course delivers essentially all of the logical and mathematical concepts covered in 
+such a course but now in a precise, abstract, automated  matheamtical language and notation. It employs the higher-order logic and toolset of Lean 4. It has also been refined through multiple offerings to reduce the coverage of Lean to a minimum to ensure that students are not overly
+distracted from the core mathematical and logical concepts at the heart of any course in DM.
+The course is also meant to prepare students to compete for jobs in the small but now growing
+market for programmers in Lean 4 and related languages.
 
-Students will also learn that recursive functions and proofs are constructed by applying induction axioms, derived from inductive data definitions, to arguments corresponding to the constructors of any given inductive type. In a traditional course it's rare to see induction on other than natural number arguments. This course teaches the explicit construction of both recursive algorithms, early, and inductive proofs, later, by explicit application of induction axioms. For students to be able to read, understand, and apply formal definitions of induction axioms, confident that they actually make sense as reasoning principles, is itself a real learning achievement at this level.
+Finally, this course is also intended as a first major segment of a graduate course in
+formal and automated logical and mathematical expression and reasoning. Anecdotally,
+almost none of the PhD or MS students entering the CS department at my institution have
+a useful background in these area. Of 38 graduate students in Spring 2025, close to zero
+were able to confidently reason about the truth-functional definition of impication. I
+take this as a sign that our field is failing undergraduate CS students when it comes
+to effective education in fundamental concepts and uses of logic, proof, set theory, and
+precise, abstract, mathematical reasoning more generally.
 
-A capstone insight for students is that reasoning about termination of non-structural recursions depends on the property of relations of being well-ordered. Induction axioms are used early in the course to construct recursive algorithms and later on to construct recursive proofs; but most of the class has gone ahead with structural recursions only, and not mentioning termination on non-structural ones.
+From here, advanced courses in several areas are possible at both undergraduate and graduate levels, including programming language design and implementation, certified software engineering, compilers, machine learning (e.g., of discrete structures) from examples, formalization of higher mathematics, and formalization of physics, AI, robotics, and other domains that require sophsticated mathematics.
 
-A major challenge in the design of this course has been that the proof assistant, and the rigorous correctness it demands, can distract early students from what many might say are the core ideas that such a course should teach. That said, every bit of learning of Lean is itself learning of and how to use the powerful formal logic at the heart of a lot of important and exciting work today. Based on experience with multiple offerings, this course limits students to learning only the tern language of Lean, eschewing the tactic language until the end. The goal is to focus CS students on deductive reasoning as a form of programming (Curry-Howard). The should come to understand the inference rules as a programming library, where they have to write programs, in general, to construct proofs of important, interesting, and beautifully expressed propositions.  
-
- From here, advanced courses in several areas are possible: programming language design, compilers, program specification and verification, machine learning (e.g., of discrete structures) from examples, formalization of higher mathematics, and formalization of physics, AI, robotics, and other domains that require sophsticated mathematics.
-
- &copy; Kevin Sullivan 2024-2025 All rights reserved. If you'd like to use this material in your teaching, please just give me a call at sullivan@virginia.edu.
+ &copy; Kevin Sullivan 2024-2025. If you'd like to use this material in your teaching, please give me a call at sullivan@virginia.edu.
