@@ -39,5 +39,5 @@ and ask questions, often getting answers very quickly.
 
 - [Lean Zulipchat](https://leanprover.zulipchat.com/)
 - [Lean Discord Channel](https://discord.gg/WZ9bs9UCvx)
-- [Functional Programming Discord Channel with Lean Topic](https://discord.gg/FUKKjpzq)
+- [Programming Languages Discord Channel](https://discord.gg/Up7KFNnF)
 
