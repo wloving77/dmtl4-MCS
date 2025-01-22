@@ -9,9 +9,12 @@ This course, developed and tested by Kevin Sullivan at the University of Virgini
 science (CS) majors, in discrete mathematics and theory (DMT). The typical paper and pencil
 course on propositional and first-order logic and set theory theory is not serving students
 in CS well. Anecdotally, almost none of the 38 PhD or MS students in my graduate course this
-semester have a useful background in these area. Close to zero knew how to reason about logical impication, for example. 
+semester have a useful background in these areas. For example, almost none of them knew how
+to reason about logical impication.
 
-Any first course in DMT must cover propositional and predicate logic, set theory, and induction, if only over natural numbers. This course delivers all of the logical and mathematical concepts covered in such a course but now as a body of knowledge entirely formalized in a precise, abstract, automated  mathematical languages and notations. It employs the higher-order logic and toolset of Lean 4. It has also been refined through multiple offerings to reduce the coverage of Lean to a minimum to ensure that students are not overly distracted from the core mathematical and logical concepts at the heart of any DMT course. The course is also meant to prepare students to compete for jobs in the small but rapidly growing market for software engineering capable of programming in Lean 4 and related languages.
+Any first course in DMT must cover propositional and predicate logic, set theory, and induction.
+This course delivers all of the logical and mathematical concepts covered in a traditional course
+but now as a body of knowledge entirely formalized in a precise, abstract, automated  mathematical languages and notations. It employs the higher-order logic and toolset of Lean 4. It has also been refined through multiple offerings to reduce the coverage of Lean to a minimum to ensure that students are not overly distracted from the core mathematical and logical concepts at the heart of any DMT course. The course is also meant to prepare students to compete for jobs in the small but rapidly growing market for software engineering capable of programming in Lean 4 and related languages.
 
 Finally, this course is also intended as a first major segment of a graduate course in
 formal and automated logical and mathematical expression and reasoning. As noted, at least
