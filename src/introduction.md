@@ -4,28 +4,21 @@
 
 Copyright &copy; Kevin Sullivan, 2024-2025.
 
-This course, developed and tested by Kevin Sullivan at the University of Virginia. It is
-intended as a model for replacing the second course for undergraduate computer science (CS)
-majors--a course typically in discrete mathematics and theory--across the board. Such a course
-typically covered propositional and first-order predicate logic and set theory eextended with
-natural number arithmetic and maybe a few other such theories.
+This course, developed and tested by Kevin Sullivan at the University of Virginia, is meant
+(proposed) as a model for replacing the traditional second course for undergraduate computer
+science (CS) majors, in discrete mathematics and theory (DMT). The typical paper and pencil
+course on propositional and first-order logic and set theory theory is not serving students
+in CS well. Anecdotally, almost none of the 38 PhD or MS students in my graduate course this
+semester have a useful background in these area. Close to zero knew how to reason about logical impication, for example. 
 
-
-This course delivers essentially all of the logical and mathematical concepts covered in 
-such a course but now in a precise, abstract, automated  matheamtical language and notation. It employs the higher-order logic and toolset of Lean 4. It has also been refined through multiple offerings to reduce the coverage of Lean to a minimum to ensure that students are not overly
-distracted from the core mathematical and logical concepts at the heart of any course in DM.
-The course is also meant to prepare students to compete for jobs in the small but now growing
-market for programmers in Lean 4 and related languages.
+Any first course in DMT must cover propositional and predicate logic, set theory, and induction, if only over natural numbers. This course delivers all of the logical and mathematical concepts covered in such a course but now as a body of knowledge entirely formalized in a precise, abstract, automated  mathematical languages and notations. It employs the higher-order logic and toolset of Lean 4. It has also been refined through multiple offerings to reduce the coverage of Lean to a minimum to ensure that students are not overly distracted from the core mathematical and logical concepts at the heart of any DMT course. The course is also meant to prepare students to compete for jobs in the small but rapidly growing market for software engineering capable of programming in Lean 4 and related languages.
 
 Finally, this course is also intended as a first major segment of a graduate course in
-formal and automated logical and mathematical expression and reasoning. Anecdotally,
-almost none of the PhD or MS students entering the CS department at my institution have
-a useful background in these area. Of 38 graduate students in Spring 2025, close to zero
-were able to confidently reason about the truth-functional definition of impication. I
-take this as a sign that our field is failing undergraduate CS students when it comes
-to effective education in fundamental concepts and uses of logic, proof, set theory, and
+formal and automated logical and mathematical expression and reasoning. As noted, at least
+in my institution, it's clear that our field is failing undergraduate CS students when it comes
+to effective education in fundamental concepts and uses of logic, proof, set theory, and in
 precise, abstract, mathematical reasoning more generally.
 
-From here, advanced courses in several areas are possible at both undergraduate and graduate levels, including programming language design and implementation, certified software engineering, compilers, machine learning (e.g., of discrete structures) from examples, formalization of higher mathematics, and formalization of physics, AI, robotics, and other domains that require sophsticated mathematics.
+From here, advanced courses in several areas are possible at both undergraduate and graduate levels, including programming language design and implementation, rigorous software engineering, machine learning, formalization of higher mathematics, and of physics, robotics, and other domains that rely on sophsticated mathematics and that demand high assurance of safety, security, and other essential system properties.
 
- &copy; Kevin Sullivan 2024-2025. If you'd like to use this material in your teaching, please give me a call at sullivan@virginia.edu.
+ &copy; Kevin Sullivan 2024-2025. Feed free to use this material for yourself. If you'd like to use it in your teaching or for other professional purposes, please give me a call at sullivan@virginia.edu so I can keep track of that.
