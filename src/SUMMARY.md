@@ -20,7 +20,7 @@
   - [Truth Tables](./DMT1/Lectures/L03_modelTheory/truthTable.lean.md)
   - [Counterexamples](./DMT1/Lectures/L03_modelTheory/counterexamples.lean.md)
   - [Properties of Expressions](./DMT1/Lectures/L03_modelTheory/properties.lean.md)
-  - [Model-Theoretic Validity](./DMT1/Lectures/L03_modelTheory/validity.lean.md)
+  - [Semantic Validity](./DMT1/Lectures/L03_modelTheory/validity.lean.md)
   
 ---
 
