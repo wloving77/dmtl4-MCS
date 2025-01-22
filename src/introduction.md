@@ -14,7 +14,7 @@ course in DMT. Beyond that, it is also intended, and is currently being used, as
 
 ## Hypothesis
 
-The hypothesis for this boook draft is thus roughly that switching CS students from courses around traditional first-order theory using quasi-formal presentations, to one something like this this one, would: engage students first in their main area of interest: computation and cool languages and tools;re-establish the ability to use expressive logic and abstract mathematics as an essential foundation for any computer scientist; provide students with conceptual foundations that are also seeing rapidly growing industrial demand.
+The hypothesis for this boook draft is thus roughly that switching CS students from courses around traditional first-order theory using quasi-formal presentations, to one something like this this one, would: engage students first in their main area of interest: computation and cool languages and tools;re-establish the ability to use expressive logic and abstract mathematics as an essential foundation for any computer scientist; provide students with deep knowledge and skills with languages and systems that are now seeing rapidly growing industrial demand.
 
 ## Ask
 
