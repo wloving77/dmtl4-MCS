@@ -32,4 +32,4 @@
 
 ---
 
-[Readings](./resources.md)
+[Learning Resources](./resources.md)
