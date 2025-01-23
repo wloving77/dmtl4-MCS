@@ -12,7 +12,7 @@ tooling and demonstrations but they are rarely employed to establish a unifying 
 for the formal, checked, abstract definitions and uses of all of the essential concepts
 in a DMT course for CS students.
 
-My judgement tends toward the view that even for many computer science students who go on
+My judgment tends toward the view that even for many computer science students who go on
 to graduate studies, these paper-and-pencil courses in first order theory do not seem to
 be achieving their long term student learning objectives. From anecdotal data, it seems the
 traditional course doesn't appear to be particularly memorable. Few strong students who
@@ -20,19 +20,19 @@ I encounter could answer with justifiable confidence as to whether (0=1 -> 2=3) 
 or false in propositional logic with arithmetic.
 
 It's not the students' faults. The traditional course was great when we didn't have the
-science and technology that do now have. This course uses the Lean 4 environment present
+science and technology that we do now have. This course uses the Lean 4 environment to present
 the formal concepts taught in traditional courses but now presented in full generality.
 For example, students in this class formally define properties of binary relations on sets,
 such as the property of a relation of being symmetric. In English, it's just, "Given a binary
 relation r on a set s, then if for every e and f from s, if (e, f) is in r then so is (f, e).
 The best one can manage to assert in first-order logic is that for some particular relation r
-it's the case that for every e, f, in s, (e,f) in r implies (f,e) in r. In Lean one says,
+it's the case that for every e, f, in s, (e,f) in r implies (f,e) in r." In Lean one says,
 for any type, t, any set s of objects of type T, any binary r relation on s, and any values,
 e and f in s, then if (e, f) is in r then so is (f, e). Learning to think abstractly is a
 major underlying aim of a DMT class.
 
 It isn't just the expressiveness, either. Sets and relations are represented by logical
-memberships predicates in our formalizations, consistent with Lean's mathlib.  Students
+membership predicates in our formalizations, consistent with Lean's mathlib. Students
 thus also learn to reason across definitional abstraction boundaries and to use this skill
 to make progress in proof constructions. Another mark of success for a course like this
 could be that the extra cost paid up front is more than repaid well within course period.
@@ -58,7 +58,7 @@ rapidly growing industrial demand.
 
 Any first course in DMT must cover propositional and predicate logic, set theory, and induction.
 This course delivers all of the logical and mathematical concepts covered in a traditional course
-but now as a body of knowledge entirely formalized in a precise, abstract, automated  mathematical
+but now as a body of knowledge entirely formalized in precise, abstract, automated mathematical
 languages and notations. It employs the higher-order logic and toolset of Lean 4. It has also been
 refined through multiple offerings to pare the required knowledge of Lean to a minimum to keep the
 focus on the DMT concepts being expressed.
@@ -72,7 +72,7 @@ particular.
 From here, advanced courses in several areas are possible at both undergraduate and graduate levels,
 including programming language design and implementation, rigorous software engineering, machine
 learning, formalization of higher mathematics, and of physics, robotics, and other domains that
-rely on sophsticated mathematics and that demand high assurance of safety, security, and other
+rely on sophisticated mathematics and that demand high assurance of safety, security, and other
 essential system properties.
 
 ## Humility
