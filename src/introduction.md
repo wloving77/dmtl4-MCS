@@ -31,7 +31,8 @@ refined through multiple offerings to pare the required knowledge of Lean to a m
 focus on the DMT concepts being expressed.
 
 The solution adopted here included teaching term-language-only proof constructions until near the
-end of the course. This choice is tuned to the needs and interests of computer science students.  
+end of the course. This choice is tuned to the needs and interests of computer science students, in
+particular.
 
 ## Paths Forward for Students
 
