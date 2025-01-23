@@ -25,11 +25,13 @@ The hypothesis for this book draft is thus roughly that switching CS students fr
 
 Any first course in DMT must cover propositional and predicate logic, set theory, and induction.
 This course delivers all of the logical and mathematical concepts covered in a traditional course
-but now as a body of knowledge entirely formalized in a precise, abstract, automated  mathematical languages and notations. It employs the higher-order logic and toolset of Lean 4. It has also been refined through multiple offerings to reduce the coverage of Lean to a minimum to ensure that students are not overly distracted from the core mathematical and logical concepts at the heart of any DMT course.
+but now as a body of knowledge entirely formalized in a precise, abstract, automated  mathematical
+languages and notations. It employs the higher-order logic and toolset of Lean 4. It has also been
+refined through multiple offerings to pare the required knowledge of Lean to a minimum to keep the
+focus on the DMT concepts being expressed.
 
-The biggest challenges in designing this course was to teach enough of Lean without detracting from, and ideally thus enhancing, the essential concepts to be taught. The question is, what principled, aggressive subsetting of Lean 4 constructs would give students essential foundations and just what they need for the course while avoiding overload and amplifying the intended signal to students.
-The solution exhibited adopted here involved eschewing the tactical language entirely while teaching
-the core material from basic inference rules (incuding induction principles), seen as strongly typed computational elements (as well). 
+The solution adopted here included teaching term-language-only proof constructions until near the
+end of the course. This choice is tuned to the needs and interests of computer science students.  
 
 ## Paths Forward for Students
 
@@ -39,4 +41,4 @@ From here, advanced courses in several areas are possible at both undergraduate 
 
 There are surely issues and opportunities for improvement. If you feel inclined to provide input, even of the critical variety, please don't hesitate to send it along.
 
- &copy; Kevin Sullivan 2024-2025. 
+ &copy; Kevin Sullivan 2024-2025.
