@@ -8,6 +8,8 @@ title = "Discrete Mathematics and Theory in Lean 4"
 
 "1.0.0" = { "releaseNotes" = "Empty Book", "releaseDate" = "Foo" }
 "1.1.0" = { releaseNotes = "Chapters on Propositional Logic and Model Theory", release_date = "2025-01-15" }
+"1.1.1" = { releaseNotes = "Fixes import paths in hw3", release_date = "2025-01-23" }
+
 [build]
 build-dir = "book"
 
