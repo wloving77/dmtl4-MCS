@@ -31,7 +31,7 @@ for any type, t, any set s of objects of type T, any binary r relation on s, and
 e and f in s, then if (e, f) is in r then so is (f, e). Learning to think abstractly is a
 major underlying aim of a DMT class.
 
-It isn't just the expressiveness, either. Ssets and relations are represented by logical
+It isn't just the expressiveness, either. Sets and relations are represented by logical
 memberships predicates in our formalizations, consistent with Lean's mathlib.  Students
 thus also learn to reason across definitional abstraction boundaries and to use this skill
 to make progress in proof constructions. Another mark of success for a course like this
