@@ -2,8 +2,6 @@
 
 *By Kevin Sullivan*
 
-Copyright &copy; Kevin Sullivan, 2024-2025.
-
 This course, developed and tested by Kevin Sullivan at the University of Virginia, is
 offered as a possible model for replacing the traditional (with exceptions) second course for undergraduate computer science (CS) students, namely discrete mathematics and theory (DMT). The typical course employs mixed formal and informal, often mostly quasi-formal, paper-and-pencil presentations generally limited to first-order theory and induction over the natural numbers. These courses sometimes do provide experience with some automated tooling and demonstrations but they are rarely employed to establish a unifying framework for the formal, checked, abstract definitions and uses of all of the essential concepts in a DMT course for CS students.
 
@@ -40,6 +38,7 @@ From here, advanced courses in several areas are possible at both undergraduate 
 
 ## Humility
 
-There are surely issues and opportunities for improvement. If you feel inclined to provide input, even of the critical variety, please don't hesitate to send it along.
+There are surely issues and opportunities for improvement. If you feel inclined to provide input, 
+even of the critical variety, please don't hesitate to send it along.
 
- &copy; Kevin Sullivan 2024-2025.
+&copy; Kevin Sullivan 2024-2025.
