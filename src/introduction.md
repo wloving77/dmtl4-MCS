@@ -1,6 +1,14 @@
 # Discrete Mathematics and Theory in Lean 4
 
-*By Kevin Sullivan*
+By Kevin Sullivan.
+
+- [Discrete Mathematics and Theory in Lean 4](#discrete-mathematics-and-theory-in-lean-4)
+  - [Preface](#preface)
+  - [Overview](#overview)
+  - [Paths Forward](#paths-forward)
+  - [Humility](#humility)
+
+## Preface
 
 This course, developed and tested by Kevin Sullivan at the University of Virginia, is
 offered as a possible model for replacing the traditional (with exceptions) second course
@@ -21,12 +29,12 @@ or false in propositional logic with arithmetic.
 
 It's not the students' faults. The traditional course was great when we didn't have the
 science and technology that we do now have. This course uses the Lean 4 environment to present
-the formal concepts taught in traditional courses but now presented in full generality.
+the formal concepts taught in traditional courses but now presented in greater generality.
 For example, students in this class formally define properties of binary relations on sets,
-such as the property of a relation of being symmetric. In English, it's just, "Given a binary
+such as the property of a relation r of being symmetric. In English, it's "Given a binary
 relation r on a set s, then if for every e and f from s, if (e, f) is in r then so is (f, e).
-The best one can manage to assert in first-order logic is that for some particular relation r
-it's the case that for every e, f, in s, (e,f) in r implies (f,e) in r." In Lean one says,
+The best one can manage to express in first-order logic is that for some particular relation 
+r it's the case that for every e, f, in s, (e,f) in r implies (f,e) in r." In Lean one says,
 for any type, t, any set s of objects of type T, any binary r relation on s, and any values,
 e and f in s, then if (e, f) is in r then so is (f, e). Learning to think abstractly is a
 major underlying aim of a DMT class.
@@ -54,7 +62,7 @@ languages, tools; reinvigorate the treatment of logic and abstract mathematics a
 foundation for computer scientists; provide students knowledge and skills that are now seeing
 rapidly growing industrial demand.
 
-## Course
+## Overview
 
 Any first course in DMT must cover propositional and predicate logic, set theory, and induction.
 This course delivers all of the logical and mathematical concepts covered in a traditional course
@@ -67,7 +75,7 @@ The solution adopted here included teaching term-language-only proof constructio
 end of the course. This choice is tuned to the needs and interests of computer science students, in
 particular.
 
-## Paths Forward for Students
+## Paths Forward
 
 From here, advanced courses in several areas are possible at both undergraduate and graduate levels,
 including programming language design and implementation, rigorous software engineering, machine
