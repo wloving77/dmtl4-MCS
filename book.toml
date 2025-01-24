@@ -14,9 +14,24 @@ title = "Discrete Mathematics and Theory in Lean 4"
 build-dir = "book"
 
 [output.html]
-additional-js = ["assets/lean.min.js"]
+additional-js = [
+    "assets/lean.min.js",
+    "assets/mermaid.min.js",
+    "assets/mermaid-init.js",
+]
+
+# additional-css = ["assets/mermaid.css"]
+
 mathjax-support = true
 git-repository-url = "https://github.com/kevinsullivan/dmtl4"
 
 [output.html.playground.boring-prefixes]
 lean = "# "
+
+[preprocessor.toc]
+command = "mdbook-toc"
+depth = 2
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+renderer = ["html"]
