@@ -1,3 +1,4 @@
+```lean
 import DMT1.Library.natArithmetic.semantics
 
 namespace DMT1.natArithmetic
@@ -82,3 +83,4 @@ def i230463 : Var → Nat
 #eval semantics.eval e5 i230463
 
 end DMT1.natArithmetic
+```
