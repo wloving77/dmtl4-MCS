@@ -22,19 +22,21 @@ It comprises:
   - to construct functions that answer correctly for each of infinite possible arguments
   - to construct proofs (if it's true) that *all* natural numbers have a specified property
 
-So how do you define a type with an infinite number of possible terms? (values)? This is what's
-needed to represent the infinite set of all natural numbers as a *type*. And how do you define
-a function capable of answering correctly for *all* values of this type? Certainly one can
-neither list all values as constructors in the type definition, nor is it feasible to do a
+So how do you define a type with an infinite number of possible terms?
+(values)? This is what's needed to represent the infinite set of all
+natural numbers as a *type*. And how do you define a function capable of
+answering correctly for *all* values of this type? Certainly one can
+neither list all values as constructors in the type definition, nor is
+it feasible to do a
 case analysis on every possible input value (as, example, we've done for Bool arguments,
 where there are only two values to consider)?
 
 The answer to these questions lies in the concept of inductive definitions
 of types and the application of *induction axioms* to construct functions
-from simpler values. Here they are (1) the correct answer for zero, and a
-function that if given *n' : Nat* and the correct answer for *n'* constructs
-and returns the correct answer for *n' + 1* from these values. Let's now see
-how these ideas play out for the Nat type.
+from simpler values. For Nat, they are (1) the correct answer for zero, and
+(2) a function that if given (a) any *n' : Nat*, and (b) the correct answer
+for *n'*, constructs and returns the correct answer for *n' + 1*. Let's see
+how these ideas, which are very general play out for the Nat type.
 
 ## Inductive De
 

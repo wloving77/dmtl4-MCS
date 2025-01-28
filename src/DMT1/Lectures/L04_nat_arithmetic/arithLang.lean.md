@@ -26,13 +26,13 @@ rapidly increasing expressiveness of logics we can envision, specify, and
 use.
 
 ```lean
-namespace DMT1.Lectures.L04_nat_arithmetic.syntax
+namespace DMT1.Lectures.nat_arithmetic.arithLang
 ```
 
 
 Variables
 *** -/
-structure Var : Type :=
+structure Var : Type where
   mk :: (index: Nat)
 deriving Repr
 
@@ -56,7 +56,7 @@ deriving Repr
 Expressions: Abstract Syntax
 ```
 inductive Expr : Type
-| lit (from_ : Nat) : Expr
+| lit (from_nat : Nat) : Expr
 | var (from_var : Var)
 | unOp (op : UnOp) (e : Expr)
 | binOp (op : BinOp) (e1 e2 : Expr)
@@ -66,7 +66,7 @@ deriving Repr
 Concrete Syntax
 ```
 notation " { " v " } " => Expr.var v
-notation " [ " n " ] " => Expr.lit n
+notation " { " n " } " => Expr.lit n
 notation e " ! " => Expr.unOp UnOp.fac e
 notation e1 " + " e2 => Expr.binOp BinOp.add e1 e2
 notation e1 " - " e2 => Expr.binOp BinOp.sub e1 e2
@@ -81,18 +81,6 @@ def eval : Expr → (Var → Nat) → Nat
 | Expr.unOp op e,                i => 0
 | Expr.binOp op e1 e2,           i => 0
 
-/-!
-HOMEWORK (ignore for now)
+notation "⟦" e "⟧" i => (eval e i)
 
-Below are some expressions that aren't evaluating to the
-right answers. The problem is that our specification of
-the semantics is not yet complete. Your job is to complete
-the specification the semantics of arithmetic expressions.
-You should do this homework on your own. You may talk with
-friends about our propositional logic expression language,
-and that will likely help you to see how to proceed here,
-but please do finish this assignment entirely on your own
-to be sure you're prepared to move on in our class.
--/
-
-namespace DMT1.Lectures.L04_nat_arithmetic.syntax
+end DMT1.Lectures.nat_arithmetic.arithLang

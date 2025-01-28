@@ -22,7 +22,8 @@
   - [Properties of Expressions](./DMT1/Lectures/L03_modelTheory/properties.lean.md)
   - [Semantic Validity](./DMT1/Lectures/L03_modelTheory/validity.lean.md)
   
----
+- [Arithmetic](./Arithmetic.md)
+  - [Syntax and Semantics](./DMT1/Lectures/L04_nat_arithmetic/arithLang.lean.md)
 
 - [Assignments](){-}
 
