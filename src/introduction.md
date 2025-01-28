@@ -8,25 +8,23 @@
 
 ## Preface
 
-This course, developed, taught, and evolved by Kevin Sullivan at the University of 
-Virginia, is offered as a possible model for replacing the traditional (with many 
-exceptions) second course for undergraduate computer science (CS) students. That is
-discrete mathematics and theory (DMT).  
+This course is offered as a possible model for replacing the traditional (with many
+exceptions) second course for undergraduate computer science (CS) students, namely\
+discrete mathematics and theory (DMT).  Such courses generally employ quasi-formal
+natural language to present mathematical concepts rather than machine-checked formal
+langauge; with coverage limited to first order theory and induction limited to that
+over the natural numbers.
 
-Such courses generally employ quasi-formal (not expected to pass strict checking of
-correctness regarding syntax, semantics, etc. For centuries, learning and practicing
-in the many uses of these formal languages has been a paper, pencil, and chalkboard
-affair.
-
-Now we have exceptionally good tooling for checked formal reason in logics that unify
-higher-order logic (with first-order theory as an easy special case), mathemetics, and
-computation. It appears to be a good time to seriously consider making the switch.
+Yet we now have exceptionally good tooling for checked formal reason in logics that
+are clearly suitable for presenting mathematics with great clarity and precision and
+with machine checking not only of syntax but of correctness. It appears to be a good 
+time to seriously consider making the switch.
 
 The crucial parameter is in the choice of the foundational theory of mathematics on
 which to base the entire course. A common choice has always been first-order set theory.
-But what we now know, from decades of research is that set theory is highly problematical
-as a foundation for tooling for unified trustworthy, highly expressive, and machine-
-checked logical, mathematical, and computational reasoning.
+But what we now know, from decades of researh, is that set theory is problematical
+as a foundation for tooling for highly expressive, machine-checked abstract logical,
+mathematical, and computational reasoning.
 
 The alternative is type theory. If one takes first-order set theory as the foundation,
 types are then represented in those terms, and machines have to deal with structures
