@@ -1,11 +1,15 @@
 ```lean
-import DMT1.Lectures.L03_nat_arithmetic.arithLang
+import DMT1.Lectures.L04_nat_arithmetic.arithLang
 
-/-!
+namespace DMT1.Lectures.L04_nat_arithmetic.arithLang.examples
+
+open DMT1.Lectures.nat_arithmetic.arithLang
+```
+
 We give you three variables expressions to work with and
 two different interpretations.
--/
 
+```lean
 -- variable expressions
 def X := { ⟨ 0 ⟩ }
 def Y := { ⟨ 1 ⟩ }
@@ -23,28 +27,30 @@ def interp_1 : Var → Nat     -- variables have specified values
 
 -- We can now evaluate the value of some arithmetic expressions
 #eval! eval (Expr.lit 3) interp_0
-#eval! eval [3] interp_0     -- expect 3
-#eval! eval [3] interp_1     -- expect 3
-#eval! eval ([5]!) interp_0  -- expect 120
+#eval! eval {3} interp_0     -- expect 3
+#eval! eval {3} interp_1     -- expect 3
+#eval! eval ({5}!) interp_0  -- expect 120
 #eval! eval X interp_0       -- expect 0
 #eval eval X interp_1        -- expect 2
 #eval eval Y interp_1        -- expect 3
 #eval eval Z interp_1        -- expect 0
+```
 
-/-!
 But these evaluations are not producing the mathematically
 correct answers.
--/
 
+```lean
 #eval eval (X + Y) interp_1    -- expect 5
 #eval eval (X * Y) interp_1    -- expect 6
-#eval eval (Y - [1]) interp_1  -- expect 2   -- correction here
+#eval eval (Y - {1}) interp_1  -- expect 2   -- correction here
 
 -- Extra credit: Make this work, too
 #eval eval (Y !) interp_1      -- expect 6
-/-
+```
 Note that we have to put that space between X and !.
 If we write X!, Lean interprets that as a single name
 and interprets it as an undefined name.
--/
+
+```lean
+end DMT1.Lectures.L04_nat_arithmetic.arithLang.examples
 ```
