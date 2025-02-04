@@ -113,11 +113,11 @@ can be evaluated as having fixed numeric rather
 than fixed Boolean values.
 @@@ -/
 
-inductive Expr : Type where
-| lit (from_nat : Nat) : Expr
+inductive ArithExpr : Type where
+| lit (from_nat : Nat) : ArithExpr
 | var (from_var : Var)
-| unOp (op : UnOp) (e : Expr)
-| binOp (op : BinOp) (e1 e2 : Expr)
+| unOp (op : UnOp) (e : ArithExpr)
+| binOp (op : BinOp) (e1 e2 : ArithExpr)
 
 
 /- @@@
@@ -129,8 +129,8 @@ of a sensible example of a ternary predicate?)
 @@@ -/
 
 inductive PredExpr : Type where
-| unOp (op : UnPredOp) (e : Expr)
-| binOp (op : BinPredOp) (e1 e2 : Expr)
+| unOp (op : UnPredOp) (e : ArithExpr)
+| binOp (op : BinPredOp) (e1 e2 : ArithExpr)
 
 
 /- @@@
@@ -138,9 +138,8 @@ We define (non-standard notations) to construct variable
 terms from natural numbers and variable expression terms
 from variable terms, as we did for propositional logic.
 @@@ -/
--- Nnotations for our abstract syntax
-notation:max " { " v " } " => Expr.var v
-notation:max " [ " n " ] " => Expr.lit n
+notation:max " { " v " } " => ArithExpr.var v
+notation:max " [ " n " ] " => ArithExpr.lit n
 
 
 /- @@@
@@ -148,10 +147,10 @@ Arithmetic operators are generally defined as left associative.
 The precedences specified here also reflect the usual rules for
 "order of operations" in arithmetic.
 @@@ -/
-notation:max e " ! " => Expr.unOp UnOp.fac e
-infixl:65 " + " => Expr.binOp BinOp.add
-infixl:65 " - " => Expr.binOp BinOp.sub
-infixl:70 " * " => Expr.binOp BinOp.mul
+notation:max e " ! " => ArithExpr.unOp UnOp.fac e
+infixl:65 " + " => ArithExpr.binOp BinOp.add
+infixl:65 " - " => ArithExpr.binOp BinOp.sub
+infixl:70 " * " => ArithExpr.binOp BinOp.mul
 
 
 /- @@@
