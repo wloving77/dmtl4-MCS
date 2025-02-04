@@ -1,5 +1,5 @@
 // Lean compiler output
-// Module: DMT1.Lectures.L04_nat_arithmetic.syntax
+// Module: DMT1.Lectures.L04_natArithmetic.syntax
 // Imports: Init
 #include <lean/lean.h>
 #if defined(__clang__)
@@ -599,7 +599,7 @@ static lean_object* _init_l_DMT1_Lectures_L04__nat__arithmetic_syntax_term_x7b__
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("L04_nat_arithmetic", 18, 18);
+x_1 = lean_mk_string_unchecked("L04_natArithmetic", 18, 18);
 return x_1;
 }
 }

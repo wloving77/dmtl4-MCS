@@ -1,12 +1,13 @@
-import DMT1.Lectures.L04_nat_arithmetic.arithLang
+```lean
+import DMT1.Lectures.L04_natArithmetic.arithLang
 
 
-namespace DMT1.Lectures.L04_nat_arithmetic.arithLang.demo
+namespace DMT1.Lectures.L04_natArithmetic.arithLang.demo
+```
 
-/- @@@
 # Our Natural Number Arithmetic Language!
-@@@ -/
 
+```lean
 open DMT1.Lectures.nat_arithmetic.arithLang
 
 
@@ -87,4 +88,5 @@ def i230463 : Var → Nat
 #eval ⟦e4⟧ i230463
 #eval ⟦e5⟧ i230463
 
-end DMT1.Lectures.L04_nat_arithmetic.arithLang.demo
+end DMT1.Lectures.L04_natArithmetic.arithLang.demo
+```
