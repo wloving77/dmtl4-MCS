@@ -1,13 +1,14 @@
+```lean
 namespace DMT1.natArithmetic
+```
 
-/- @@@
 # Arithmetic and Induction Principles
-@@@
 
+```lean
 <!-- toc -->
 -/
+```
 
-/- @@@
 ## Nat: A Recursive Type
 
 Everyone here is familar with natural number arithmetic.
@@ -36,9 +37,7 @@ from simpler values. For Nat, they are (1) the correct answer for zero, and
 (2) a function that if given (a) any *n' : Nat*, and (b) the correct answer
 for *n'*, constructs and returns the correct answer for *n' + 1*. Let's see
 how these ideas, which are very general play out for the Nat type.
-@@@ -/
 
-/- @@@
 ## Inductive De
 
 The answer in both cases is to apply a principle of valid reasoning called
@@ -62,12 +61,12 @@ which is precisely the term that we take to represent *n' + 1*. So if
 one wishes to construct a representation of, say, the natural number,
 *3*, then there's a procerss: start with *zero* and apply *succ* to it
 three times. Here's what it looks like in real life!
-@@@ -/
 
+```lean
 def three : Nat := Nat.succ (Nat.succ (Nat.succ Nat.zero))
 #reduce three   -- Lean has built-in notation so it prints "3"
+```
 
-/- @@@
 Using it, we go on to define a small library of
 basic arithmetic operators (addition, subtraction,
 etc.) and predicate functions (less than or equal,
@@ -118,21 +117,17 @@ for example, Nat.succ (Nat.succ Nat.Zero) represents 2.
 inductive Nat : Type
 | zero : Nat
 | succ (n' : Nat) : Nat
-@@@ -/
 
-/- @@@
 ## Operations
 
 Next we look at unary and binary operations. We represent
 the mathematical abstractions as functions in Lean that
 both consume (take as argments) and construct and return
 values of type Nat.
-@@@ -/
 
-/- @@@
 ### Unary Operations
-@@@ -/
 
+```lean
 -- identity function; two different ways to write it in Lean
 def id : Nat → Nat
 | n => n
@@ -162,9 +157,9 @@ def dec : Nat → Nat := pred
 def fac : Nat → Nat
 | 0 => 1
 | (n' + 1) => (n' + 1) * fac n'
+```
 
 
-/- @@@
 ### Binary Operations
 
 The preceding operations were unary, each taking one natural
@@ -172,8 +167,8 @@ number. The following definitions specify the standar binary
 arithmetic operations. Key ideas: (1) in general you need to
 pattern match on both arguments to distinguish key subsets of
 combinations of values to distinguish.
-@@@ -/
 
+```lean
 def add : Nat → Nat → Nat           -- case analysis on m only
 | n, 0 => n                         -- m = 0
 | n, (m' + 1) => (add n m') + 1     -- m = (m' + 1)
@@ -191,8 +186,8 @@ def mul : Nat → Nat → Nat           -- case analysis on second arg m
 def exp : Nat → Nat → Nat           -- you figure it out
 | _, 0 => 1
 | n, (m' + 1) => n * exp n m'
+```
 
-/- @@@
 ## Relations via Predicate Functions
 
 ### Unary Relations
@@ -205,8 +200,8 @@ argument is even, or prime, or a perfect square. You can
 pick the *property* of natural numbers you want. You can
 then often *specify* it as a predicate function, one that
 returns a Boolean yes/no answer, just as we're doing here.
-@@@ -/
 
+```lean
 -- An interesting unary property is "n is equal to zero."
 -- As a predicate function: give it n; it answers yes/no.
 
@@ -223,15 +218,15 @@ def poof : Nat → Bool
 
 -- Haha: is n *even*, does n have the property of being even?
 def isEven : Nat → Bool := poof
+```
 
 
-/- @@@
 ### Binary Relations
 
 Carefully study the case analysis and compare it with
 that for the equality relation (eq).
-@@@ -/
 
+```lean
 def le : Nat → Nat → Bool
 | 0, _ => true
 | (_ + 1), 0 => false
@@ -255,8 +250,8 @@ def ge : Nat → Nat → Bool
 | n, m => gt n m || eq n m
 
 end DMT1.natArithmetic
+```
 
-/- @@@
 ## The Natural Numbers in Lean4
 
 Lean provides a broad array of functions, standard notation,
@@ -269,17 +264,17 @@ its associated machinery in Lean4. From now on, you can just
 write arithmetic as you usually would and it'll all work as
 you expect. Here are some basic expressions, using Lean4 and
 its mathlib.
-@@@ -/
 
+```lean
 -- We're back to using Lean's definitions
+```
 
-/- @@@
 Lean provides all of the usual arithmetic operations.
 In abstract syntax, they're Nat.add (the add function
 defined in the Nat namespace), Nat.mul, Nat.sub, etc.
 Lean also provides standard notations for all of the
 usual arithmetic operators
-@@@ -/
+```lean
 #eval 4 + 5 * 6   -- evaluated as 4 + (5 * 6) due to precedence
 
 #check Nat.add 4 5 * 6
@@ -290,8 +285,8 @@ usual arithmetic operators
 #eval 4 ≤ 5
 #eval 5 ≤ 5
 #eval 6 ≤ 5
+```
 
-/- @@@
 Now that we have the domain of natural number arithmetic set up,
 it's time to turn to building a new *expression language* of our
 own as a second example of a formal language with a syntax and an
@@ -302,4 +297,3 @@ we'll have natural number-valued variable expressions. Instead of
 Boolean literals, we'll have Nat literal expressions. Instead of
 syntactic expressions with ∧ and ∨ symbols, the operators will be
 the likes of +, -, *.
-@@@ -/

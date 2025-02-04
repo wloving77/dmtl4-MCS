@@ -1,3 +1,4 @@
+```lean
 /-!
 # Induction
 
@@ -596,3 +597,4 @@ def fib : Nat → Nat
 /-
 Write test cases for 0, 1, 2, and 10. Does it work?
 -/
+```
