@@ -7,13 +7,16 @@ syntax propositional logic.
 <!-- toc -->
 @@@ -/
 
+/- @@@
+We import the theory syntactic language
+@@@ -/
+import DMT1.Lectures.L04_natArithmetic.syntax
+
 namespace DMT1.Lectures.theoryExtensions.syntax
 
 
 
 /- @@@
-## Abstract Syntax
-
 The syntax specifies the set of all and only syntactically
 correct propositional logic expressions. Roughly speaking,
 the syntax defines "literal" and "variable" expressions and
@@ -87,37 +90,33 @@ been using the term: they are not themselves expressions
 but are necessary values for making variable expressions.
 @@@ -/
 
-/- @@@
-##### abstract syntax for variables (var)
 
-The idea is that eventually an interpretation function
-will take a Var object as arguments and return the
-Boolean values that that interpretation assigns to it.
+/- @@@
+### Variables
+
+We will now have both Boolean and arithmetic
+(Nat-valued) variables, from which we will then
+be able to build variable expressions.
 @@@ -/
 
-structure Var : Type :=
+structure LogicVar : Type where
   mk :: (index: Nat)
 deriving Repr
 
 
-/- @@@
-The structure keyword indicates we're defining a data
-type with just one constructor, here called *mk*. In this
-case, it takes one argument, a natural number. The result
-of applying var.mk to the number 3 is the term (var.mk 3),
-which we will take to mean "the particular variable from
-our set of infinitely many, built from the Nat value 3".
-Here's a shorthand notation we just made up. You can use
-var_[3], for example, to mean (var.mk 3). It't not a lot
-of help, but
-@@@ -/
 
 /- @@@
-The "deriving Repr" construct is a detail you can ignore for
-now. In a nutshell it tells Lean to try to define a function
-to convert any value of this type to a string for presenting
-values as properly formatted output strings. Anyway, a detail.
+Lean detail: If you omit a constructor name,
+Lean uses *mk* by default.
 @@@ -/
+
+structure ArithVar : Type where
+  (index: Nat)
+deriving Repr
+
+-- See: it's defined
+#check ArithVar.mk
+
 
 
 
@@ -133,7 +132,7 @@ build a value of such a type you can use ⟨ a, b, c,... ⟩
 notation as a shorthand for, say, "var.mk a b c ....".
 We do need to let Lean know the result show be a "var".
 @@@ -/
-#check (⟨3⟩ : Var)    -- it's a variable (var)
+#check (⟨3⟩ : LogicVar)    -- it's a variable (var)
 -- #check ⟨3⟩             -- not unique constructor expr
 -- But where Lean can infer Var type ⟨3⟩ will suffice
 
@@ -148,6 +147,9 @@ need that when it comes to defining interpretations as
 functions that take *variables* in and that return values
 from the semantic domain, here just of Boolean values.
 @@@ -/
+
+
+
 
 /- @@@
 ### Operator Expressions
@@ -189,14 +191,15 @@ be (really will represent) expressions in propositional logic. In
 fact, in Lean, this type specifies the set of *all* and *only*
 the expressions legal in propositional logic.
 
-### Formal Syntax of Propositional Logic
+### Syntax of Propositional Logic with Arithmetic
 @@@ -/
 
 inductive Expr : Type
 | lit_expr (from_bool : Bool) : Expr
-| var_expr (from_var : Var)
+| var_expr (from_var : LogicVar)
 | un_op_expr (op : UnOp) (e : Expr)
 | bin_op_expr (op : BinOp) (e1 e2 : Expr)
+| arith_pred_expr (e : natArithmetic.syntax.PredExpr)
 deriving Repr
 
 /- @@@

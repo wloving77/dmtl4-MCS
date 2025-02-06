@@ -8,6 +8,7 @@ import DMT1.Lectures.L02_propLogic.formal.utilities
 import DMT1.Lectures.L02_propLogic.formal.semantics
 
 namespace DMT1.Lectures.propLogic.semantics
+
 open propLogic.syntax
 open propLogic.utilities
 

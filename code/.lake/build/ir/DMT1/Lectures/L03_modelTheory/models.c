@@ -13,22 +13,22 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-lean_object* l_DMT1_lecture_propLogic_semantics_eval(lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_findModels(lean_object*);
-LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_propLogic_semantics_models_findModels___spec__1(lean_object*, lean_object*, lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_findModel(lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_propLogic_semantics_models_findModel(lean_object*);
+lean_object* l_DMT1_Lectures_propLogic_semantics_eval(lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_propLogic_semantics_models_findModels(lean_object*);
 lean_object* l_List_reverse___rarg(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_isModel(lean_object*, lean_object*);
-lean_object* l_DMT1_lecture_propLogic_semantics_interpsFromExpr(lean_object*);
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_isModel(lean_object* x_1, lean_object* x_2) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_propLogic_semantics_models_isModel(lean_object*, lean_object*);
+lean_object* l_DMT1_Lectures_propLogic_semantics_interpsFromExpr(lean_object*);
+LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_Lectures_propLogic_semantics_models_findModels___spec__1(lean_object*, lean_object*, lean_object*);
+LEAN_EXPORT lean_object* l_DMT1_Lectures_propLogic_semantics_models_isModel(lean_object* x_1, lean_object* x_2) {
 _start:
 {
 lean_object* x_3; 
-x_3 = l_DMT1_lecture_propLogic_semantics_eval(x_2, x_1);
+x_3 = l_DMT1_Lectures_propLogic_semantics_eval(x_2, x_1);
 return x_3;
 }
 }
-LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_lecture_propLogic_semantics_models_findModels___spec__1(lean_object* x_1, lean_object* x_2, lean_object* x_3) {
+LEAN_EXPORT lean_object* l_List_filterTR_loop___at_DMT1_Lectures_propLogic_semantics_models_findModels___spec__1(lean_object* x_1, lean_object* x_2, lean_object* x_3) {
 _start:
 {
 if (lean_obj_tag(x_2) == 0)
@@ -49,7 +49,7 @@ x_6 = lean_ctor_get(x_2, 0);
 x_7 = lean_ctor_get(x_2, 1);
 lean_inc(x_6);
 lean_inc(x_1);
-x_8 = l_DMT1_lecture_propLogic_semantics_eval(x_1, x_6);
+x_8 = l_DMT1_Lectures_propLogic_semantics_eval(x_1, x_6);
 x_9 = lean_unbox(x_8);
 lean_dec(x_8);
 if (x_9 == 0)
@@ -81,7 +81,7 @@ lean_inc(x_12);
 lean_dec(x_2);
 lean_inc(x_12);
 lean_inc(x_1);
-x_14 = l_DMT1_lecture_propLogic_semantics_eval(x_1, x_12);
+x_14 = l_DMT1_Lectures_propLogic_semantics_eval(x_1, x_12);
 x_15 = lean_unbox(x_14);
 lean_dec(x_14);
 if (x_15 == 0)
@@ -104,21 +104,21 @@ goto _start;
 }
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_findModels(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_propLogic_semantics_models_findModels(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; lean_object* x_3; lean_object* x_4; 
-x_2 = l_DMT1_lecture_propLogic_semantics_interpsFromExpr(x_1);
+x_2 = l_DMT1_Lectures_propLogic_semantics_interpsFromExpr(x_1);
 x_3 = lean_box(0);
-x_4 = l_List_filterTR_loop___at_DMT1_lecture_propLogic_semantics_models_findModels___spec__1(x_1, x_2, x_3);
+x_4 = l_List_filterTR_loop___at_DMT1_Lectures_propLogic_semantics_models_findModels___spec__1(x_1, x_2, x_3);
 return x_4;
 }
 }
-LEAN_EXPORT lean_object* l_DMT1_lecture_propLogic_semantics_models_findModel(lean_object* x_1) {
+LEAN_EXPORT lean_object* l_DMT1_Lectures_propLogic_semantics_models_findModel(lean_object* x_1) {
 _start:
 {
 lean_object* x_2; 
-x_2 = l_DMT1_lecture_propLogic_semantics_models_findModels(x_1);
+x_2 = l_DMT1_Lectures_propLogic_semantics_models_findModels(x_1);
 if (lean_obj_tag(x_2) == 0)
 {
 lean_object* x_3; 

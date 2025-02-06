@@ -2,6 +2,7 @@ import DMT1.Lectures.L04_natArithmetic.syntax
 import DMT1.Lectures.L04_natArithmetic.domain
 
 namespace DMT1.Lectures.natArithmetic.semantics
+
 open DMT1.Lectures.natArithmetic.domain
 
 /- @@@
