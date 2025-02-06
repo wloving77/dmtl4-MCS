@@ -1,0 +1,17 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/build/lib DYLD_LIBRARY_PATH=././.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Cli/.lake/build/lib:/Users/sullivan/.elan/toolchains/leanprover--lean4---v4.16.0-rc2/lib/lean:/Users/sullivan/.elan/toolchains/leanprover--lean4---v4.16.0-rc2/lib /Users/sullivan/.elan/toolchains/leanprover--lean4---v4.16.0-rc2/bin/lean ././././DMT1/Lectures/L05_theoryExtensions/domain.lean -R ./././. -o ././.lake/build/lib/DMT1/Lectures/L05_theoryExtensions/domain.olean -i ././.lake/build/lib/DMT1/Lectures/L05_theoryExtensions/domain.ilean -c ././.lake/build/ir/DMT1/Lectures/L05_theoryExtensions/domain.c --json",
+   "level": "trace"},
+  {"message":
+   "././././DMT1/Lectures/L05_theoryExtensions/domain.lean:28:0: \"F\"",
+   "level": "info"},
+  {"message":
+   "././././DMT1/Lectures/L05_theoryExtensions/domain.lean:29:0: \"T\"",
+   "level": "info"},
+  {"message":
+   "././././DMT1/Lectures/L05_theoryExtensions/domain.lean:42:0: \"T\"",
+   "level": "info"},
+  {"message":
+   "././././DMT1/Lectures/L05_theoryExtensions/domain.lean:43:0: \"F\"",
+   "level": "info"}],
+ "depHash": "9370865555143162816"}
