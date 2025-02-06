@@ -1,4 +1,5 @@
 import DMT1.Lectures.L05_theoryExtensions.syntax
+import DMT1.Lectures.L04_natArithmetic.syntax
 
 /- @@@
 # Examples
@@ -7,9 +8,12 @@ import DMT1.Lectures.L05_theoryExtensions.syntax
 @@@ -/
 
 
-namespace DMT1.Lectures.propLogic.axioms
+namespace DMT1.Lectures.theoryExtensions.axioms
 
 open theoryExtensions.syntax
+--open natArithmetic.syntax
+
+
 open Expr
 
 
@@ -85,4 +89,28 @@ def distribNotOr    := ¬(P ∨ Q) ↔ (¬P ∧ ¬ Q)
 
 @@@-/
 
-end DMT1.Lectures.propLogic.axioms
+#check DMT1.Lectures.natArithmetic.syntax.PredExpr
+
+def v₀ : natArithmetic.syntax.Var :=  ⟨0⟩
+def v₁ : natArithmetic.syntax.Var := ⟨1⟩
+def v₂ : natArithmetic.syntax.Var := ⟨2⟩
+
+def K : natArithmetic.syntax.OpExpr :=
+  natArithmetic.syntax.OpExpr.var v₀
+def N : natArithmetic.syntax.OpExpr :=
+  natArithmetic.syntax.OpExpr.var v₁
+def M : natArithmetic.syntax.OpExpr :=
+  natArithmetic.syntax.OpExpr.var v₂
+
+set_option diagnostics true
+
+#check (K + M)
+#check (K == M)
+def foo := (K == M)
+def bar := Expr.arith_pred_expr foo
+
+#check theoryExtensions.syntax.Expr.arith_pred_expr foo
+
+#check bar ∧ bar
+
+end DMT1.Lectures.theoryExtensions.axioms

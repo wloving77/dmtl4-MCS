@@ -163,10 +163,12 @@ We also specify concrete syntax for the usual binary
 predicates (aka relational operators) in arithmetic.
 @@@ -/
 
-infix:50 " = " => PredExpr.mk BinPredOp.eq
-infix:50 " ≤ " => PredExpr.mk BinPredOp.le
-infix:50 " < " => PredExpr.mk BinPredOp.lt
-infix:50 " ≥ " => PredExpr.mk BinPredOp.ge
-infix:50 " > " => PredExpr.mk BinPredOp.gt
+#check PredExpr.binOp BinPredOp.eq
+
+notation:50 x " == " y => PredExpr.binOp BinPredOp.eq x y
+notation:50 x " ≤ " y => PredExpr.binOp BinPredOp.le x y
+notation:50 x " < " y => PredExpr.binOp BinPredOp.lt x y
+notation:50 x " ≥ " y => PredExpr.binOp BinPredOp.ge x y
+notation:50 x " > " y => PredExpr.binOp BinPredOp.gt x y
 
 end DMT1.Lectures.natArithmetic.syntax

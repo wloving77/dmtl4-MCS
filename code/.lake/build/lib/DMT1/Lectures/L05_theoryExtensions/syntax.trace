@@ -7,5 +7,8 @@
    "level": "info"},
   {"message":
    "././././DMT1/Lectures/L05_theoryExtensions/syntax.lean:135:0: { index := 3 } : LogicVar",
+   "level": "info"},
+  {"message":
+   "././././DMT1/Lectures/L05_theoryExtensions/syntax.lean:205:0: DMT1.Lectures.theoryExtensions.syntax.Expr.arith_pred_expr (from_pred : natArithmetic.syntax.PredExpr) : Expr",
    "level": "info"}],
- "depHash": "9002003034981269138"}
+ "depHash": "7893468915201096481"}

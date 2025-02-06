@@ -199,8 +199,10 @@ inductive Expr : Type
 | var_expr (from_var : LogicVar)
 | un_op_expr (op : UnOp) (e : Expr)
 | bin_op_expr (op : BinOp) (e1 e2 : Expr)
-| arith_pred_expr (e : natArithmetic.syntax.PredExpr)
+| arith_pred_expr (from_pred : natArithmetic.syntax.PredExpr)
 deriving Repr
+
+#check Expr.arith_pred_expr
 
 /- @@@
 Every type encloses the names of its constructors
@@ -245,11 +247,12 @@ The de-sugared versions follow after the arrows.
 notation:max " ⊤ " => (Expr.lit_expr true)
 notation:max " ⊥ " => (lit_expr false)
 notation:max "{" v "}" => (var_expr v)
-notation:max "¬" p:40 => un_op_expr UnOp.not p
-infixr:35 " ∧ "  =>  Expr.bin_op_expr BinOp.and
-infixr:30 " ∨  "  => Expr.bin_op_expr BinOp.or
-infixr:20 " ↔ " => bin_op_expr BinOp.iff
-infixr:25 " ⇒ " => bin_op_expr BinOp.imp
+notation:max "⟨" e "⟩ " => arith_pred_expr (e : natArithmetic.syntax.PredExpr)
+notation:max "¬" p:40 =>  un_op_expr UnOp.not p
+infixr:35 " ∧ "  =>       bin_op_expr BinOp.and
+infixr:30 " ∨  "  =>      bin_op_expr BinOp.or
+infixr:20 " ↔ " =>        bin_op_expr BinOp.iff
+infixr:25 " ⇒ " =>        bin_op_expr BinOp.imp
 
 /- @@@
 That's it. That's the entire abstract and concrete
