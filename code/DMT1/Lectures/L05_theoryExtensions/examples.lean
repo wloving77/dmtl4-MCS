@@ -1,5 +1,5 @@
 import DMT1.Lectures.L05_theoryExtensions.syntax
-import DMT1.Lectures.L04_natArithmetic.syntax
+import DMT1.Lectures.L05_theoryExtensions.semantics
 
 /- @@@
 # Examples
@@ -11,6 +11,7 @@ import DMT1.Lectures.L04_natArithmetic.syntax
 namespace DMT1.Lectures.theoryExtensions.axioms
 
 open theoryExtensions.syntax
+open theoryExtensions.semantics
 --open natArithmetic.syntax
 
 
@@ -111,6 +112,11 @@ def bar := Expr.arith_pred_expr foo
 
 #check theoryExtensions.syntax.Expr.arith_pred_expr foo
 
-#check bar ∧ bar
+def x := bar ∧ bar
+
+#check eval
+
+def i : Interp := ⟨ (λ v => true), (λ v => 0),  ⟩
+#reduce eval x i
 
 end DMT1.Lectures.theoryExtensions.axioms
