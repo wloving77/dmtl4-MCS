@@ -12,7 +12,6 @@ namespace DMT1.Lectures.natArithmetic.arithLang.demo
 
 open DMT1.Lectures.natArithmetic.syntax
 
-
 #check OpExpr
 
 /- @@@

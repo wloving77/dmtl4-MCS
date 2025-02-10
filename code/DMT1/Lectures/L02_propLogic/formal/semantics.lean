@@ -37,6 +37,7 @@ import DMT1.Lectures.L02_propLogic.formal.syntax
 import DMT1.Lectures.L02_propLogic.formal.domain
 
 namespace DMT1.Lectures.propLogic.semantics
+
 open propLogic.syntax
 
 

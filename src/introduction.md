@@ -2,14 +2,18 @@
 
 - [Discrete Mathematics and Theory in Lean 4](#discrete-mathematics-and-theory-in-lean-4)
   - [Preface](#preface)
+<<<<<<< HEAD
   - [The Problem](#the-problem)
   - [A Modest Proposal](#a-modest-proposal)
+=======
+>>>>>>> bb5418df0456018248adb40b59a33187e892d776
   - [Overview](#overview)
   - [Paths Forward](#paths-forward)
   - [Humility](#humility)
 
 ## Preface
 
+<<<<<<< HEAD
 The formal languages of computer science fall into two broad, overlapping categories: programming languages and reasoning languages. By definition, expressions written programming langauges describe computations that can be effected by computing machines. Expressions in reasoning languages, by contrast, express propositions that encode precise claims about *states of affairs* in *worlds* of interest, themselves formalized as any of a variety of structures, in ways that admit the rigorous verification of the truth of such propositions over such structures. Languages for programming and languages for reasoning are the two pillars holding up of all computer science.
 
 Yet, as a field, we've fallen into the trap of teaching what is easy and immediately industrial useful, at the expense of graduating many generations of students with little ability, by the time they enter the professional workforce, to express themselves or to reason in terms of this broad second category of languages: the *logics* of computer science.
@@ -25,6 +29,11 @@ While this state of affairs is understandable as the outcome of a long history, 
 ## A Modest Proposal
 
 A big part of the mismatch between what we typically teach and that has now become too big to ignore, given the amazing progress in languages and tools accompanied by exploding industrial demand, between Such courses generally employ quasi-formal
+=======
+This course is offered as a possible model for replacing the traditional (with many
+exceptions) second course for undergraduate computer science (CS) students, namely\
+discrete mathematics and theory (DMT).  Such courses generally employ quasi-formal
+>>>>>>> bb5418df0456018248adb40b59a33187e892d776
 natural language to present mathematical concepts rather than machine-checked formal
 langauge; with coverage limited to first order theory and induction limited to that
 over the natural numbers.
@@ -34,11 +43,14 @@ are clearly suitable for presenting mathematics with great clarity and precision
 with machine checking not only of syntax but of correctness. It appears to be a good 
 time to seriously consider making the switch.
 
+<<<<<<< HEAD
 
 The author proposes that it's now time to remediate the deep imbalance in programming versus symbolic reasoning in the education of our students. Developed with support provided in part by the U.S. National Science Foundation, this course is offered as a tested model for replacing the traditional second course for undergraduate computer science (CS) students, namely discrete mathematics and theory (DMT).  
 
 
 
+=======
+>>>>>>> bb5418df0456018248adb40b59a33187e892d776
 The crucial parameter is in the choice of the foundational theory of mathematics on
 which to base the entire course. A common choice has always been first-order set theory.
 But what we now know, from decades of researh, is that set theory is problematical

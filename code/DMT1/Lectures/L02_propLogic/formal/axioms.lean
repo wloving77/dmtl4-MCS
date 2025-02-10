@@ -22,8 +22,6 @@ open propLogic.syntax
 
 open Expr
 
-
-
 /- @@@
 
 ## Variable Expressions

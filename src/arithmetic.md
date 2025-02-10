@@ -1,5 +1,6 @@
 # Arithmetic
 
+<<<<<<< HEAD
 In this chapter we adapt the what we've learned in the
 chapter on propositional logic syntax and semantics to
 specify the syntax and semantics of a simple language of
@@ -33,3 +34,6 @@ away from this chapter is that you already knew how to
 formally define a language such as this one by simple
 adaptation of the lessons of the preceding chapter on
 the syntax and semantics of propositional logic.
+=======
+THIS SECTION IS UNDER CONSTRUCTION.
+>>>>>>> bb5418df0456018248adb40b59a33187e892d776
