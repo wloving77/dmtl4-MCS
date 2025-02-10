@@ -1,13 +1,14 @@
+```lean
 import DMT1.Lectures.L05_theoryExtensions.syntax
 import DMT1.Lectures.L05_theoryExtensions.semantics
+```
 
-/- @@@
 # Examples
 
 <!-- toc -->
-@@@ -/
 
 
+```lean
 namespace DMT1.Lectures.theoryExtensions.axioms
 
 open theoryExtensions.syntax
@@ -16,12 +17,12 @@ open theoryExtensions.semantics
 
 
 open Expr
+```
 
 
-/- @@@
 ## Variable Expressions
-@@@ -/
 
+```lean
 -- Propositional variables expressions
 def P : Expr := {⟨0⟩}
 def Q : Expr := {⟨1⟩}
@@ -41,6 +42,7 @@ def M : natArithmetic.syntax.OpExpr := natArithmetic.syntax.OpExpr.var v₂
 -- Some expressions in "propositional logic with arithmeic"
 
 #check (K + M)
+
 
 #check (K == M)
 
@@ -71,3 +73,4 @@ def newI : Interp := ⟨ (λ v => true), (λ v =>
 #reduce eval x newI
 
 end DMT1.Lectures.theoryExtensions.axioms
+```

@@ -1,5 +1,5 @@
 ```lean
-namespace DMT1.Lectures.L04_natArithmetic.syntax
+namespace DMT1.Lectures.natArithmetic.syntax
 ```
 
 # Syntax of Arithmetic Expressions
@@ -22,6 +22,7 @@ terms, just as we did for propositional logic.
 ```lean
 structure Var : Type where
 (index: Nat)
+deriving Repr
 ```
 
 
@@ -49,6 +50,7 @@ inductive UnOp : Type where
 | inc
 | dec
 | fac
+deriving Repr
 ```
 
 
@@ -65,6 +67,7 @@ inductive BinOp : Type where
 | add
 | sub
 | mul
+deriving Repr
 ```
 
 ### Binary Arithmetic Predicate Operators
@@ -85,6 +88,7 @@ inductive BinPredOp : Type
 | lt
 | ge
 | gt
+deriving Repr
 ```
 
 ### Unary Arithmetic Predicate Operators
@@ -97,6 +101,7 @@ to which it's applied evaluates to zero or not.
 ```lean
 inductive UnPredOp : Type
 | isZero
+deriving Repr
 ```
 
 
@@ -112,13 +117,13 @@ can be evaluated as having fixed numeric rather
 than fixed Boolean values.
 
 ```lean
-inductive ArithExpr : Type where
-| lit (from_nat : Nat) : ArithExpr
+inductive OpExpr : Type where
+| lit (from_nat : Nat) : OpExpr
 | var (from_var : Var)
-| unOp (op : UnOp) (e : ArithExpr)
-| binOp (op : BinOp) (e1 e2 : ArithExpr)
+| unOp (op : UnOp) (e : OpExpr)
+| binOp (op : BinOp) (e1 e2 : OpExpr)
+deriving Repr
 ```
-
 
 Arithemtic Predicate expressions are similarly
 specified as an inductively defined type, values
@@ -128,17 +133,17 @@ of a sensible example of a ternary predicate?)
 
 ```lean
 inductive PredExpr : Type where
-| unOp (op : UnPredOp) (e : ArithExpr)
-| binOp (op : BinPredOp) (e1 e2 : ArithExpr)
+| unOp (op : UnPredOp) (e : OpExpr)
+| binOp (op : BinPredOp) (e1 e2 : OpExpr)
+deriving Repr
 ```
-
 
 We define (non-standard notations) to construct variable
 terms from natural numbers and variable expression terms
 from variable terms, as we did for propositional logic.
 ```lean
-notation:max " { " v " } " => ArithExpr.var v
-notation:max " [ " n " ] " => ArithExpr.lit n
+notation:max " { " v " } " => OpExpr.var v
+notation:max " [ " n " ] " => OpExpr.lit n
 ```
 
 
@@ -146,10 +151,10 @@ Arithmetic operators are generally defined as left associative.
 The precedences specified here also reflect the usual rules for
 "order of operations" in arithmetic.
 ```lean
-notation:max e " ! " => ArithExpr.unOp UnOp.fac e
-infixl:65 " + " => ArithExpr.binOp BinOp.add
-infixl:65 " - " => ArithExpr.binOp BinOp.sub
-infixl:70 " * " => ArithExpr.binOp BinOp.mul
+notation:max e " ! " => OpExpr.unOp UnOp.fac e
+infixl:65 " + " => OpExpr.binOp BinOp.add
+infixl:65 " - " => OpExpr.binOp BinOp.sub
+infixl:70 " * " => OpExpr.binOp BinOp.mul
 ```
 
 
@@ -157,11 +162,13 @@ We also specify concrete syntax for the usual binary
 predicates (aka relational operators) in arithmetic.
 
 ```lean
-infix:50 " = " => PredExpr.mk BinPredOp.eq
-infix:50 " ≤ " => PredExpr.mk BinPredOp.le
-infix:50 " < " => PredExpr.mk BinPredOp.lt
-infix:50 " ≥ " => PredExpr.mk BinPredOp.ge
-infix:50 " > " => PredExpr.mk BinPredOp.gt
+#check PredExpr.binOp BinPredOp.eq
 
-end DMT1.Lectures.L04_natArithmetic.syntax
+notation:50 x " == " y => PredExpr.binOp BinPredOp.eq x y
+notation:50 x " ≤ " y => PredExpr.binOp BinPredOp.le x y
+notation:50 x " < " y => PredExpr.binOp BinPredOp.lt x y
+notation:50 x " ≥ " y => PredExpr.binOp BinPredOp.ge x y
+notation:50 x " > " y => PredExpr.binOp BinPredOp.gt x y
+
+end DMT1.Lectures.natArithmetic.syntax
 ```

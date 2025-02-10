@@ -11,7 +11,7 @@ be assembed.
 ```lean
 import DMT1.Lectures.L02_propLogic.formal.interpretation
 
-namespace DMT1.lecture.propLogic.semantics.models
+namespace DMT1.Lectures.propLogic.semantics.models
 open propLogic.syntax
 ```
 
@@ -34,5 +34,5 @@ def mapEvalExprAllInterps : Expr → List Bool
 -- just another name for this function
 def truthTableOutputs := mapEvalExprAllInterps
 
-end DMT1.lecture.propLogic.semantics.models
+end DMT1.Lectures.propLogic.semantics.models
 ```

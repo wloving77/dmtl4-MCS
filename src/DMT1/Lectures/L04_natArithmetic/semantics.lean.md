@@ -2,16 +2,17 @@
 import DMT1.Lectures.L04_natArithmetic.syntax
 import DMT1.Lectures.L04_natArithmetic.domain
 
-namespace DMT1.Lectures.L04_natArithmetic.semantics
-open DMT1.Lectures.L04_natArithmetic.domain
+namespace DMT1.Lectures.natArithmetic.semantics
+
+open DMT1.Lectures.natArithmetic.domain
 ```
 
 Given syntactic operator and predicate terms, return
 their fixed semantic meanings as Nat- and Bool-valued
 functions.
 ```lean
-open DMT1.Lectures.L04_natArithmetic.domain
-open DMT1.Lectures.L04_natArithmetic.syntax
+open DMT1.Lectures.natArithmetic.domain
+open DMT1.Lectures.natArithmetic.syntax
 
 def evalUnOp : UnOp → (Nat → Nat)
 | UnOp.inc    => Nat.succ
@@ -55,11 +56,11 @@ def evalVar : Var → Interp → Nat  -- evalVar is a function
 | v, i => i v   -- apply interpretation i to variable v to get value
 
 -- Semantic evaluation of arithmetic expression, yielding its Nat value
-def eval : ArithExpr → Interp → Nat
-| ArithExpr.lit n,          _   => (evalLit n)
-| ArithExpr.var v,          i   => (evalVar v i)
-| ArithExpr.unOp op e,      i   => (evalUnOp op) (eval e i)
-| ArithExpr.binOp op e1 e2, i   => (evalBinOp op) (eval e1 i) (eval e2 i)
+def eval : OpExpr → Interp → Nat
+| OpExpr.lit n,          _   => (evalLit n)
+| OpExpr.var v,          i   => (evalVar v i)
+| OpExpr.unOp op e,      i   => (evalUnOp op) (eval e i)
+| OpExpr.binOp op e1 e2, i   => (evalBinOp op) (eval e1 i) (eval e2 i)
 ```
 
 Semantic evaluation of a predicate expression.
@@ -73,8 +74,8 @@ def evalPredExpr : PredExpr → Interp → Bool
 Standard concrete notation for applying semantic
 evaluation functions to expressions.
 ```lean
-notation "⟦" e "⟧"  => eval e
-notation "⟦" e "⟧" => evalBinPred e
+notation "⟦" e "⟧" i  => eval e i
+notation "⟦" e "⟧" i => evalBinPred e i
 
-end  DMT1.Lectures.L04_natArithmetic.semantics
+end  DMT1.Lectures.natArithmetic.semantics
 ```
