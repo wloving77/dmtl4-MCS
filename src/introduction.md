@@ -2,18 +2,14 @@
 
 - [Discrete Mathematics and Theory in Lean 4](#discrete-mathematics-and-theory-in-lean-4)
   - [Preface](#preface)
-<<<<<<< HEAD
   - [The Problem](#the-problem)
   - [A Modest Proposal](#a-modest-proposal)
-=======
->>>>>>> bb5418df0456018248adb40b59a33187e892d776
   - [Overview](#overview)
   - [Paths Forward](#paths-forward)
   - [Humility](#humility)
 
 ## Preface
 
-<<<<<<< HEAD
 The formal languages of computer science fall into two broad, overlapping categories: programming languages and reasoning languages. By definition, expressions written programming langauges describe computations that can be effected by computing machines. Expressions in reasoning languages, by contrast, express propositions that encode precise claims about *states of affairs* in *worlds* of interest, themselves formalized as any of a variety of structures, in ways that admit the rigorous verification of the truth of such propositions over such structures. Languages for programming and languages for reasoning are the two pillars holding up of all computer science.
 
 Yet, as a field, we've fallen into the trap of teaching what is easy and immediately industrial useful, at the expense of graduating many generations of students with little ability, by the time they enter the professional workforce, to express themselves or to reason in terms of this broad second category of languages: the *logics* of computer science.
@@ -24,16 +20,11 @@ When formal reasoning was largely a paper and pencil exercise with primitive too
 
 For example, in the experience of this author, few or any incoming graduate students have a working-level fluency in any of the reasoning languages of computer science: not even in simple propositional logic. Most students in a recent new graduate class, for example, could not confidently explain the rule for evaluating implications. They weren't able to distinguish between truth and validity, and were unsure whether expressions such as *1 = 0 → 2 = 3* are valid. Most had clearly not ever firmly grasped why it makes sense to judge them as valid. By contrast, nearly every incoming student has working fluency in at least one *programming* language.
 
-While this state of affairs is understandable as the outcome of a long history, times have now changed and our field finds itself flat-footed. We are witnessing the rise of powerful new theories and technologies for abstract formal reasoning, and rapidly growing demand for computer science graduates who can *hit the ground running* when it comes to expressing complex ideas in reasoning languages and who can then reasoning about their truth and validity over complex worlds, including critical systems that programmers produce. 
+While this state of affairs is understandable as the outcome of a long history, times have now changed and our field finds itself flat-footed. We are witnessing the rise of powerful new theories and technologies for abstract formal reasoning, and rapidly growing demand for computer science graduates who can *hit the ground running* when it comes to expressing complex ideas in reasoning languages and who can then reasoning about their truth and validity over complex worlds, including critical systems that programmers produce.
 
 ## A Modest Proposal
 
 A big part of the mismatch between what we typically teach and that has now become too big to ignore, given the amazing progress in languages and tools accompanied by exploding industrial demand, between Such courses generally employ quasi-formal
-=======
-This course is offered as a possible model for replacing the traditional (with many
-exceptions) second course for undergraduate computer science (CS) students, namely\
-discrete mathematics and theory (DMT).  Such courses generally employ quasi-formal
->>>>>>> bb5418df0456018248adb40b59a33187e892d776
 natural language to present mathematical concepts rather than machine-checked formal
 langauge; with coverage limited to first order theory and induction limited to that
 over the natural numbers.
@@ -43,14 +34,11 @@ are clearly suitable for presenting mathematics with great clarity and precision
 with machine checking not only of syntax but of correctness. It appears to be a good 
 time to seriously consider making the switch.
 
-<<<<<<< HEAD
 
 The author proposes that it's now time to remediate the deep imbalance in programming versus symbolic reasoning in the education of our students. Developed with support provided in part by the U.S. National Science Foundation, this course is offered as a tested model for replacing the traditional second course for undergraduate computer science (CS) students, namely discrete mathematics and theory (DMT).  
 
 
 
-=======
->>>>>>> bb5418df0456018248adb40b59a33187e892d776
 The crucial parameter is in the choice of the foundational theory of mathematics on
 which to base the entire course. A common choice has always been first-order set theory.
 But what we now know, from decades of researh, is that set theory is problematical
