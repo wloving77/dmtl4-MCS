@@ -14,6 +14,8 @@
   - [Paths Forward](#paths-forward)
   - [Humility](#humility)
 
+![National Science Foundation Logo](static/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
+
 ## The Two Pillars of Computing
 
 The formal languages of computer science fall into two broad, overlapping categories: *programming* languages and *reasoning* languages. Expressions in programming langauges describe computations that can be executed by computing machines. Expressions in reasoning languages express propositions that make precise claims about the states of *worlds* of interest in ways that admit formal verification. Languages for programming and languages for reasoning are the two pillars holding up of all computer science.
