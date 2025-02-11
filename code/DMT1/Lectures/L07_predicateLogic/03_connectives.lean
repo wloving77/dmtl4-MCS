@@ -1,4 +1,4 @@
-/-!
+/- @@@
 # The Logical Connectives in Type Theory
 
 If you come to understand the following ideas, and can use them, then
@@ -37,7 +37,7 @@ So as to be able to illustrate these ideas, let's suppose/assume (using Lean's "
 keyword) that we have (1) three arbitrary propositions, P, Q, and R, along with a propostion,
 F, defined explicitly as having no proofs; and (2) (p : P), (q : Q), and (r : R) are proofs
 of P, Q, and R, respectively.
--/
+@@@ -/
 
 -- Propositions and proofs
 axiom P : Prop              -- assume P is some proposition
@@ -50,11 +50,11 @@ axiom q : Q                 -- assume q is a proof of Q
 axiom r : R                 -- assume r is a proof of R
 
 
-/-!
+/- @@@
 ## And
--/
+@@@ -/
 
-/-!
+/- @@@
 ### ∧ Is Represented as a Polymorphic Proposition (Type) Builder
 
 Here are the axioms for ∧ from our work on PL:
@@ -70,10 +70,10 @@ The mapping of these axioms into Lean is as follows:
 - the elimination rules map to getter/projection functions
 
 We'll now take each of these aspects in turn.
--/
+@@@ -/
 
 
-/-!
+/- @@@
 #### The Syntactic ∧ Connective is Represented as a Polymorphic Type Builder
 
 The ∧ connective is represented in the type theory of Lean
@@ -83,11 +83,11 @@ thus yields another proposition, namely P ∧ Q. The type of And
 is thus Prop → Prop → Prop, making it a "binary operation" on
 propositions, just as in propositional logic. Lean defines ∧
 as a concrete notation for the polymorphic type builder, And.
--/
+@@@ -/
 #check (@And)     -- Prop → Prop → Prop
 #check (And P Q)  -- a proposition (not a proof)
 
-/-!
+/- @@@
 ### The "Intro" Axiom is Represented as its Single Constructor
 
 And now for the inference rules. The constructor, And.intro, has
@@ -100,20 +100,20 @@ defined to be a value of type (And a b), which is to say that it
 is accepted a proof of a ∧ b. Lean defines ⟨p, q⟩ as a shorthand
 for (And.intro p q), emphasizing that a proof of a conjunciton is
 in the form of a *pair* of proofs, one of a and one of b.
--/
+@@@ -/
 
 #check (@And.intro)
 #check (And.intro p q)
 
 
-/-!
+/- @@@
 ### The "Elimination" Rules are Represented as its Getter Functions
 
 When you use "structure" to define a single-constructor type in Lean,
 Lean defines getter functions for you with the names of the fields (in
 this case, left and right, respectively) as getter functions. Given a
 proof, h = ⟨p, q⟩, (And.left h) returns p and (And.right h⟩ returns q.
--/
+@@@ -/
 
 #check (@And.left)            -- ∀ {a b : Prop}, a ∧ b → a
 #check (@And.right)           -- ∀ {a b : Prop}, a ∧ b → b
@@ -121,7 +121,7 @@ proof, h = ⟨p, q⟩, (And.left h) returns p and (And.right h⟩ returns q.
 #check (And.intro p q).right  -- ⟨p, q⟩.right : Q
 
 
-/-!
+/- @@@
 ## Or
 
 We've seen that if α and β are types in Prop, then And α β is also a
@@ -158,27 +158,28 @@ elimination rule uses pattern matching to determine whether h is of
 the form, Or.inl a, *or* of the form, Or.inr b. It then derive a proof
 of
 
- -/
+@@@ -/
 
 -- The type of the Or proposition builder
 #check (Or)
 #check (Or P Q)
 
-/-!
-### The "Intro" Axioms are Represented as Constructor-/
+/- @@@
+### The "Intro" Axioms are Represented as Constructor
+@@@ -/
 
 #check (@Or.inl)
 #check (@Or.inr)
 #check (Or.inl p : P ∨ Q)
 #check (Or.inr q : P ∨ Q)
 
-/-!
+/- @@@
 ### The Or Elimination Rule
--/
+@@@ -/
 
 #check (@Or.elim)   -- ∀ {a b c : Prop}, a ∨ b → (a → c) → (b → c) → c
 
-/-!
+/- @@@
 We can pronounce this inference rule in either truth-or proof-theoretical
 forms. Here's the truth-theoretical reading. If a, b, and c are propositions,
 then if at least one of a and b is true, then if it's true that if a is true
@@ -191,19 +192,19 @@ have a function that converts any proof of a into a proof of c, and then if
 we also have a function that converts any proof of b into a proof of c, then
 an application of Or.elim to these three proofs reduces to (returns) a proof
 of c.
--/
+@@@ -/
 #check (@Or.elim)   -- ∀ {a b c : Prop}, a ∨ b → (a → c) → (b → c) → c
 
-/-!
+/- @@@
 Note: The curly braces around { a b c : Prop }, rather than parentheses,
 tells Lean to figure out the values of these type arguments from the remaining
 arguments, so that you as the "programmer" don't have to supply these three
 type arguments when applying the Or.elim rule. Note also that constructors of
 polymorphic types are also polymorphic, taking type arguments *implicitly*.
--/
+@@@ -/
 
 
-/-!
+/- @@@
 ## Equivalence
 
 The ↔ connective is also defined as an inductive type in Lean. The basic
@@ -226,43 +227,43 @@ The names of the arguments are abbreviations for modus ponens and
 modus ponens reverse. Modus ponens (latin) was Aristotle's rule that
 if (P → Q) and P then Q. What mp and mpr are express is the same idea
 but for ↔. If (P ↔ Q) and P then Q, and if (P ↔ Q) and Q then P.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### The Polymorphic ↔ Proposition/Type Builder
 
 The Iff proposition/type (builder), with two proposition arguments
--/
+@@@ -/
 #check (@Iff)
 #check (Iff P Q)
 
-/-!
+/- @@@
 ### The ↔ Intro Inference Rule
--/
+@@@ -/
 #check (@Iff.intro)
 
-/-!
+/- @@@
 ### The ↔ Elim Rules
 
 The elimination rules are just the two "projection" (getter) functions.
 Their names are abbreviations for "modus ponens (for Iff)" and "modus
 ponens reversed (for Iff)." The name "modus ponens" comes from Aristotle!
--/
+@@@ -/
 #check (@Iff.mp)    -- if we know a ↔ b and we know a then we know b
 #check (@Iff.mpr)   -- if we know a ↔ b and we know b then we know a
 
 
 
-/-!
+/- @@@
 ## Implication
 
 In type theory, we don't give a proof of an implication as a data
 structure (that is, as a value of an inductive type); rather a proof
 of a logical implication, P → Q in type theory has the form of a
 function, f : P → Q.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Introduction Rule
 
 As stated, a proof of P → Q is given as a function of type P → Q. In
@@ -273,9 +274,9 @@ Another way to say this is that if we have a function that, when applied
 to any proof of P constructs and returns a proof of Q, then if P is true,
 as shown by having a proof, p, of it, then Q must be true, as f applied
 to p reduces to a proof of Q, showing that it must also be true.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Elimination Rule
 
 The elimination rule is what Aristotle called modus ponens. If we
@@ -298,24 +299,24 @@ Let's in addition now assume that we have a proof, (pimpq : P → Q). It
 is a function. The elimination rule is *function application*. Given
 this proof, and given that we already assumed a proof of P, (p : P),
 all we have to do is apply pimpq to p to get a proof of Q.
--/
+@@@ -/
 
 #check P → Q          -- a proposition
 axiom pimpq : P → Q   -- suppose we have a proof of it, pimpq
 #check (pimpq p)      -- *Applying* it to pimpq yields a proof of Q
 
 
-/-!
+/- @@@
 ### Summary
 
 To construct a proof of an implication, P → Q, in type theory, define a
 function of type P → Q. If there is no function/proof of (type) P → Q,
 then P → Q is false. To *use* a proof of P → Q, apply it to a proof of P
 to obtain a proof of Q.
--/
+@@@ -/
 
 
-/-!
+/- @@@
 ### True
 
 The "always true" proposition (which we wrote as top, ⊤, in PL, is realized
@@ -326,18 +327,18 @@ Here's the definition of True from Lean's core libraries.
 
 inductive True : Prop where
   | intro : True                -- True.intro is a proof of True
--/
+@@@ -/
 
 #check True                     -- a proposition
 
-/-!
+/- @@@
 ### Introduction Rule
 
 True.intro is the name of the single proof of True in Lean, If ever
 you need a proof of true, just write True.intro. It is rare, almost
 never, that you actually need to have a proof of true. Nothing can
 be deduced from it, so it's really of little to no use in practice.
--/
+@@@ -/
 
 #check True.intro               -- the always available proof of True
 
@@ -346,11 +347,11 @@ be deduced from it, so it's really of little to no use in practice.
 
 Because nothing else can be derived from a proof of True, there is
 no useful elimination rule for this proposition.
--/
+@@@ -/
 
 
 
-/-!
+/- @@@
 ## False
 
 In Type theory (in Lean), False is the always false proposition, akin
@@ -361,20 +362,20 @@ Lean, here's its definition.
 inductive False : Prop
 
 That's it!
--/
+@@@ -/
 
 #check False
 
-/-!
+/- @@@
 ### Introduction Rule
 
 As False has no proof constructors, there are no proofs of it at all.
 This is the representation in type theory of the fact that there is no
 introduction rule for False. That is true in both propositional logic
 and in the much richer logic of type theory.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Elimination Rule
 
 Please take a moment to revisit our axioms for propositional logic.
@@ -383,11 +384,11 @@ then anything is true (⊥ → P). Once again, this already familiar rule
 maps directly into type theory, but now as a rule that says that if
 P is any type (whether a propositional or an ordinary data type), then
 False → P. From False *anything* follows. In Latin, ex falso quodlibet.
--/
+@@@ -/
 
 #check (@False.elim)      -- {C : Sort u_1} → False → C
 
-/-!
+/- @@@
 Let's unpack the type of False.elim. First, it's a chained implication,
 so we start with "If." If we're given any type, C (whether a proposition
 or any other type, which is what Sort u_1 means here) then if we're also
@@ -405,7 +406,7 @@ is, if False is true (with some proof, f) then a proof value for the
 proposition (type) 0 = 1, can be constructed and returned. This is a
 true statement, but only because the premise can't be true, so there
 will never be any need to construct a proof of 0 = 1.
--/
+@@@ -/
 
 example : False → 0 = 1
 | f => False.elim f -- No need to supply 0=1 an explicit type argument
@@ -415,7 +416,7 @@ example : False → 0 = 1
 example : False → 0 = 1
 | f => @False.elim (0 = 1) f  -- @: the type argment must now be given explicitly
 
-/-!
+/- @@@
 So why does the false elimination rule make sense? Let's see. To prove
 False → 0 = 1, we have to show that if a function *assumes* it gets a
 proof of False as an argument, then all it has to do is convert every
@@ -431,7 +432,7 @@ worry about it!
 Here are two examples. In the first case, the return type, Nat,
 is in Type. In the second case, it's in Prop, so the definition
 of the function serves as a proof that (False → 0 = 1) is true.
--/
+@@@ -/
 
 def false_imp_nat : False → Nat
 | f => nomatch f
@@ -439,17 +440,17 @@ def false_imp_nat : False → Nat
 def false_imp_bad : False → 0 = 1
 | f => nomatch f
 
-/-!
+/- @@@
 DMT1 Class of 10/31 ended here
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Examples: Implications Between True and False
 
 Let's see how implications between True and False in
 type theory exactly mirror those between ⊤ and ⊥ in
 propositional logic.
--/
+@@@ -/
 
 -- True → True is valid
 example : True → True
@@ -486,17 +487,17 @@ example : False → False
 example : False → False
 | f => nomatch f
 
-/-!
+/- @@@
 As a final note, you can consider any uninhabited type to be false.
 Recall that we defined F to be an proposition with no proofs. We
 can show that if there's a proof of it (which there isn't!) then we
 can have a proof of False.
--/
+@@@ -/
 
 example : F → False
 | f => nomatch f
 
-/-!
+/- @@@
 A function argument, of an uninhabited type (such as F) states
 that the function can *assume* it's applied to a value of that
 type; but there are none, and nomatch f is the way to tell Lean
@@ -511,26 +512,26 @@ type is called Empty. The same reasoning applies here. We can
 define a function from Empty to anything because there are no
 values to apply it to, and so no cases to consider to define
 the function.
--/
+@@@ -/
 
 example : Empty → False
 | e => nomatch e
 
 
-/-!
+/- @@@
 ## Not
 
 In the preceding section we proved that F → False, where
 F is a proposition without any proofs (an uninhabited type).
 The proof is by case analysis on all possible values of F,
 of which there are none.
--/
+@@@ -/
 
 example : F → False
 | f => nomatch f
 
 
-/-!
+/- @@@
 If F had at least one value, we'd have to judge it to be true,
 and in this case we'd be trying to prove that true implies false,
 which is wrong. Fortunately, if F is true with some proof f, then
@@ -540,12 +541,12 @@ an actual proof of False, but that's impossible. For example, we
 cannot prove P → False because there is at least one proof of P.
 If we try, Lean will say we've failed to define a return value
 for that (or those) cases.
--/
+@@@ -/
 
 example : P → False
 | pf => nomatch pf
 
-/-!
+/- @@@
 So, what we've now seen is that we can define a function from
 a proposition, P, to False, if and only iff P has no proofs, in
 which case we can judge that P is false, *in which case we can
@@ -561,12 +562,12 @@ Not in Lean's library (with ¬ as a concrete notation): it takes
 a proposition a and returns the proposition a → False.
 
 def Not (a : Prop) : Prop := a → False
--/
+@@@ -/
 
 #check @Not
 #print Not
 
-/-!
+/- @@@
 As a small example, we'd expect ¬False to be true. That is,
 we expect there to be a proof of False → False. That is, we
 expect there to be a function of type False → False. And we
@@ -579,7 +580,7 @@ which we can read as saying that *if* there's a proof of F,
 then there's a proof of False; and no proof of False exists,
 so no proof of F can exist, and in this case we can conclude
 that ¬F must be true.
--/
+@@@ -/
 
 example : ¬F    -- trick: you *must* treat ¬F as F → False
 | f => nomatch f
@@ -591,7 +592,7 @@ what we're seeing here: If P being true implies false is
 true, then P cannot be true and in this case ¬P must be.
 The definition of Not (¬) in Lean is directly analogous:
 if (P → False) is true, then you can conclude ¬P is true.
--/
+@@@ -/
 
 /-
 ### Introduction Rule for Not (¬)
@@ -599,9 +600,9 @@ Given all that, we can see that to prove ¬P one simply proves
 P → False. The latter proposition is an implication. And as you
 already know, to prove implication in type theory you define a
 function. The preceding proof of ¬F serves as an example.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Elimination Rule for ¬
 
 Now we've seen that a proof of ¬F in type theory is a function
@@ -610,7 +611,7 @@ proof of F → False. This proof/function converts any proof of
 F into a proof of False, then you can apply False.elim to be done.
 The elimination rule for a proof, nf, of ¬F is to *apply* nf, as
 a function, to a proof of F.
--/
+@@@ -/
 
 def nf : ¬F
 | f => nomatch f
@@ -623,17 +624,17 @@ def badfun2 : F → False
 
 -- Yay!
 
-/-!
+/- @@@
 ## Examples
 
 ### And (∧)
--/
+@@@ -/
 
-/-!
+/- @@@
 #### Introduction
--/
+@@@ -/
 
-/-!
+/- @@@
 Here we apply And.intro to construct proofs of P ∧ Q.
 In each case it's by applying the proof/value constructor,
 And.intro to arguments, p and q, of types P and Q, respectively.
@@ -641,12 +642,12 @@ The first example binds a name to the resulting proof so we can
 use it later. The second example checks the proof but doesn't
 give it a name. The third example presents concrete notation,
 defined in Lean's libraries, for And.intro _ _
--/
+@@@ -/
 def pandq : P ∧ Q := And.intro p q
 example   : P ∧ Q := And.intro p q
 example   : P ∧ Q := ⟨ p, q ⟩
 
-/-!
+/- @@@
 #### Elimination
 
 From a proof, pandq, of P ∧ Q, we can derive proofs of P and
@@ -659,22 +660,22 @@ elimination rules because (1) there's one constructor, And.intro,
 as a result of that, we can use the names of the fields, given
 in the definition of And, to retrieve that arguments that were
 given to And.intro when the value was constructed.
--/
+@@@ -/
 example : P := pandq.left
 example : Q := pandq.right
 example : P := pandq.1
 example : Q := pandq.2
 
-/-!
+/- @@@
 A little theorem
--/
+@@@ -/
 
 example : P ∧ Q → Q ∧ P
 | And.intro p q => And.intro q p
 
 
 
-/-!
+/- @@@
 ### Or (∨)
 
 #### Introduction
@@ -682,14 +683,14 @@ example : P ∧ Q → Q ∧ P
 A proof of P ∨ Q can be constructed from a proof (p : P) or
 from a proof (q : Q), for which we have the two constructors,
 Or.inl and Or.inr.
--/
+@@@ -/
 
 def porqFromP : P ∨ Q := Or.inl p
 def porqFromQ : P ∨ Q := Or.inr q
 
-/-!
+/- @@@
 Elimination
--/
+@@@ -/
 
 #check (@Or.elim)
 
@@ -709,7 +710,7 @@ that we do have have proofs of ac : a → c and bc : b → c. They will be
 in the form of functions, as we've seen several times now. Because we've
 already defined R to be an empty type, we'll introduce one more type, S,
 to illustrate these ideas.
--/
+@@@ -/
 
 axiom S : Prop
 axiom ps : P → S
@@ -719,15 +720,15 @@ axiom qs : Q → S
 #check (Or.elim porqFromP ps qs)
 -- This term, (Or.elim porqFromP ps qs), serves as a proof of S!
 
-/-!
+/- @@@
 A little theorem.
--/
+@@@ -/
 
 example : P ∨ Q → Q ∨ P
 | Or.inl p => Or.inr p
 | Or.inr q => Or.inl q
 
-/-!
+/- @@@
 Proof:
 Assume P ∨ Q is true with a proof, call it h. There are
 two cases to consider.
@@ -738,9 +739,9 @@ In this case, Or.inl (on the left) q is a proof of Q ∨ P.
 Those are all the cases for a proof of P ∨ Q, so *whenever*
 we're given a proof of P ∨ Q we can derive a proof of Q ∨ P,
 so P ∨ Q → Q ∨ P is valid.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Implication in Lean (→)
 
 #### Introduction
@@ -752,7 +753,7 @@ works for all values of the argument type.
 
 To make a few more interesting examples, let's recall our
 our natural number evenness predicate.
--/
+@@@ -/
 
 inductive Ev : Nat → Prop
 -- Note: Ev 0 in the following is a proposition
@@ -762,7 +763,7 @@ inductive Ev : Nat → Prop
 | evFromEv : (n : Nat) → (evn : Ev n) → (Ev (n + 2))
 
 
-/-!
+/- @@@
 The first constructor makes (Ev 0) an axiom by defining ev0
 is a proof of it. The second constructor, evFromEv, makes our
 second rule defining evenness into an axiom: in this case it is
@@ -780,11 +781,11 @@ just defined it.
 A cool observation is that you can't even *apply* evFromEv
 to its arguments if n isn't even, because you can never have
 a proof that that n is even.
--/
+@@@ -/
 
-/-!
+/- @@@
 Here are Lean-checked (correct) proofs that 0, 2, 4, and 6 are even.
--/
+@@@ -/
 open Ev
 
 def zeroEv  : Ev 0 := (Ev.ev0)
@@ -792,20 +793,20 @@ def twoEv   : Ev 2 := (evFromEv 0 zeroEv)
 def fourEv  : Ev 4 := (evFromEv 2 twoEv)
 def sixEv   : Ev 6 := (evFromEv 4 fourEv)
 
-/-!
+/- @@@
 Here's a proof of a theorem: if any natural number, n,
 is even, then so is n+4. The proof is by two applications
 of the inductive step. First from the assumed n and proof
 of Ev n, a proof of Ev (n+2) is constructed. Then from n+2
 and that latter proof, a proof of n+4 is constructed. QED.
--/
+@@@ -/
 
 
 open Ev
 def IfEvNThenEvNPlus4 : (n : Nat) → (Ev n) → Ev (n + 4)
 | n, evn => evFromEv (n+2) (evFromEv n evn)
 
-/-!
+/- @@@
 Finally, to get back to the main topic of this section,
 you prove an implication, such as P → Q, by showing, in
 the form of a function of type P → Q, that there is a way
@@ -825,14 +826,14 @@ we proved that if n is even so is (n+4). We actually have a
 proof object, called IfEvNThenEvNPlus4. It's a function. If
 we apply it to, say, n = 6 and a proof that 6 us even, it
 will compute and return a proof that 10 is even!Check it out!
--/
+@@@ -/
 
 #check  IfEvNThenEvNPlus4 6 sixEv
 --      IfEvNThenEvNPlus4 6 sixEv : Ev (6 + 4) <-- proof Ev 10
 
 
 
-/-!
+/- @@@
 ### Negation (¬)
 
 Recall that at the top of this file we defined F to be a
@@ -855,12 +856,12 @@ F into a proof of False. As we've already reasoned about, it
 is possible to define such a function if and only if F is an
 uninhabited type. The only trick is that you remember that
 to prove ¬F is defined to be identicall to proving F → False.
--/
+@@@ -/
 
 def notF : ¬F       -- this is defined to mean F → False
 | f => nomatch f    -- assuming a value of type F is absurd
 
-/-!
+/- @@@
 #### Introduction: Proof By Negation
 
 So that the introduction rule for negation. To construct a proof
@@ -934,13 +935,13 @@ proof of P, which is what you need to conclude that P is true.
 To see in more detail what the issue is, let's just try to prove a
 that a statement of neg_elim in Lean is valid and we'll see where we
 get stuck. With α being any proposition, we'll try to prove ¬¬α → α.
--/
+@@@ -/
 
 example (α : Prop) : ¬¬A → A
 | pf => _   -- stuck: need proof of A; only have weird function
 
 
-/-!
+/- @@@
 #### Classical Reasoning
 
 In "classical" logic, such as propositional logic, the
@@ -958,12 +959,12 @@ contradiction. Can we not do ordinary mathematics in Lean?
 The answer to that is no, that's not what it means. To do
 classical reasoning in Lean, you just have to tell Lean
 to accept negation elimination as an axiom!
--/
+@@@ -/
 
 axiom neg_elim : ∀ {α : Prop}, ¬¬α → α
 
 
-/-!
+/- @@@
 In English that says, Hey Lean. Trust me. You can just
 accept that for any proposition, α, if one has a proof of
 ¬¬α one can simple assume that one can get a proof of α,
@@ -972,12 +973,12 @@ and that would be by applying neg_elim!
 For example suppose I want to prove P by contradiction
 and that I've managed to get a hold of a proof (nnp : ¬¬P).
 A proof of P is had by apply negation elimination to nnp.
--/
+@@@ -/
 
 axiom nnp : ¬¬P               -- assume I have a proof of ¬¬P
 def pfP : P := (neg_elim nnp) -- neg_elim applied to nnp proves P
 
-/-!
+/- @@@
 #### Excluded Middle
 
 The main "problem" with negation elimination is that it just
@@ -996,18 +997,18 @@ that P is true from a proof that ¬P is false, but with the
 axiom of negation elimination we can. We can formalize this
 statement as another axiom: the so-called law of the excluded
 middle.
--/
+@@@ -/
 
 axiom excludedMiddle (α : Prop) : P ∨ ¬P
 
-/-!
+/- @@@
 Indeed, it turns out that if neg_elim is accepted as an
 axiom, then excludedMiddle can be proved, and vice versa!
 They are equivalent. It's a litte challenge to prove that!
--/
+@@@ -/
 
 def equiv (P : Prop) : ¬¬P ↔ (P ∨ ¬P) := _
 
-/-!
+/- @@@
 The proof is left as an exercise!
--/
+@@@ -/

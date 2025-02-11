@@ -29,10 +29,21 @@
   - [Examples](./DMT1/Lectures/L04_natArithmetic/examples.lean.md)
   
 - [Theory Extensions](./TheoryExtensions.md)
-  - [Syntax](./DMT1/Lectures/L04_natArithmetic/syntax.lean.md)
-  - [Semantics](./DMT1/Lectures/L04_natArithmetic/semantics.lean.md)
-  - [Examples](./DMT1/Lectures/L04_natArithmetic/examples.lean.md)
+  - [Domain](./DMT1/Lectures/L05_theoryExtensions/domain.lean.md)
+  - [Syntax](./DMT1/Lectures/L05_theoryExtensions/syntax.lean.md)
+  - [Semantics](./DMT1/Lectures/L05_theoryExtensions/semantics.lean.md)
+  - [Examples](./DMT1/Lectures/L05_theoryExtensions/examples.lean.md)
+  - [Satisfiability Modulo Theories](./smt.md)
 
+- [Induction](./DMT1/Lectures/L06_induction/induction.lean.md)
+
+- [Predicate Logic](./predLogic.md)
+  - [Propositions as Types](./DMT1/Lectures/L07_predicateLogic/01_props_as_types.lean.md)
+  - [Predicates](./DMT1/Lectures/L07_predicateLogic/02_predicates.lean.md)
+  - [Connectives](./DMT1/Lectures/L07_predicateLogic/03_connectives.lean.md)
+  - [Quantifiers](./DMT1/Lectures/L07_predicateLogic/04_quantifiers.lean.md)
+  - [For All](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_all.lean.md)
+  - [Exists](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_exists.lean.md)
 
 - [Assignments](){-}
 

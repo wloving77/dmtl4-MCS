@@ -1,9 +1,11 @@
-```lean
-import «DMT1».Library.propLogic.syntax
-import «DMT1».Library.propLogic.semantics
-import «DMT1».Library.propLogic.model_theory.properties
+-- TODO: Fix imports to come from Lectures
+import DMT1.Lectures.L02_propLogic.formal.syntax
+import DMT1.Lectures.L02_propLogic.formal.semantics
+import DMT1.Lectures.L03_modelTheory.properties
 
-namespace DMT1.propLogic
+namespace DMT1.Lectures.propLogic.syntax
+open DMT1.Lectures.propLogic.semantics.models
+
 
 def P : Expr := {⟨0⟩}
 def Q : Expr := {⟨1⟩}
@@ -59,6 +61,7 @@ to confirm that each and every one of them is
 valid.
 -/
 
+
 #eval! is_valid  and_intro
 #eval! is_valid  and_elim_left
 #eval! is_valid  and_elim_right
@@ -80,5 +83,4 @@ valid.
 #eval! is_valid  true_intro
 #eval! is_valid false_elim
 
-end DMT1.propLogic
-```
+end DMT1.Lectures.propLogic.syntax

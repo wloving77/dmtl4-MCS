@@ -1,4 +1,4 @@
-/-!
+/- @@@
 # Quantifiers: Existential Quantification (∃)
 
 We now turn to the second of the two quantifiers in
@@ -9,7 +9,7 @@ This proposition is read as asserting that *there is some
 an example, we repeat our definition of the *is_even*
 predicate, and then write a proposition asserts that
 there is (there exists) *some* even natural number.
--/
+@@@ -/
 
 -- Predicate: defines property of *being even*
 def isEven : Nat → Prop := λ n => (n % 2 = 0)
@@ -18,7 +18,7 @@ def isEven : Nat → Prop := λ n => (n % 2 = 0)
 -- Proposition: there exists an even number
 #check ∃ (n : Nat), isEven n
 
-/-!
+/- @@@
 ## Introduction
 
 In the *constructive* logic of Lean, a proof of
@@ -46,35 +46,35 @@ In type theory, proofs of existence are *dependent pairs*.
 
 Here's a simple example showing that there exists an even
 number, with *4* as a witness.
--/
+@@@ -/
 
 example : exists (n : Nat), isEven n := Exists.intro 4 rfl
 
-/-!
+/- @@@
 The witness is 4 and the proof (computed by rfl) is a
 proof of 4 % 2 = 0, which is to say, of 0 = 0. Try *5*
 instead of *4* to see what happens.
--/
+@@@ -/
 
-/-!
+/- @@@
 Lean provides ⟨ _, _ ⟩ as a notation for Exists.intro.
--/
+@@@ -/
 
 example : ∃ (n : Nat), isEven n := ⟨ 4, rfl ⟩
 
-/-!
+/- @@@
 English language rendering: We are to prove that some
 natural number is even. To do so we need to choose a
 number (will will cleverly pick 4) and then also give
 a proof that *4 is even*, which we formalizes as the
 proposition resulting from the application of isEven
 (a predicate taking a Nat) to 4.
--/
+@@@ -/
 
-/-!
+/- @@@
 Another example: Suppose we have a proof that Iris is
 a blue dog. Can we prove that there exists a blue dog?
--/
+@@@ -/
 
 namespace bluedog
 variable
@@ -87,7 +87,7 @@ variable
 example : ∃ (d : Dog), Blue d := ⟨ Iris, iris_is_blue ⟩
 end bluedog
 
-/-!
+/- @@@
 ## An Aside on Constructive Logic
 
 The term *constructive* here means that to prove that
@@ -157,16 +157,16 @@ One of these is called the *Banach-Tarski* paradox: a
 proof (using the axiom of choice) that there is a way
 cut up and reassemble a sphere that doubles its volume!
 (Wikipedia article here.)[https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox]
--/
+@@@ -/
 
-/-!
+/- @@@
 As with excluded middle, you can easily add the axiom
 of choice to your Lean environment to enable classical
 (non-constructive) reasoning in Lean. We will not look
 further into this possibility in this class.
--/
+@@@ -/
 
-/-!
+/- @@@
 ## Elimination Rule for ∃
 
 Now suppose you have a proof of a proposition, *∃ (x : T),
@@ -188,16 +188,16 @@ along with a proof of *P w*. For this reason, you will see
 that proofs of existence are called *information hiding*
 objects. A specific witness is no longer availabe from a
 proof of existence.
--/
+@@@ -/
 
-/-!
+/- @@@
 ### Examples
 
 Here's an example. We want to show that if we have a proof,
 *pf*, that there's a natural number, *n*, that satsifies
 *True* and *isEven*, then there's a natural number, *f*,
 that satisfies just *isEven*.
--/
+@@@ -/
 
 def ex1 :
   -- Prove:
@@ -230,7 +230,7 @@ def ex1 :
       )
 
 
-/-!
+/- @@@
 To this end. delete everything from fun to the end and put
 (_) in its place. Next, use Lean to display, and understand,
 what type of value is needded. Provide a complete term of that
@@ -244,9 +244,9 @@ can't just read the text, you have to watch and experience
 the emergence of the proof, largely at this point fron the
 mere syntactic forms of the propositions being proved all
 along the way.
--/
+@@@ -/
 
-/-!
+/- @@@
 The preceding expression of the proof explicitly applies
 inference axioms without Lean-provided concrete notations.
 The following expression of the proof uses concrete notations.
@@ -267,7 +267,7 @@ A great mind exercise is to read through the completely desugared,
 pure functional proof construction, and see where each element in
 that definition is reflected in the one using Haskelly notation,
 here.
--/
+@@@ -/
 
 def ex1' :
   (∃ (n : Nat), True ∧ isEven n) →
@@ -275,7 +275,7 @@ def ex1' :
 | ⟨ w, pf_w ⟩  => Exists.intro w pf_w.right
 
 
-/-!
+/- @@@
 Note: In commonplace mathematical lingo, a theorem is often
 thought of as a "true proposition:" for which a proof has
 been given. There's also a purely social convention around
@@ -290,11 +290,11 @@ Lean4 does support use of the word, theorem, instead of def,
 when defining a proof of a proposition. It is just a nicety
 with no real additional importance. No need to be perplexed
 by it. Just read it as "def."
--/
+@@@ -/
 
 
 --------
-/-!
+/- @@@
 way to apply elimination is by pattern matching,
 as in the following example. It shows that if there exists a
 number that's true and even, then there's a natural number
@@ -302,9 +302,9 @@ that's even. Note that what matching gives you is not the
 specific value used to form the proof, but an *arbitrary*
 value, *w* and a proof *pf : P w.* That is what you have
 to work with after applying the elimination rule.
--/
+@@@ -/
 
-/-!
+/- @@@
 To show this we destructure *pf* as *⟨ w, pf_w ⟩*. This
 gives us a witness, *w : Nat* (whose value we do not know),
 along with a proof, *pf_w*, that *w* (whatever value it is)
@@ -334,7 +334,7 @@ deduce there's a proof, *pf_w_even*, that *w* is even.
 So we now have a witness, *w*, and a proof that *w* is
 even, so we can form a proof that there exists a number
 that's even: ⟨ w, pf_w_even ⟩.
--/
+@@@ -/
 
 
 
@@ -346,7 +346,7 @@ theorem ex1'' :
   (∃ (f : Nat), isEven f)
 | ⟨ w, pf_w ⟩  => Exists.intro w pf_w.right
 
-/-!
+/- @@@
 ## Worked Exercise
 
 Formalize and prove the proposition that if there's
@@ -363,7 +363,7 @@ there is someone *p* loves. But everyone loves *beau* so,
 by universal specialization, *p* loves Beau. Because *p* is
 arbitrary, this shows (by *forall introduction*) that every
 person loves someone (namely *beau*).
--/
+@@@ -/
 
 namespace cs2120f23
 variable
@@ -386,13 +386,13 @@ example :
     ⟨beau, (everyone_loves_beau p)⟩
 end cs2120f23
 
-/-!
+/- @@@
 Here's the same logical story presented in a
 more abstract form, using *T* instead of *Person*
 and *R : T → T → Prop* to represent the binary
 relation (previously *Loves*) on objects of type
 *T*.
--/
+@@@ -/
 
 variable
   (T : Type)
@@ -403,7 +403,7 @@ example : (∃ (p : T), (∀ (t : T), R t p)) →
           (∀ (p : T), (∃ (t : T), R p t))
 | ⟨ w, pf_w ⟩ => (fun (p : T) => ⟨ w, pf_w p ⟩)
 
-/-!
+/- @@@
 In mathematical English: Given a binary relation,
 *R*, on objects of type *T*, if there's some *p*
 such that forall *t*, *R t p* (every *t* is related
@@ -411,10 +411,10 @@ to *p* by *R*), then for every *p* there is some *t*
 such that *R p t* (every *p* is related to some *t*).
 In particular, every *p* is related to *w*, the person
 *everyone* loves. So everyone loves someone.
--/
+@@@ -/
 
-/-!
+/- @@@
 ## Homework
 
 Forthcoming.
--/
+@@@ -/

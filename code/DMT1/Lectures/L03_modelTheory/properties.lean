@@ -19,6 +19,7 @@ being *unsatisfiable?* And does "e" have the property of being
 
 import DMT1.Lectures.L03_modelTheory.truthTable
 
+-- TODO: Fix namespace names in this unit
 namespace DMT1.Lectures.propLogic.semantics.models
 
 open propLogic.syntax

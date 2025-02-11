@@ -23,6 +23,7 @@ open Expr
 ```
 
 
+
 ## Variable Expressions
 
 It'll suffice for our purposes to have three variable

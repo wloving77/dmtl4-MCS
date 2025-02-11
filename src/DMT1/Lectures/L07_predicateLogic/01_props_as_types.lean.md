@@ -1,4 +1,3 @@
-/-!
 # Propositional Logic with Proof-Theoretic Validity
 
 In this lecture, we'll show how we can re-develop propositional
@@ -20,17 +19,15 @@ To make all of this concrete, we'll do the following in the rest of this lecture
 - use cleverly designed constructors to express introduction rules
 - use functions that consume and return proof values to express elimination rules
 - use all of this machinery to prove an interesting identity (*And* is commutative)
--/
 
-/-!
 ## Propositions as Types; Values as Proofs of Validity
 
 We now represent two propositions as type: Kevin is from Charlottesville,
 and Carter is from Charlottesville. We'll use K and C as shorted names for
 these propositions. We'll go on to define three *values* of each type, each
 one to be considered as a proof.
--/
 
+```lean
 -- Kevin is from Charlottesville
 inductive K : Type where                            -- proposition as a type
 | cvilleBirthCert                                   -- a proof as a value
@@ -57,9 +54,9 @@ open C
 --  proof name  proposition/type    proof/value
 def pfK      : K :=              K.cvilleDriversLicense
 def pfC      : C :=              C.cvilleUtilityBill
-def pfKLA    : KLA :=            _
+def pfKLA    : KLA :=            sorry
+```
 
-/-!
 We've introduced no new Lean constructs at this point. We've just
 proposed a way to use what we already know about types and values.
 By same reasoning we could even think of 1 as a proof (one of many)
@@ -67,13 +64,13 @@ of Nat. We won't find it particularly useful to think this way, but
 the point is to see that so far we've seen nothing new in Lean, just
 a weird new way to represent propositions (as types) and proofs (as
 values of such types). That's it!
--/
 
+```lean
 --  proof name    proposition/type  proof/value
 def proofOfNat    : Nat             := 1
+```
 
 
-/-!
 ## Logical Connectives And Their Meanings
 
 Ok, so we've represented two propositions as types, each with
@@ -95,9 +92,7 @@ that define each logical connective using types and functions.
 As a first, and the easiest, example consider once again the
 *And* (∧) connective. It's intended meaning is captured by
 the corresponding axioms.
--/
 
-/-!
 ### Conjunctions: *And* Propositions
 
 Suppose P and Q are propositions and recall the axioms for
@@ -124,10 +119,8 @@ and and_elim_right as functions. These functions in turn will use
 pattern matching (which you also already understand) to determine
 what constructors and what arguments were used to construct given
 proofs, so that these values can be used in building new proofs.
--/
 
 
-/-
 #### Introduction Rule
 
 We will represent the proposition, K ∧ C, that Kevin is from
@@ -139,8 +132,8 @@ proofs of K and of C as separate arguments to complete its task.
 We will provide no other constructors, so the *only* way to prove
 KandC will be to give separate proofs of K and C to the *intro*
 constructor.
--/
 
+```lean
 -- First, here's a type and proof constructor for this proposition
 inductive KandC : Type where
 | intro (kp : K) (cp : C)
@@ -148,16 +141,16 @@ inductive KandC : Type where
 
 -- The type of the constructor reveals how it encodes and_intro (compare!)
 #check (@KandC.intro)
+```
 
 
-/-!
 Now let's use "intro" rule to construct a proof (value) of KandC
--/
 
+```lean
 --  proof name (value)  proposition/type  proof/value of ∧ proposition from proofs of conjuncts
 def pfKandC :           KandC :=  (KandC.intro pfK pfC)
+```
 
-/-!
 #### Elimination Rules
 
 Yay! So now what about the two elimination rules?
@@ -170,8 +163,8 @@ will take a proof of the conjunction (such as *pfBoth*)
 and will return one of the two component proofs: either K or C. It
 should be clear that these functions precisely represent the "elim"
 rules that define the behavior of the logical *And* connective!
--/
 
+```lean
 def KandC_elim_left : KandC → K
 | KandC.intro k c => k            -- note: can replace c with _
 
@@ -183,18 +176,18 @@ def KandC_elim_right : KandC → C
 
 -- KandC → C
 #check (@KandC_elim_right)
+```
 
-/-!
 The "elimination" axioms for *And* are represented by these
 functions. But we now have more than just paper-and-pencil logic;
 we have functions that compute! Let's see them in action: first
 P ∧ Q → P, then P ∧ Q → Q.
--/
 
+```lean
 #reduce KandC_elim_left pfKandC   -- proof of K (driver's license)
 #reduce KandC_elim_right pfKandC  -- proof of C (utility bill)
+```
 
-/-!
 #### A Theorem
 
 We previously determined that the proposition that
@@ -212,8 +205,8 @@ but with the K and C reversed. What we then want to
 prove is, in essence, K ∧ C → C ∧ K: that if we have
 a proof of K ∧ C (which we do, namely *KandC*), we
 can derive from it a proof of C ∧ K?
--/
 
+```lean
 -- intro: C → K → C ∧ K
 inductive CandK : Type where
 | intro (c : C) (k : K)
@@ -225,8 +218,8 @@ def CandK_elim_left : CandK → C
 -- elim_right: C ∧ K → K
 def CandK_elim_right : CandK → K
 | CandK.intro _ k => k
+```
 
-/-!
 ### Implication
 
 To finish off this introduction to logical reasoning using
@@ -238,19 +231,17 @@ It will use the KandC elim rules to obtain separate proofs of
 K and of C. And it will finally pass them as arguments, in
 the reverse order, to CandK.intro constructor. This shows
 that from any proof of KandC we can derive a proof of CandK!
--/
 
+```lean
 def andCommutes : KandC → CandK
 | KandC.intro k c => CandK.intro c k
+```
 
-/-!
 To the left of the =>, we analyze the given/assumed proof
 of KandC, extracting its component proofs, then on the right
 side of the => we use those component proofs, in a different
 way, to construct a proof of CandK.
--/
 
-/-!
 The existence of this function, one that can take any proof
 of KandC and turn it into a proof of CandK, shows that if
 KandC is valid/true, as demonstrated by having a proof of
@@ -275,9 +266,7 @@ deriving/constructing a proof of Q as a return value.
 We thus have our *introduction* rule for implication. To
 prove P → Q, exhibit is a function implementation that takes
 any proof, (p : P), and that returns a result, (q : Q).
--/
 
-/-!
 So what is the elimination rule for implication? See the
 rule in the axioms file. It reads as this: (P → Q) → P → Q.
 If you have a function, (f : P → Q), that turns P proof/values
@@ -290,15 +279,15 @@ We have a proof of KandC → CandK, in the form of the function,
 andCommutes, and we have a proof of K, namely *pfK*. We can thus
 expect that applying *andCommutes* to *pfK* will return a proof
 of CandK. And indeed it does.
--/
 
+```lean
 #check (andCommutes pfKandC)
 -- Applying andCommutes to pfKandC returns a value/proof of type CandK
 -- namely, CandK.intro applied to the component proofs in reverse order.
 #reduce (andCommutes pfKandC)
+```
 
 
-/-!
 ## Summary
 
 You've now seen how we can map propositions, proofs,
@@ -324,4 +313,3 @@ theory.
 - with lots more to come
 
 Fun!
--/
