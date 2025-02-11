@@ -47,6 +47,18 @@
   - [For All](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_all.lean.md)
   - [Exists](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_exists.lean.md)
 
+- [Sets and Relations](./setTheory)
+  - [Sets](./DMT1/Lectures/L08_setsRelationsFunctions/01_sets.lean.md)
+  - [Relations](./DMT1/Lectures/L08_setsRelationsFunctions.02_relations.lean.md)
+  - [Properties of Sets and Relations](./DMT1/Lectures/L08_setsRelationsFunctions.03_propertiesOfRelations.lean.md)
+
+- [Proof Construction by Induction](./proofByInduction.md)
+  - [Induction Axioms](./inductionAxioms.md)
+  - [Inductive Proofs](./DMT1/Lectures/L09_induction/01_sets.lean.md)
+  - [Structural vs Generative Recursion](./structuralRecursion.md)
+  - [Well-Founded Relations and Termination](./wellFoundedRelations.md)
+
+  
 - [Assignments](){-}
 
   - [Lean and VSCode](./Assignments/a1.md)

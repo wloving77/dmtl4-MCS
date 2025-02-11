@@ -1,5 +1,7 @@
 ```lean
-import DMT1.Lectures.«L07_sets_relations_functions».«L03_properties_of_relations»
+import DMT1.Lectures.L08_setsRelationsFunctions.«03_propertiesOfRelations»
+
+namespace DMT1.Lectures.setsRelationsFunctions.homeworksSetsRelations
 
 /-
 Homework #8 Properties of Relations.
@@ -173,4 +175,6 @@ on the natural numbers  m and n are congruent mod k
 Formally state and prove the proposition that
 
 -/
+
+end DMT1.Lectures.setsRelationsFunctions.homeworksSetsRelations
 ```

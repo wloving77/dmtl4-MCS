@@ -1,26 +1,27 @@
-```lean
 import Mathlib.Data.Rel
 import Mathlib.Data.Set.Basic
 import Mathlib.Logic.Relation
 import Mathlib.Data.Real.Basic
 
-/-!
+/- @@@
 # Properties of Binary Relations
 
 There are many important properties of relations. In this
 section we'll formally define some of the most important.
 The definitions/specifications speak for themselves.
--/
+@@@ -/
 
-/-
+namespace DMT1.Lectures.setsRelationsFunctions.propertiesOfRelations
+
+/- @@@
 The property of not relating any pair of values
--/
+@@@ -/
 def isEmpty {α β : Type} : Rel α β → Prop :=
   fun (r : Rel α β) => ¬∃ (x : α) (y : β), r x y
 
-/-
+/- @@@
 The property of relating every every pair of values
--/
+@@@ -/
 def isComplete {α β : Type} : Rel α β → Prop :=
   fun r => ∀ x y, r x y
 
@@ -36,41 +37,41 @@ fun a b =>
 --
 True.intro
 
-/-
+/- @@@
 The property of relating every input to some output
--/
+@@@ -/
 def isTotal  {α β : Type} : Rel α β → Prop :=
   fun r => ∀ (x : α), ∃ (y : β), r x y
 
-/-
+/- @@@
 The property of relating some input to every output
--/
+@@@ -/
 def isSurjectiveRel {α β : Type} : Rel α β → Prop :=
   fun r => ∀ (y : β), ∃ (x : α), r x y
 
-/-
+/- @@@
 The property of relating no input to more than one output
--/
+@@@ -/
 def isSingleValued {α β : Type} : Rel α β → Prop :=
   fun r => ∀ x y z, r x y → r x z → y = z
 
-/-
+/- @@@
 The property of relating no more than one input to any
 output. Sometimes also called one-to-one, as distinct
 from many-to-one, which injectivity prohibits.
--/
+@@@ -/
 def isInjectiveRel  {α β : Type} : Rel α β → Prop :=
   fun r => ∀ x y z, r x z → r y z → x = y
 
-/-
+/- @@@
 The propery of a relation being surject means that there
 is at least one input, a, for each possible output, b,
 with (a, b) being in the relation.
--/
+@@@ -/
 
-/-
+/- @@@
 The property of being a function, i.e., single-valued
--/
+@@@ -/
 def isFunctional {α β : Type} : Rel α β → Prop :=
   isSingleValued
 
@@ -98,13 +99,13 @@ def isOnto {α β : Type} : Rel α β → Prop :=
 -- property of a *function* pairing domain and range values
 def isBijective {α β : Type} : Rel α β → Prop :=
   fun r => isInjective r ∧ isSurjective r
-/-
+/- @@@
 When a relation is a function and is both injective
 and surjective then the relation defines a pairing of
 the elements of the two sets. Among other things, the
 existence of a bijective relationship shows that the
 domain and range sets are the same size.
--/
+@@@ -/
 
 -- The property of a relation being a many-to-one function
 def isManyToOne {α β : Type} : Rel α β → Prop :=
@@ -152,10 +153,10 @@ def isAsymmetric {α  β : Type} : Rel α α → Prop :=
 def isAntisymmetric {α  β : Type} : Rel α α → Prop :=
   fun r => ∀ (a b : α), r a b → r b a → a = b
 
-/-
+/- @@@
 The property of a relation that relates every pair
 of values one way or the other
--/
+@@@ -/
 def isStronglyConnected {α  β : Type} : Rel α α → Prop :=
   fun r => ∀ (a b : α), r a b ∨ r b a
 
@@ -183,12 +184,12 @@ example : @isWellOrdering Nat Nat predRel :=
   -- ∃ m ∈ s, ¬∃ n ∈ s, predRel n m
   _
 
-/-
+/- @@@
 ## Examples
--/
+@@@ -/
 
 
-/-
+/- @@@
 ### Equality is an equivalence relation.
 
 To show that that equality on a type, α, (@Eq α), is
@@ -197,7 +198,7 @@ reflexive, symmetric, and transitive. We'll give the
 proof in a bottom up style, first proving each of the
 conjuncts, then composing them into a proof of the
 overall conjecture.
--/
+@@@ -/
 
 -- equality is reflective
 theorem eqIsRefl {α β: Type}: @isReflexive α β (@Eq α) :=
@@ -221,11 +222,11 @@ theorem eqIsEquiv {α β: Type}: @isEquivalence α β (@Eq α) :=
   -- just need to prove that Eq is refl,, symm, and trans
   ⟨ eqIsRefl, ⟨ eqIsSymm, eqIsTrans ⟩ ⟩ -- And.intros
 
-/-
+/- @@@
 ### The Property of Being Empty
 
 Any emptyRel (see our definition) has the property of being empty.
--/
+@@@ -/
 def emptyRel {α β : Type*} : Rel α β := fun _ _ => False
 
 example {α β : Type} : @isEmpty α β emptyRel :=
@@ -242,9 +243,9 @@ example {α β : Type} : @isEmpty α β emptyRel :=
           fun b pfBad => nomatch pfBad
 
 
-/-
+/- @@@
 ### The Set.subset Relation is a Partial Order
--/
+@@@ -/
 
 def subSetRel {α : Type} : Rel (Set α) (Set α) :=
   fun (s t : Set α) => s ⊆ t
@@ -291,9 +292,9 @@ example {α β : Type}: (@isPartialOrder (Set α) β) (@subSetRel α)  :=
         )
     )
 
-/-
+/- @@@
 ### The inverse of an injective function is a function
--/
+@@@ -/
 
 #check Rel.inv
 example {α β : Type} :
@@ -314,4 +315,5 @@ example {α β : Type} :
         -- ∀ x y z, r x y → r x z → y = z
         have rfun : isFunctional r := hinjr.left
         sorry ---???
-```
+
+end DMT1.Lectures.setsRelationsFunctions.propertiesOfRelations

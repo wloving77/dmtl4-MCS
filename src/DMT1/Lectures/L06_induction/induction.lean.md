@@ -8,6 +8,10 @@ and returns another natural number value, it's type
 must be *Nat → Nat*. But can we compute the value of
 the function for *any* n?
 
+```lean
+namespace DMT1.Lectures.induction.induction
+```
+
 ## A Manual Approach
 
 First, we could fill in a table of function values
@@ -624,4 +628,6 @@ the axiom called *Nat.strongRecOn*.
 #check Nat.strongRecOn
 
 open Nat
+
+end DMT1.Lectures.induction.induction
 ```

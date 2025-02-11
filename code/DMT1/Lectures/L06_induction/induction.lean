@@ -10,6 +10,8 @@ must be *Nat → Nat*. But can we compute the value of
 the function for *any* n?
 @@@ -/
 
+namespace DMT1.Lectures.induction.induction
+
 /- @@@
 ## A Manual Approach
 
@@ -651,3 +653,5 @@ the axiom called *Nat.strongRecOn*.
 #check Nat.strongRecOn
 
 open Nat
+
+end DMT1.Lectures.induction.induction
