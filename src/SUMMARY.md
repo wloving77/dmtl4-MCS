@@ -37,6 +37,8 @@
 
 - [Induction](./DMT1/Lectures/L06_induction/induction.lean.md)
 
+- [Mathlib](./mathlib.md)
+
 - [Predicate Logic](./predLogic.md)
   - [Propositions as Types](./DMT1/Lectures/L07_predicateLogic/01_props_as_types.lean.md)
   - [Predicates](./DMT1/Lectures/L07_predicateLogic/02_predicates.lean.md)
@@ -45,7 +47,6 @@
   - [For All](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_all.lean.md)
   - [Exists](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_exists.lean.md)
 
-- [Mathlib](./mathlib.md)
 - [Assignments](){-}
 
   - [Lean and VSCode](./Assignments/a1.md)
