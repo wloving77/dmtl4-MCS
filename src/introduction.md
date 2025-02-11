@@ -36,7 +36,7 @@ Most students in a recent new graduate class, for example, could not confidently
 
 ## The Radical Purpose of This Course
 
-With support provided in part by a research grant from the National Science Foundation (# ______), the authorhas developed this course as a model for full-out replacement for the traditional undergraduate course in discrete mathematics and theory. Several crucial changes in in circumstances make right now a superb time to consider this significant transition in CS pedagogy. They include the following:
+With support provided in part by a research grant from the National Science Foundation (#1909414, SHF: Small: Explicating and Exploiting the Physical Semantics of Code), the author has developed this course as a model for full-out replacement for the traditional undergraduate course in discrete mathematics and theory, and as a first major unit of a graduate course for students with little prior experience with formal langauges and reasoning. Several big changes in in circumstances make right now a great time to consider this significant transition in CS pedagogy. They include the following:
 
 - Rapidly increasing industrial demand for formal reasoning about systems that undergird our society
 - The emergence of type-theory-based formalisms with exceptional expressiveness and broad applications
