@@ -25,6 +25,7 @@ and ask questions, often getting answers very quickly.
 - [Lean for the Curious Mathematician (2023 edition)](https://lftcm2023.github.io/tutorial/index.html)
 - [Learning Resources](https://leanprover-community.github.io/learn.html)
 - [The Type Theory of Lean](https://github.com/digama0/lean-type-theory/releases)
+- [Type Checking in Lean](https://ammkrn.github.io/type_checking_in_lean4/)
 - [Hitchhikers Guide to Logical Verification](https://raw.githubusercontent.com/blanchette/logical_verification_2023/main/hitchhikers_guide.pdf)
 
 ## Books on Closely Related Concepts and Tools (mainly Coq)
