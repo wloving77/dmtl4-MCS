@@ -100,8 +100,8 @@ and return other objects as results.
 As an aside, first-order predicate logic with sets as a theory
 extension (*first-order set theory*) speaks in terms of *sets*
 of objects. The higher-order predicate logic of Lean speaks in
-terms of *types* of objects. For now, you can think of a type 
-in Lean as defining a set of objects, namely all and only the 
+terms of *types* of objects. For now, you can think of a type
+in Lean as defining a set of objects, namely all and only the
 objects of that type.
 
 ### Universal and Existential Quantifers

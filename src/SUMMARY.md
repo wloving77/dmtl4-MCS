@@ -45,6 +45,7 @@
   - [For All](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_all.lean.md)
   - [Exists](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_exists.lean.md)
 
+- [Mathlib](./mathlib.md)
 - [Assignments](){-}
 
   - [Lean and VSCode](./Assignments/a1.md)
