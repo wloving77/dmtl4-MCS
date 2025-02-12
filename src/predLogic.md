@@ -5,8 +5,11 @@ logic have only Boolean values as their semantic domain,
 expressions in predicate logic can be interpreted over
 an unlimited range of domains, each comprising entities,
 functions, and relations. Predicate logic gives us a
-language in which to express propositions about *many*
+language in which to express complex propositions about
+properties of objects and relations among them in *many*
 different kinds of worlds.
+
+## Overview
 
 The syntax of predicate logic retains the logical
 operators of propositional logic, but also has new
@@ -70,39 +73,57 @@ Lean would know to take the function, *Nat.add*, as the
 meaning of *+*, and the *Nat.lt* relation as the meaning
 of *<*.
 
+## From Propositional to Predicate Logic
+
 With that introduction, we now highlight key differences
 between propositional and predicate logic, focusing on
 differences that hold whether one is speaking of simple
 first-order predicate logic or the much mroe expressive
 higher-order predicate logic provide by the Lean prover.
 
-## Propositional Logic Connectives
+### Syntax of Predicate Logic
+
+The syntax of predicate logic keeps the fixed operator symbols
+and variable expressions of propositional logic. To these it adds
+quantifier, constant, function, and predicate symbols. Here are
+examples, with each example written first in first-order logic and
+then in Lean.
+
+
+
+such as *true* and *false* in propositional logic, interpreted as
+referring to specific objects in the semantic domain. It also has
+
+referring to objects (or entities) in the semantic domain.
+And it permits names to refer to functions and predicates in the
+domain.
+
+### Semantics of Predicate Logic
+
+As an example, domain could have *people* as entities. It could have
+a function, *motherOf*, that maps any give person, *p*, to the person
+who is the mother of *p*. And there could also be a property of a 
+person expressed as a predicate, *isBlue*, that takes a person and
+indicates whether that person is blue. 
+
+With this semantic domain, Ote could then assert the following using
+the language of predicate logic: the mother of everyone who's blue
+is blue, too. A literal reading would say if p and q are people and
+then if p is blue and then if q is the mother of p then q is blue.
+
+- ∀ (p q: Person), isBlue p → isMother q p → isBlue q
+
+In first order logic, it'd be more tedious to express, and there
+would be more room for uncaught implicit type errors.
+
+- ∀ p, q, isPerson p → isPerson q → isBlue p → isMother q p → isBlue q
+
+### Propositional Logic Connectives
 
 Predicate logic maintains the logical connectives, such
 as *and*, *or*, and *not* from propositional logic, with
 their usual truth-functional meanings. Beyond that, there
 are significant changes.
-
-### Arbitrary Semantic Domains
-
-Propositional logic has Boolean algebra as its fixed semantic
-domain. One evaluates expressions in this language over simple
-structures that bind propositional variables to Boolean values.
-
-Predicate logic, by contrast, admits many semantic domains.
-You can use it to talk about whatever domain you care to talk
-about, provided you can represent it in terms of objects; sets
-of objects (in first-order logic with set theory), or types of
-objects (in the higher-order logic of Lean); relations among
-objects; and functions that take objects as their arguments
-and return other objects as results.
-
-As an aside, first-order predicate logic with sets as a theory
-extension (*first-order set theory*) speaks in terms of *sets*
-of objects. The higher-order predicate logic of Lean speaks in
-terms of *types* of objects. For now, you can think of a type
-in Lean as defining a set of objects, namely all and only the
-objects of that type.
 
 ### Universal and Existential Quantifers
 
@@ -122,6 +143,27 @@ type judgments, *(x : T)* and *(y : T)* and write, *∀ x, P x*
 and *∃ x, P x* making the syntax close to that of first-order
 predicate logic. In this book we focus heavily on predicate
 logic in Lean, viewing first-order logic as a special case.
+
+### Unbounded Possible Semantic Domains
+
+Propositional logic has Boolean algebra as its fixed semantic
+domain. One evaluates expressions in this language over simple
+structures that bind propositional variables to Boolean values.
+
+Predicate logic, by contrast, admits many semantic domains.
+You can use it to talk about whatever domain you care to talk
+about, provided you can represent it in terms of objects; sets
+of objects (in first-order logic with set theory), or types of
+objects (in the higher-order logic of Lean); relations among
+objects; and functions that take objects as their arguments
+and return other objects as results.
+
+As an aside, first-order predicate logic with sets as a theory
+extension (*first-order set theory*) speaks in terms of *sets*
+of objects. The higher-order predicate logic of Lean speaks in
+terms of *types* of objects. For now, you can think of a type
+in Lean as defining a set of objects, namely all and only the
+objects of that type.
 
 ### Strongly Typed Higher-Order vs. Untyped First-Order Logic
 
@@ -158,34 +200,6 @@ and type checkers will not allow it. By constrast there would be
 nothing wrong, in first-order predicate logic, with applying the
 *isMNortal* predicate to a cheese or some gas, as everything is
 in the first instance just an *object*.
-
-### Syntactic Elements of Predicate Logic
-
-The syntax of predicate logic has fixed symbols to represent the
-usual connectives and the two new quantifiers. It has constants,
-such as *true* and *false* in propositional logic, interpreted as
-referring to specific objects in the semantic domain. It also has
-variables, referring to objects (or entities) in the semantic domain.
-And it permits names to refer to functions and predicates in the
-domain.
-
-As an example, domain could have *people* as entities. It could have
-a function, *motherOf*, that maps any give person, *p*, to the person
-who is the mother of *p*. And there could also be a property of a 
-person expressed as a predicate, *isBlue*, that takes a person and
-indicates whether that person is blue. 
-
-With this semantic domain, Ote could then assert the following using
-the language of predicate logic: the mother of everyone who's blue
-is blue, too. A literal reading would say if p and q are people and
-then if p is blue and then if q is the mother of p then q is blue.
-
-- ∀ (p q: Person), isBlue p → isMother q p → isBlue q
-
-In first order logic, it'd be more tedious to express, and there
-would be more room for uncaught implicit type errors.
-
-- ∀ p, q, isPerson p → isPerson q → isBlue p → isMother q p → isBlue q
 
 ### From Model-Theoretic (Semantic), to Proof-Theoretic, Validity
 

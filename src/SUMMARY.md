@@ -23,9 +23,10 @@
   - [Semantic Validity](./DMT1/Lectures/L03_modelTheory/validity.lean.md)
   
 - [Arithmetic](./arithmetic.md)
+  - [Domain](./DMT1/Lectures/L04_natArithmetic/domain.lean.md)
   - [Syntax](./DMT1/Lectures/L04_natArithmetic/syntax.lean.md)
   - [Semantics](./DMT1/Lectures/L04_natArithmetic/semantics.lean.md)
-  - [Domain (Induction)](./DMT1/Lectures/L04_natArithmetic/domain.lean.md)
+  - [Induction](./DMT1/Lectures/L04_natArithmetic/induction.lean.md)
   - [Examples](./DMT1/Lectures/L04_natArithmetic/examples.lean.md)
   
 - [Theory Extensions](./TheoryExtensions.md)
