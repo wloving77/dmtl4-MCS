@@ -1,7 +1,8 @@
 # Discrete Mathematics and Theory in Lean 4
 
 - [Discrete Mathematics and Theory in Lean 4](#discrete-mathematics-and-theory-in-lean-4)
-  - [The Two Pillars of Computing](#the-two-pillars-of-computing)
+  - [The Two Intellectual and Linguistic Pillars of Computer Science](#the-two-intellectual-and-linguistic-pillars-of-computer-science)
+  - [Stepping Back: Some Problems](#stepping-back-some-problems)
   - [The Pillar Ignored](#the-pillar-ignored)
   - [The Practical Problem](#the-practical-problem)
   - [The Radical Purpose of This Course](#the-radical-purpose-of-this-course)
@@ -16,25 +17,31 @@
 
 ![National Science Foundation Logo](static/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
 
-## The Two Pillars of Computing
+## The Two Intellectual and Linguistic Pillars of Computer Science
 
-The formal languages of computer science fall into two broad, overlapping categories: *programming* languages and *reasoning* languages. Expressions in programming langauges describe computations that can be executed by computing machines. Expressions in reasoning languages express propositions that make precise claims about the states of *worlds* of interest in ways that admit formal verification. Languages for programming and languages for reasoning are the two pillars holding up of all computer science.
+The formal languages of computer science, and the fundamental patterns of thought that they enable and support, fall into two broad overlapping categories: languages for *conputations*, programming  languages, and languages for *reasoning*. Expressions in programming langauges specify executable computations. Expressions in reasoning languages express testable claims, and tests thereof, about states of affairs in all manner of abstract and physical *worlds* of interest. The two linguistic pillars then, not disjoint, are *programming* Languages and *reasoning* languages.
 
-Yet, as a field, we've fallen into the trap of teaching what has been intellectual easier and also immediately industrial useful, namely the syntax, semantics, and uses of programming languages, at the expense of graduating generations of students with little or no fluency, by the time they enter the workforce, to express ideas, or to reason, using this category of languages: software *logics*.
+In languages like the one we use in this coures, they are interwoven intricately into a unified linguistic whole enabled by an amazing conceptual unification, the Curry-Howard correspondence. It names the insight that formalized reasoning of fundamental kinds can be cast as programming. Proofs are programs! That idea is the hook for engaging computer scientists: explain it in terms they they already understand and love.
+
+## Stepping Back: Some Problems
+
+That we arrived here is entirely understandable. The demand for programming was voracious, and the cost of reasoning was prohibitively high. Theory, languages, tools, thriving communitities, and real demand drives curriculuar choices. But now the winds are turbulent. Generative and related AI still appear to hold promising of reduced demand for entirely hand-typed programming code. But what's even more impressive is now rapidly growing demand for students with real fluency not only in programming language and thinking, but in the abstractions and dynamics of reasoning, including, but not limited to, reasoning about computations.
+
+This goal for this course is to contribute to addressing this shortfall by radically replacing the traditional undergraduate CS2  course in discrete mathematics around the wildly successful reasoning and computation language, Lean 4. The course is scope for one undergraduate semester. The material on theory extensions and SMT solvers is recommended at this level as optional, and shuold probably be skipped on a first teaching of the course.
 
 ## The Pillar Ignored
 
-To the extent that this class of languages is taught, it typically appears in a second course in computer science, name *discrete mathematics and theory*, or something similar. Such a course covers propositional logic, first-order predicate logic, proof-theoretic validity, first-order set theory, and induction, often over only the natural numbers.
+To the extent that reasoning and the theories, languages, and tools that support it, are taught, they generally appear in a standard second course for majors, namely *discrete mathematics and theory (DMT1)*. This course teaches students to use propositional logic (syntax, semantics, model theory), first-order predicate logic and set theory, proof-theoretic validity and proof construction skills, and induction, typically only for proofs and only over natural numbers.
 
- These courses are generally paper-and-pencil affairs and, at least anecdotally, as far as students seem to be concerned, are among the least relevant, least memorable courses in the entire curriculum. There is little interesting automation, or connection to students' intrinsic interest in *computing*, or apparent practical utility in any of it. The result is that undergraduate students today generally graduate with something close to no fluency in the languages or modes of thought that constitute the second pillar of our discipline.
+The overarching intellectual construct as seen by students is untyped, but properly stratified, first order logical and set theory. These courses are also generally paper-and-pencil affairs. In the end, I am afraid to suggested, they are received as among the least relevant, least memorable courses in the entire curriculum. There is little apparent connection to students' known intrinsic interests in *computation*, and little or no perceived utility in the subject matter. The result, over generations of students, is that even top BS graduates and entering graduate students generally have graduate no experience with reasoning or with contemporary enabling theories, languages, tools, communities, and industrial needs. 
 
 ## The Practical Problem
 
-This state of affairs is understandable as the outcome of a decades-long history during which formal logics were arcane (e.g., see the concrete syntax of Z), industrial demands came from only the most specialized of applications, and one needed graduate education to use reasoning languages and methods. Times have changed, to say the least. We are seeing the rise of powerful languages and technologies for sophisticated abstract reasoning, along with rapidly growing demand for graduates who are prepared to *hit the ground running* when it comes to expressing and verifying ideas using these capabilities. Sadly, our field has been caught flat-footed.
+This state of affairs is understandable as the outcome of a decades-long history during which reasoning languages were arcane, tool support was minimal, one needed graduate education to use them, very few people used them, and demand came only from rare exceptional projects.
 
-The reality is that the courses that most undergraduates take in reasoning languages and methods are leaving them woefully deficient in foundational knowledge on the *reasoning* side of our discipline. In the experience of this author, for example, few if any incoming graduate students have any degree of fluency in any of the reasoning languages of computer science, not even in simple propositional logic. 
+Times have now changed. We now have clearly successful reasoning theories, languages, technologies, and communities enabling deep and substantially automated reasoning across many domains of discourse  employing the natural abstractions and notations of all of the respective domains.  Exponentiating the effect is rapidly growing industrial demand for graduates who are prepared to *hit the ground running* when it comes to useing these capabilities for productive reasoning.
 
-Most students in a recent new graduate class, for example, could not confidently explain the rule for evaluating implications. They weren't able to distinguish between truth and validity, and were unsure whether expressions such as *1 = 0 → 2 = 3* are valid. Most had clearly not ever firmly grasped why it makes sense to judge them as valid. By contrast, nearly every incoming student has working fluency in at least one *programming* language.
+In this author's experience, few if any incoming graduate students have any degree of fluency in any of the reasoning languages of computer science, not even in important aspects of propositional logic.Most new graduate students incoming to a recent class did not confidently know how to reason about implications. Yet we take for granted that all incoming grad students will have working fluency in at least one and almost certainly multiple styles of *computational* thought and expression.
 
 ## The Radical Purpose of This Course
 

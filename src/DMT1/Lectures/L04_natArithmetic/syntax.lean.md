@@ -35,7 +35,7 @@ interpret as evaluating to natural numbers, as well as
 unary and binary arithemtic predicate operators that
 we will evaluated as reducing to Boolean values.
 
-### Unary Arithemtic Operators
+### Unary
 
 We define syntactic symbols for the unary operators
 of our emerging little language for arithmetic. Just
@@ -54,7 +54,7 @@ deriving Repr
 ```
 
 
-### Binary Arithemtic Operators
+### Binary
 
 We define binary operator symbols here, that we will
 eventually interpret as having corresponding arithemtic
@@ -70,7 +70,22 @@ inductive BinOp : Type where
 deriving Repr
 ```
 
-### Binary Arithmetic Predicate Operators
+## Predicates
+
+### Unary
+
+Next we define syntax for unary predicate operator symbols.
+Here we define just one, namely isZero. We will interpret
+it as returning a Boolean indicating whether the expression
+to which it's applied evaluates to zero or not.
+
+```lean
+inductive UnPredOp : Type
+| isZero
+deriving Repr
+```
+
+### Binary
 
 Next we define a set of syntactic symbols (names)
 for basic *natural number arithmetic relational*
@@ -89,24 +104,14 @@ inductive BinPredOp : Type
 | ge
 | gt
 deriving Repr
-```
 
-### Unary Arithmetic Predicate Operators
 
-Next we define syntax for unary predicate operator symbols.
-Here we define just one, namely isZero. We will interpret
-it as returning a Boolean indicating whether the expression
-to which it's applied evaluates to zero or not.
-
-```lean
-inductive UnPredOp : Type
-| isZero
+inductive TernPredOp : Type
+-- TODO: Nothing here for now. Could be add relation
 deriving Repr
 ```
 
-
-
-## Arithmetic and Predicated Expressions
+## Operator Expressions
 
 The syntax of arithemtic expressions is nearly
 isomorphic to (has the same structure) as that
@@ -125,6 +130,8 @@ inductive OpExpr : Type where
 deriving Repr
 ```
 
+### Predicate Expressions
+
 Arithemtic Predicate expressions are similarly
 specified as an inductively defined type, values
 of which represent (true/false) unary and binary
@@ -135,6 +142,7 @@ of a sensible example of a ternary predicate?)
 inductive PredExpr : Type where
 | unOp (op : UnPredOp) (e : OpExpr)
 | binOp (op : BinPredOp) (e1 e2 : OpExpr)
+| ternOp (op : TernPredOp) (e1 e2 e3 : OpExpr)
 deriving Repr
 ```
 
@@ -155,8 +163,8 @@ notation:max e " ! " => OpExpr.unOp UnOp.fac e
 infixl:65 " + " => OpExpr.binOp BinOp.add
 infixl:65 " - " => OpExpr.binOp BinOp.sub
 infixl:70 " * " => OpExpr.binOp BinOp.mul
+-- TODO: ternOp notation?
 ```
-
 
 We also specify concrete syntax for the usual binary
 predicates (aka relational operators) in arithmetic.

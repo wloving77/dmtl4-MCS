@@ -3,8 +3,6 @@ import DMT1.Lectures.L04_natArithmetic.syntax
 import DMT1.Lectures.L04_natArithmetic.domain
 
 namespace DMT1.Lectures.natArithmetic.semantics
-
-open DMT1.Lectures.natArithmetic.domain
 ```
 
 Given syntactic operator and predicate terms, return
@@ -30,6 +28,9 @@ def evalBinPred : BinPredOp → (Nat → Nat → Bool)
 | BinPredOp.lt => domain.lt
 | BinPredOp.ge => domain.ge
 | BinPredOp.gt => domain.gt
+
+-- TODO:
+def evalTernPred : TernPredOp  →  (Nat → Nat → Nat → Bool) := sorry
 
 def evalUnPred : UnPredOp → (Nat → Bool)
 | UnPredOp.isZero => domain.isZero
@@ -69,6 +70,7 @@ Semantic evaluation of a predicate expression.
 def evalPredExpr : PredExpr → Interp → Bool
 | PredExpr.unOp op e, i =>  (evalUnPred op) (eval e i)
 | PredExpr.binOp op e1 e2, i =>  (evalBinPred op) (eval e1 i) (eval e2 i)
+| PredExpr.ternOp op e1 e2 e3, i =>  (evalTernPred op) (eval e1 i) (eval e2 i) (eval e3 i)
 ```
 
 Standard concrete notation for applying semantic
