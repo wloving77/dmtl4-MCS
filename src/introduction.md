@@ -17,7 +17,9 @@
 
 ![National Science Foundation Logo](./images/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
 
-Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
+This course was developed with support provided in part by a research grant from the National Science Foundation, #1909414, SHF: Small: Explicating and Exploiting the Physical Semantics of Code.
+
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
 The views expressed in this article are those of the author(s) and do not necessarily reflect the views, policies, or positions of the University of Virginia.
 
@@ -54,7 +56,7 @@ In this author's experience, few if any incoming graduate students have any degr
 
 ## The Radical Purpose of This Course
 
-With support provided in part by a research grant from the National Science Foundation (#1909414, SHF: Small: Explicating and Exploiting the Physical Semantics of Code), the author has developed this course as a model for full-out replacement for the traditional undergraduate course in discrete mathematics and theory, and as a first major unit of a graduate course for students with little prior experience with formal langauges and reasoning. Several big changes in in circumstances make right now a great time to consider this significant transition in CS pedagogy. They include the following:
+The author has developed this course as a model for full-out replacement for the traditional undergraduate course in discrete mathematics and theory, and as a first major unit of a graduate course for students with little prior experience with formal langauges and reasoning. Several big changes in in circumstances make right now a great time to consider this significant transition in CS pedagogy. They include the following:
 
 - Rapidly increasing industrial demand for formal reasoning about systems that undergird our society
 - The emergence of type-theory-based formalisms with exceptional expressiveness and broad applications
