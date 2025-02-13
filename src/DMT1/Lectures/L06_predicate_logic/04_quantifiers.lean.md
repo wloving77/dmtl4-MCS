@@ -1,8 +1,10 @@
+/- @@@# Quantifiers
 
 Suppose:
 
 - α is any type (such as Nat or A ∨ B)
 - Pr : α → Prop is predicate expressing a property of α values (e.g., evennness)
+@@@ -/
 
 ```lean
 universe u
@@ -10,11 +12,13 @@ axiom α : Sort u      -- α can be in Prop (Sort 0), Type (Sort 1), or Type 1, 
 axiom Pr : α → Prop
 ```
 
+/- @@@
 
 Then in predicate logic we also have two forms of quantifier expressions
 
 - ∀ (a : α), Pr a
 - ∃ (a : α), Pr a
+@@@ -/
 
 
 ```lean
@@ -23,6 +27,7 @@ Then in predicate logic we also have two forms of quantifier expressions
 ```
 
 
+/- @@@
 
 ## Universal Quantifier: ∀ (a : α), Pr a
 
@@ -39,25 +44,30 @@ a function. If α is any type (including Prop), a proof of ∀ (a : α), P a, is
 pf : (a : α) → P a. That is the type of a function that takes any argument of type α and
 that returns proofs the corresponding propositions P a, one proposition/type for each a.
 That's it! It's the same as for any implication.
+@@@ -/
 
 ```lean
 def pf : ∀ (a : α), Pr a := (fun (a : α) => sorry)
 ```
 
+/- @@@
 Now to use a proof of an implication, apply it, as a function to any value (b : α) to
 get a proof of P b.
+@@@ -/
 
 ```lean
 axiom b : α
 
 #check pf b
-```
 
+/- @@@
 We can call constructing a proof of (∀ a, P a) a universal generalization. We can
 call the application of a generliation to a value to get a value-specific proof
 universal specialization.
+@@@ -/
 
 
+/- @@@
 ## Existential Quantifier: ∃ (a : α), P a
 
 Now we meet the form of an "existentially quantified" proposition. It can be read as
@@ -66,11 +76,13 @@ saying "there exists an a with property P", or "some a satisfies the predicate P
 ### Introduction
 
 To prove it, apply Exists.intro to some value (a : α) and to a proof (pf : P a).
+@@@ -/
 
 ```lean
 def aPf : ∃ (x : α), Pr x := Exists.intro b sorry   -- you also need a proof of P b
 ```
 
+/- @@@
 ### Elimination
 
 The rule for using a proof of existence is a little strange. If you have one,
@@ -89,6 +101,7 @@ rule has given you two new context elements to work with: (1) *some* value,
 (a : α), and a proof that that value, a, satisfies the predicate, Pr. In
 a more interesting proof, you would then use these elements to help build
 the proof you seek (here of True.intro).
+@@@ -/
 
 ```lean
 example : (∃ (x : α), Pr x) → True :=
@@ -101,7 +114,9 @@ example : (∃ (x : α), Pr x) → True :=
       )
 ```
 
+/- @@@
 ## A few examples
+@@@ -/
 
 ```lean
 example : ∃ (n : Nat), n = 0 := Exists.intro 0 rfl
@@ -119,7 +134,9 @@ axiom Hard : Ball → Prop
 #check Exists.elim
 ```
 
+/- @@@
 Exists.elim.{u} {α : Sort u} {p : α → Prop} {b : Prop} (h₁ : ∃ x, p x) (h₂ : ∀ (a : α), p a → b) : b
+@@@ -/
 
 ```lean
 example : (∃ (b : Ball), Red b ∧ Hard b) → (∃ (b : Ball), Red b) := by

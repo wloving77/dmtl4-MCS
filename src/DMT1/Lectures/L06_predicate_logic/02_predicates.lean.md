@@ -1,6 +1,9 @@
+/- @@@
 # Proposition, Predicate, and Connective Types
+@@@ -/
 
 
+/- @@@
 ## Predicates
 Last time we developed two examples where we represented
 propositions as types.  We then noticed that these two
@@ -20,6 +23,7 @@ types, predicates return propositions (represented as types
 in type theory).
 
 Here are the two original propositions.
+@@@ -/
 
 ```lean
 -- Kevin is from Charlottesville
@@ -35,6 +39,7 @@ inductive CarterIsFromCville : Type where
 | cvilleUtilityBill
 ```
 
+/- @@@
 ### Generalizing from Instances by Parameterization
 
 Now what we want to do is to formulate a single predicate
@@ -43,6 +48,7 @@ replaced by a single argument specifying the "person" that
 the resulting proposition "is about." For that we will need
 a new type: a Person type, whose values we will interpret
 as representing individual people in the real world.
+@@@ -/
 
 ```lean
 -- First, we need a Person type
@@ -54,6 +60,7 @@ inductive Person : Type where
 open Person
 ```
 
+/- @@@
 And now we can write our *generalized* predicate. We will
 call it IsFromCharlottesville. On the first line, below, we
 specify this name and the fact that it refers to *function*
@@ -61,8 +68,8 @@ that takes a person as an argument and that returns a *type*
 that (1) represents a proposition about a particular person,
 (2) comes with a collection of constructors for creating
 proofs/values of such a proposition/type.
+@@@ -/
 
-```lean
 inductive IsFromCville : Person → Type where
 | cvilleBirthCert (p : Person) : IsFromCville p
 | cvilleDriversLicense (p : Person) : IsFromCville p
@@ -71,25 +78,28 @@ inductive IsFromCville : Person → Type where
 open IsFromCville
 ```
 
+/- @@@
 As we'e emphasized before, a predicate is a function
 from arguments to propositions, where propositions are,
 yet again, represented as *types*, and where proofs of
 such propositions are represented as values of such
 types.
-```lean
+@@@ -/
 #check IsFromCville
 ```
 
+/- @@@
 ### Specializing to Propositions By Application to Parameter Values
 
 Applied to arguments a predicate yields a proposition. In
 Lean, we represent propositions as types. So here we are
 defining propositions called KIFC and CIFC.
-```lean
+@@@ -/
 def KIFC : Type := IsFromCville Kevin
 def CIFC : Type := IsFromCville Carter
 ```
 
+/- @@@
 ## Proving Propositions Derived from Predicates
 
 Finally we can now see how to "prove" propositions derived from
@@ -100,22 +110,26 @@ proposition. The following code declares KIFC and CIFC as proofs
 of our two propositions, using the same proof/value constructors
 in both cases, as they're common to *all* specializations of the
 given predicate.
-```lean
+@@@ -/
 def pfKevin : IsFromCville Kevin := cvilleBirthCert Kevin
 def pfCarter : CIFC := cvilleUtilityBill Carter
 ```
 
+/- @@@
 So there! We've now represented a *predicate* in Lean, not
 as a type, per se, but as a function that takes a Person as
 an argument, yields a proposition/type, and provies general
 rules (constructors) for building proofs.
+@@@ -/
 
+/- @@@
 ### Another Example
 
 We can prove that natural number is "Even" (a predicate!) by
 showing that it's either zero or two more than any other even
 number. Let's see an Even predicate represented in Lean in the
 manner we just introduced.
+@@@ -/
 
 ```lean
 inductive Ev : Nat → Type where
@@ -125,7 +139,9 @@ inductive Ev : Nat → Type where
 open Ev
 ```
 
+/- @@@
 And here are some proofs of evenness
+@@@ -/
 
 ```lean
 def pfZeroEv : Ev 0 := pfZero
@@ -145,6 +161,7 @@ def pfSixEv : Ev 6 :=
 ```
 
 
+/- @@@
 Why can't we build a proof that 5 is even?
 Well, to do that, we'd need a proof that 3
 is even. Why can't we build that? Well, we'd
@@ -152,7 +169,9 @@ need a proof that 1 is even. And we have no
 way at all to construct such a proof. There
 just isn't one given the construtors that we
 have to work with.
+@@@ -/
 
+/- @@@
 ## Logical Connectives
 
 Ok, so now we know how to represent propositions
@@ -176,12 +195,14 @@ proofs of P and of Q, respectively, as arguments
 to an "and_intro-like" constructor. We'll call
 our connective MyAnd to avoid conflicting with
 And, already built into Lean.
+@@@ -/
 
 ```lean
 inductive MyAnd : (P : Type) → (Q : Type) → Type where
 | intro (p : P) (q : Q) : MyAnd P Q
 ```
 
+/- @@@
 It's tremendously important that you be able to
 read, understand, and explain "what's going on"
 with the intro constructor. What is says, in
@@ -193,6 +214,7 @@ that is, of what we'd usually write as P ∧ Q.
 
 Now, finally, we've enabled the construction of
 proofs of our own "And" expressions.
+@@@ -/
 
 ```lean
 -- let nothFromCville be an "And" propopsition

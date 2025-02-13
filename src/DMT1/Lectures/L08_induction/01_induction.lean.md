@@ -2,6 +2,7 @@
 import Mathlib.Tactic.Ring
 ```
 
+/- @@@
 # Induction
 
 Suppose that you have some arbitrary type, α, and
@@ -45,7 +46,9 @@ Indeed, every inductive type definition in Lean comes
 with at least one inducation axiom specifically for
 defining total functions and for proving universal
 generalizations over values of that input type, α.
+@@@ -/
 
+/- @@@
 ## Definining Total Functions by Induction
 
 As an easy example, suppose we want to define a total
@@ -64,6 +67,7 @@ To have a total function from Bool inputs, we *must*
 define an output for each of the two constructors: an
 output for true and an output for false. Our usual way
 to do this is with some nice Lean syntax, as follows.
+@@@ -/
 
 ```lean
 -- Here's the syntax we've always used
@@ -73,8 +77,10 @@ def myNeg0 : Bool → Bool
 | false => true
 ```
 
+/- @@@
 Here's exactly the same definition using
 an explicit match statement
+@@@ -/
 
 ```lean
 def myNeg1 : Bool → Bool :=
@@ -87,11 +93,11 @@ fun b =>
 And now finally, here's how we can define this
 function by applying an induction axiom for Bool.
 In Lean, it's called Bool.rec.
-```
+@@@ -/
 
 #check Bool.rec
 
-```lean
+/- @@@
 Here we explain it in more detail.
 
 Bool.rec.{u}
@@ -110,28 +116,28 @@ The next two arguments are where we define the right
 outputs for each of the constructors. This is where
 again giving answers "by cases" just as before. So let
 us see it in action.
-```
+@@@ -/
 
 
-```lean
+/- @@@
 In this example we turn off implicit arguments using @
 so that we can see all the arguments explicitly. First
 we see that the following expression at least checks out
 to be of type Bool → Bool. We use Lean syntax to clarify
 which named arguments we're proving as arguments.
-```
+@@@ -/
 
 #check (@Bool.rec
           (motive:=(λ (_ : Bool) => Bool))  -- type of function
           (false:=true)                     -- answer for false
           (true:=false))                    -- answer for true
 
-```lean
+/- @@@
 This expression exactly reflects the case analysis that we
 used in our first implementation of this function. Indeed,
 Lean "desugars" the nice notation we've been using to just
 this expression.
-```
+@@@ -/
 
 -- When we apply this expression to an argument we get the right result
 #reduce (@Bool.rec (motive := (λ (_ : Bool) => Bool)) true false) true
@@ -145,17 +151,20 @@ example : (@Bool.rec (motive := (λ (_ : Bool) => Bool)) true false) true = fals
 Lean doesn't fully support definition of computational functions using recursors.
 It won't generate code for them. You're thus forced to use Lean's nicer syntax to
 define computational functions.
+@@@ -/
 
 ```lean
 def myNeg : Bool → Bool := (Bool.recOn true false) -- oops
 ```
 
+/- @@@
 ## Proving Universal Generalizations by Induction
 
 Let's now define a simple property of Boolean values
 and write and prove the propotion that every Boolean
 has this property. The property that we will use here
 is fun b => b ∧ false = false. We'll call it andFalse.
+@@@ -/
 
 ```lean
 def andFalse (b : Bool) := (b && false) = false
@@ -164,31 +173,35 @@ def andFalse (b : Bool) := (b && false) = false
 def andFalse' := fun (b : Bool) => (b && false) = false
 ```
 
+/- @@@
 We can see that the andFalseIsFalse property is true
 of every Boolean value, of which there are only two.
-```lean
+@@@ -/
 #reduce (types:=true) andFalse true   -- false = false
 #reduce (types:=true) andFalse false  -- false = false
 ```
 
 
+/- @@@
 Here's a formal statement in predicate logic of the claim
 that andFalse b is true for all Boolean values, b. The
 proofs is by simple case analysis. In each case what is
 to be proved is false = false, and that's by reflexivity
 of equality.
-```lean
+@@@ -/
 def allFalseAnd : ∀ (b : Bool), andFalse b
 | true => rfl
 | false => rfl
 ```
 
+/- @@@
 And now for the punchline. Here's the same proof but now
 given by explictly applying the induction axiom, Bool.rec.
 
 The basic idea, again, is that we give it answers for each
 of the constructors of the Bool type (as we just did but with
 nice syntax).
+@@@ -/
 
 ```lean
 def allFalseAnd' : ∀ (b : Bool), andFalse b :=
@@ -199,6 +212,7 @@ def allFalseAnd' : ∀ (b : Bool), andFalse b :=
 ```
 
 
+/- @@@
 ## Induction on Natural Numbers
 
 Let's look at the definition of the Nat type and then at the
@@ -213,6 +227,7 @@ inductive Nat where
   | zero : Nat
   | succ (n : Nat) : Nat
 
+@@@ -/
 
 ```lean
 #check Nat.rec
@@ -261,12 +276,12 @@ the right answer for n = 0, and (2) a way to produce the right
 answer for n > 0, where n = n' + 1, given n' and the result
 for n'. The second argument here defines a function that if
 given n' and the answer for n' computes the answer for n'+1.
-```
+@@@ -/
 
-```lean
+/- @@@
 Suppose the function we want to define is factorial. Here
 is the syntax we've been using all along
-```
+@@@ -/
 
 def fact0 : Nat → Nat
 | 0 => 1
@@ -280,6 +295,7 @@ But as we now understand, this nice notation is
 really using the induction axiom for the Nat type
 internally. Here's the function definition now by
 explicit application of induction, using Nat.rec.
+@@@ -/
 
 ```lean
 -- It has the right type! Nat → Nat
@@ -308,6 +324,7 @@ example : (
         := rfl
 ```
 
+/- @@@
 ### Proof by Induction (on the Natural Numbers)
 
 Induction can't be used to prove any proposition. It is
@@ -330,6 +347,7 @@ to n * (n + 1) / 2.
 
 To begin our exploration, let's define a simple function
 to compute this sum. It's by recursion, of course.
+@@@ -/
 
 ```lean
 def sumToN : Nat → Nat
@@ -343,12 +361,13 @@ example : sumToN 10 = 55 := rfl
 /-
 Now we can formally define the property we will claim
 every natural number has.
-```
+@@@ -/
 
 def sumToNProp (n : Nat) := 2 * sumToN n = n * (n.succ)
 
 /-
 Next we can state the universal generalization we want.
+@@@ -/
 
 ```lean
 def sumToNPropAll := (∀ (n : Nat), sumToNProp n)
@@ -358,13 +377,14 @@ And now we can prove it, by induction. For this we will
 need to provide two "parts". The first is the correct value
 for n = 0. In this case, sumToN 0 = 0, and n * (n + 1) is
 also zero, so proof result that we want in this case is rfl.
-```
+@@@ -/
 /-
 The proof is by induction on the natural number n.
 
 Base case: The answer for n = 0 is clearly 0. So the proof
 we want for n = 0 is just a proof of 0 = 0, which we can have
 by the reflexivity of equality.
+@@@ -/
 
 ```lean
 -- Base case (for n constructed by Nat.zero)
@@ -428,9 +448,9 @@ if sumToN n' = n'*(n'+1)/2, then sumToN (n'+1)
 = (n'+1)*((n'+1)+1)/2, and that is all we need
 to apply the principle of induction for natural
 number arguments and we're done!
-```
+@@@ -/
 
-```lean
+/- @@@
 A key to this proof was the observation that we can
 write (sumToProp n'+1) as (sumToProp n') + (n'+1).
 That's critical because the induction hypothesis
@@ -441,17 +461,17 @@ writing the proof, let's prove that we can always
 rewrite sumToN (n'+1) as (sumTo n') + n'+1. The
 proof is simply by the definition of sumToN. Go
 look at its definition; you'll see.
-```
+@@@ -/
 
 def pf (n : Nat) : sumToN (n.succ) = (sumToN n) + (n.succ) :=
 -- true by the definition of sumToN
 -- see the the second rule for computing this function
 by simp [sumToN]
 
-```lean
+/- @@@
 Now we see how to define the step function. Here
 is a formal definition in Lean.
-```
+@@@ -/
 
 def sumStep :
       ∀ (n' : Nat),
@@ -492,7 +512,7 @@ Here then is a final proof in Lean for what we
 have already proved by hand / in English, by the
 explicit application of the induction axiom for
 Nat.
-```lean
+@@@ -/
 def pfSumToNPropAll : sumToNPropAll :=
 @Nat.rec      -- apply induction
   _           -- type of proof (inferred)
@@ -510,6 +530,7 @@ The proof is constructed entirely in tactic mode here.
 The comments, though, should all make sense.
 ```
 
+@@@ -/
 example : sumToNPropAll :=
 -- again in tactic mode
 -- open infoView (CMD/CTRL-SHIFT-ENTER/RETURN)
