@@ -22,11 +22,43 @@
   - [Properties of Expressions](./DMT1/Lectures/L03_modelTheory/properties.lean.md)
   - [Semantic Validity](./DMT1/Lectures/L03_modelTheory/validity.lean.md)
   
-- [Arithmetic](./Arithmetic.md)
+- [Arithmetic](./arithmetic.md)
+  - [Domain](./DMT1/Lectures/L04_natArithmetic/domain.lean.md)
   - [Syntax](./DMT1/Lectures/L04_natArithmetic/syntax.lean.md)
   - [Semantics](./DMT1/Lectures/L04_natArithmetic/semantics.lean.md)
-  - [Domain (Induction)](./DMT1/Lectures/L04_natArithmetic/domain.lean.md)
+  - [Induction](./DMT1/Lectures/L04_natArithmetic/induction.lean.md)
   - [Examples](./DMT1/Lectures/L04_natArithmetic/examples.lean.md)
+  
+- [Theory Extensions](./TheoryExtensions.md)
+  - [Domain](./DMT1/Lectures/L05_theoryExtensions/domain.lean.md)
+  - [Syntax](./DMT1/Lectures/L05_theoryExtensions/syntax.lean.md)
+  - [Semantics](./DMT1/Lectures/L05_theoryExtensions/semantics.lean.md)
+  - [Examples](./DMT1/Lectures/L05_theoryExtensions/examples.lean.md)
+  - [Satisfiability Modulo Theories](./smt.md)
+
+- [Induction](./DMT1/Lectures/L06_induction/induction.lean.md)
+
+- [Mathlib](./mathlib.md)
+
+- [Predicate Logic](./predLogic.md)
+  - [Propositions as Types](./DMT1/Lectures/L07_predicateLogic/01_props_as_types.lean.md)
+  - [Predicates](./DMT1/Lectures/L07_predicateLogic/02_predicates.lean.md)
+  - [Connectives](./DMT1/Lectures/L07_predicateLogic/03_connectives.lean.md)
+  - [Quantifiers](./DMT1/Lectures/L07_predicateLogic/04_quantifiers.lean.md)
+  - [For All](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_all.lean.md)
+  - [Exists](./DMT1/Lectures/L07_predicateLogic/04_quantifiers_exists.lean.md)
+
+- [Sets and Relations](./setTheory)
+  - [Sets](./DMT1/Lectures/L08_setsRelationsFunctions/01_sets.lean.md)
+  - [Relations](./DMT1/Lectures/L08_setsRelationsFunctions.02_relations.lean.md)
+  - [Properties of Sets and Relations](./DMT1/Lectures/L08_setsRelationsFunctions.03_propertiesOfRelations.lean.md)
+
+- [Proof Construction by Induction](./proofByInduction.md)
+  - [Induction Axioms](./inductionAxioms.md)
+  - [Inductive Proofs](./DMT1/Lectures/L09_induction/01_sets.lean.md)
+  - [Structural vs Generative Recursion](./structuralRecursion.md)
+  - [Well-Founded Relations and Termination](./wellFoundedRelations.md)
+
   
 - [Assignments](){-}
 
