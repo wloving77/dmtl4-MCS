@@ -356,6 +356,32 @@ but is expected to have type
   Person : Type
 ```
 
+Now in first-order logic, one would typically use natural
+language to set up a context in which a formal expression
+makes sense. One might say this, for example.
+
+We postulate a world inhabited by entities of two kinds,
+namely person and rock, with predicates defined to tell
+objects of these kinds apart: isPerson and isRock. In this
+setting we define the predicate isMortal to take a single
+object. If it's a person, the predicate is true of that
+object; and if it's a rock, it's false for that object.
+In this context, we can express the proposition that all
+people are mortal, as follows:
+
+- ∀ x, isPerson x → isMortal x
+
+But this predicate is true for rocks, isn't it! You
+can see how things can easily go awry when writing
+complex specifications in first-order logic. In the
+typed language of Lean, by contrast, we can do better. 
+
+- ∀ (p : Person), isMortal' p
+
+No runtime ("reasoning-time") test is needed to tell
+if the argument really represents a person or not. The
+type checker of Lean 4 does that for us right up front.
+
 #### Older Version of this Subsection
 
 The next major difference between the first-order theory of a
