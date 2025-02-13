@@ -1,6 +1,7 @@
 # Discrete Mathematics and Theory in Lean 4
 
 - [Discrete Mathematics and Theory in Lean 4](#discrete-mathematics-and-theory-in-lean-4)
+  - [Acknowledgements](#acknowledgements)
   - [Two Pillars of Computer Science](#two-pillars-of-computer-science)
   - [Stepping Back: Some Problems](#stepping-back-some-problems)
   - [The Pillar Ignored](#the-pillar-ignored)
@@ -17,13 +18,15 @@
 
 ![National Science Foundation Logo](./images/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
 
+## Acknowledgements
+
 This course was developed with support provided in part by a research grant from the National Science Foundation, #1909414, SHF: Small: Explicating and Exploiting the Physical Semantics of Code.
 
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
 The views expressed in this article are those of the author(s) and do not necessarily reflect the views, policies, or positions of the University of Virginia.
 
-This work expresses cetain technical juddgments by the author based on observation and experience but not on outcomes of scientific testing. No IRBs have been needed orsought. No student data in any form has been reported outside of official reporting channels. It was an experience of figuring out just how much of the ____ could be cut as distraction while revealing all of the required context of the course, in better ways that can be done in CS2: first-order discrete math courses.
+This work expresses cetain technical juddgments by the author based on observation and experience but not always on outcomes of scientific testing. No IRBs have been needed or sought. No student or other human subjects data is reported here or has been reported outside of official reporting channels. 
 
 ## Two Pillars of Computer Science
 
