@@ -263,7 +263,7 @@ We can apply and_elim_left to *pq* to derive a proof of *p* from it,
 and similarly a proof of *q*. We can then apply the proof constructor,
 and.intro to these proofs in q-then-p order to have a proof of Q /\ P.
 
-## Formalizing Predicate Logic in Lean 4
+## Propositions as Types: Predicate Logic in Lean 4
 
 Prediate logic is a richer and more expressive language
 that propositional logic. Moreover, the higher order logic of
