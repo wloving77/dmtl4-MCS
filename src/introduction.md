@@ -15,7 +15,7 @@
   - [Paths Forward](#paths-forward)
   - [Humility](#humility)
 
-![National Science Foundation Logo](./images/480px-NSF_Official_logo_Med_Res.png "National Science Foundation") 
+![National Science Foundation Logo](./images/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
 
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
 
