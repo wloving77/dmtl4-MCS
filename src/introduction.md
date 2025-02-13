@@ -23,7 +23,6 @@ The views expressed in this article are those of the author(s) and do not necess
 
 This work expresses cetain technical juddgments by the author based on observation and experience but not on outcomes of scientific testing. No IRBs have been needed orsought. No student data in any form has been reported outside of official reporting channels. It was an experience of figuring out just how much of the ____ could be cut as distraction while revealing all of the required context of the course, in better ways that can be done in CS2: first-order discrete math courses.
 
-
 ## Two Pillars of Computer Science
 
 Computation and reasoning are two great partially intertwined pillars of computer science. Consequently we have languages for expressing *conputations*, namely *programming* languages, and languages for expressing *propositions* over diverse structures and for reasoning about their properties: of being unsatisfiable, satisfiable, or valid.  
