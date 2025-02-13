@@ -60,7 +60,6 @@
   - [Structural vs Generative Recursion](./structuralRecursion.md)
   - [Well-Founded Relations and Termination](./wellFoundedRelations.md)
 
-  
 - [Assignments](){-}
 
   - [Lean and VSCode](./Assignments/a1.md)
