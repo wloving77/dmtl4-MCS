@@ -30,12 +30,13 @@ This work expresses cetain technical juddgments by the author based on observati
 
 ## Two Pillars of Computer Science
 
-Computation and reasoning are two great partially intertwined pillars of computer science. Consequently we have languages for expressing *conputations*, namely *programming* languages, and languages for expressing *propositions* over diverse structures and for reasoning about their properties: of being unsatisfiable, satisfiable, or valid.  
+Computation and reasoning are two great partially intertwined pillars of computer science. Consequently we have languages for expressing *conputations*, namely *programming* languages, and languages for expressing *propositions* over diverse structures (or *worlds*) and for *reasoning* about (1) their logical properties, of being unsatisfiable, satisfiable, or valid, and (2) whether they are true or not for any given  structures (in any given world).  
 
-The use of programming langauges to specify computations is familiar territory even to the earliest computer science students. Expressions in reasoning languages, by contrast, express propositions about given *worlds* along with valid forms of reasoning about the truth, or satisfiability, or validity of such propositions in particular worlds. 
-Two connected linguistic pillars of the field are *programming* Languages and *reasoning* languages.
+The use of programming langauges to specify computations is familiar territory even to the earliest computer science students. Expressions in reasoning languages, by contrast, express propositions about given *worlds* along with valid forms of reasoning about the truth in particular worlds, or unsatisfiability, satisfiability, or validity in the space of all possible worlds. The wwo pillars of the field, then, are *computation* enabled by *programming* Languages and *reasoning* enabled by what may call *reasoning languages*.
 
-In languages like the one we use in this coures, they are interwoven intricately into a unified linguistic whole enabled by an amazing conceptual unification, the Curry-Howard correspondence. It names the insight that formalized reasoning of fundamental kinds can be cast as programming. Proofs are programs! That idea is the hook for engaging computer scientists: explain it in terms they they already understand and love.
+In languages like the one we use in this course, these two forms of language are interwoven intricately into a unified linguistic whole enabled by an amazing conceptual unification called the the Curry-Howard Correspondence (CHC). The CHC is the insight that formalized deductive reasoning of certains kinds (namely natural deduction) can be cast as computation, but with propositions and proofs rather than ordinary data and function  types.
+
+This idea, of the CHC, is the principle that this book attempts to exploit to engage computer scientists, in particular, in the topic of formal expression and reasoning. We aim to teach logic, proof, and automated mathematical reasoning in terms that computer science students and practitioners already understand and love. We have thus adopted Lean 4 as both the unified *programming and reasoning* language for this course.
 
 ## Stepping Back: Some Problems
 
