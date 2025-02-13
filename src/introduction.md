@@ -1,7 +1,7 @@
 # Discrete Mathematics and Theory in Lean 4
 
 - [Discrete Mathematics and Theory in Lean 4](#discrete-mathematics-and-theory-in-lean-4)
-  - [The Two Intellectual and Linguistic Pillars of Computer Science](#the-two-intellectual-and-linguistic-pillars-of-computer-science)
+  - [Two Pillars of Computer Science](#two-pillars-of-computer-science)
   - [Stepping Back: Some Problems](#stepping-back-some-problems)
   - [The Pillar Ignored](#the-pillar-ignored)
   - [The Practical Problem](#the-practical-problem)
@@ -17,9 +17,19 @@
 
 ![National Science Foundation Logo](static/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
 
-## The Two Intellectual and Linguistic Pillars of Computer Science
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
 
-The formal languages of computer science, and the fundamental patterns of thought that they enable and support, fall into two broad overlapping categories: languages for *conputations*, programming  languages, and languages for *reasoning*. Expressions in programming langauges specify executable computations. Expressions in reasoning languages express testable claims, and tests thereof, about states of affairs in all manner of abstract and physical *worlds* of interest. The two linguistic pillars then, not disjoint, are *programming* Languages and *reasoning* languages.
+The views expressed in this article are those of the author(s) and do not necessarily reflect the views, policies, or positions of the University of Virginia.
+
+This work expresses cetain technical juddgments by the author based on observation and experience but not on outcomes of scientific testing. No IRBs have been needed orsought. No student data in any form has been reported outside of official reporting channels. It was an experience of figuring out just how much of the ____ could be cut as distraction while revealing all of the required context of the course, in better ways that can be done in CS2: first-order discrete math courses.
+
+
+## Two Pillars of Computer Science
+
+Computation and reasoning are two great partially intertwined pillars of computer science. Consequently we have languages for expressing *conputations*, namely *programming* languages, and languages for expressing *propositions* over diverse structures and for reasoning about their properties: of being unsatisfiable, satisfiable, or valid.  
+
+The use of programming langauges to specify computations is familiar territory even to the earliest computer science students. Expressions in reasoning languages, by contrast, express propositions about given *worlds* along with valid forms of reasoning about the truth, or satisfiability, or validity of such propositions in particular worlds. 
+Two connected linguistic pillars of the field are *programming* Languages and *reasoning* languages.
 
 In languages like the one we use in this coures, they are interwoven intricately into a unified linguistic whole enabled by an amazing conceptual unification, the Curry-Howard correspondence. It names the insight that formalized reasoning of fundamental kinds can be cast as programming. Proofs are programs! That idea is the hook for engaging computer scientists: explain it in terms they they already understand and love.
 
