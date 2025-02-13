@@ -16,9 +16,9 @@
   - [Paths Forward](#paths-forward)
   - [Humility](#humility)
 
-![National Science Foundation Logo](./images/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
-
 ## Acknowledgements
+
+![National Science Foundation Logo](./images/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
 
 This course was developed with support provided in part by a research grant from the National Science Foundation, #1909414, SHF: Small: Explicating and Exploiting the Physical Semantics of Code.
 
