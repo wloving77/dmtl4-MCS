@@ -1,15 +1,55 @@
 # Predicate Logic
 
-Whereas propositions (expressions) in propositionl
+Whereas propositions (expressions) in propositional
 logic have only Boolean values as their semantic domain,
 expressions in predicate logic can be interpreted over
-an unlimited range of domains, each comprising entities,
-functions, and relations. Predicate logic gives us a
-language in which to express complex propositions about
-properties of objects and relations among them in *many*
-different kinds of worlds.
+an unlimited range of structures comprising entities,
+functions, and predicates (a.k.a. relations) on entities.
+One can speak about much more complex worlds in predicate
+logic than in propositional logic.
 
-## Overview
+## Predicate Logic in a Nutshell
+
+In predicate logic, whether first- or higher-order (as we
+discuss later), one speaks of worlds characterized in terms
+of entities (and in some predicate logics types of entities);
+functions *in the world* that take and return entities; and
+relations over objects represented by predicates. A predicate
+in turn is simply a proposition with placeholders (parameters)
+where specific objects can be plugged in to yield a proposition
+about them that in turn could be judged as either true or false.
+We say that an object or a tuple of objects *satisfies* a given
+predicate (is *in* the relation it specifies) when the resulting
+proposition about them is true. Predicate logics also support set 
+theory: sets of objects and ways of speaking about *all* of
+the elements in a given set, or *at least one* element of a
+given set as satisfying some condition.
+
+For example, one might consider simple world having;
+
+- entities, namely character strings and natural numbers
+- a set of strings, e.g., containing three particular strings
+- a function, *length*, from string to number, giving length
+- a relation, lexicographic less than or equal, on strings
+
+In predicate logic, one has symbols to refer to such things,
+including *constant* and *variable* names, interpreted as
+naming entities; *function* names referring to functions in
+the world; and *predicate* names referring to *properties* of
+objects or *relations* among them in the world.
+
+A proposition in predicate logic is evaluated over such a
+world and is judged to be true when what it asserts about
+that world is true in that world.
+
+In addition to these elements, prredicate logic adopts the
+symbols and their truth-functional meanings from propositional
+logic, and also provides two *quantifiers* as new syntactic
+elements. These allow one to assert that all entities in a
+given set (or of a given type) have a certain property, or
+that at least one of them does.
+
+## In a Bit More Detail
 
 The syntax of predicate logic retains the logical
 operators of propositional logic, but also has new
@@ -89,14 +129,7 @@ quantifier, constant, function, and predicate symbols. Here are
 examples, with each example written first in first-order logic and
 then in Lean.
 
-
-
-such as *true* and *false* in propositional logic, interpreted as
-referring to specific objects in the semantic domain. It also has
-
-referring to objects (or entities) in the semantic domain.
-And it permits names to refer to functions and predicates in the
-domain.
+TODO!
 
 ### Semantics of Predicate Logic
 

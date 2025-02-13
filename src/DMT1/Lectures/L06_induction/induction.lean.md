@@ -19,9 +19,8 @@ starting with, in the 0th row, n = 0 in the first
 column, and the value of (factorial n), which is 1,
 in the in the second column.
 
-+---+-------+
 | n |   n!  |
-+---+-------+
+|---|-------|
 | 0 |   1   |
 | 1 |       |
 | 2 |       |
@@ -425,13 +424,16 @@ deal with numbers 2 or greater.
 
 Let's make a table
 
-0 | "0"
-1 | "1"
-2 | "10"
-3 | "11"
-4 | "100"
-5 | "101"
-etc
+| n | binary  |
+|---|---------|
+| 0 | "0"     |
+| 1 | "1"     |
+| 2 | "10"    |
+| 3 | "11"    |
+| 4 | "100"   |
+| 5 | "101"   |
+
+
 
 What do we notice? The righmost digits flip from 0
 to 1 to 0 to 1, depending on whether the number is
@@ -571,17 +573,20 @@ for writing such functions.
 Oh, the table. It helps! Fill in enough answers to
 grok it! Complete the table in your notes.
 
-|  0  |  0  |
-|  1  |  1  |
-|  2  |  1  |
-|  3  |  2  |
-|  4  |  3  |
-|  5  |  5  |
-|  6  |  8  |
-|  7  | 13  |
-|  8  | __  |
-|  9  | __  |
-| 10  | __  |
+|  n  | fib n |
+|-----|-------|
+|  0  |  0    |
+|  1  |  1    |
+|  2  |  1    |
+|  3  |  2    |
+|  4  |  3    |
+|  5  |  5    |
+|  6  |  8    |
+|  7  | 13    |
+|  8  | __    |
+|  9  | __    |
+| 10  | __    |
+
 
 You see how you build an answer for n from answer not
 just one but both one and two rows back.
