@@ -374,7 +374,7 @@ people are mortal, as follows:
 But this predicate is true for rocks, isn't it! You
 can see how things can easily go awry when writing
 complex specifications in first-order logic. In the
-typed language of Lean, by contrast, we can do better. 
+typed logic of Lean we can say it easier and better:
 
 - ∀ (p : Person), isMortal' p
 
@@ -420,8 +420,8 @@ in the first instance just an *object*.
 
 ### From Model-Theoretic (Semantic), to Proof-Theoretic, Validity
 
-The most notable change from propositional to predicate logic is that
-in the former, one can assess the validity of any given proposition by
+One of the most notable changes from propositional to predicate logic
+is that in the former, one can assess the validity of a proposition by
 evaluating it over each of a finite number of interpretations. As soon
 as one can interpret a variable in predicate logic as having a natural
 number as its meaning, one is into the realm of domains of infinite size.
