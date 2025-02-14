@@ -1,6 +1,7 @@
 # Discrete Mathematics and Theory in Lean 4
 
 - [Discrete Mathematics and Theory in Lean 4](#discrete-mathematics-and-theory-in-lean-4)
+  - [Acknowledgements](#acknowledgements)
   - [Two Pillars of Computer Science](#two-pillars-of-computer-science)
   - [Stepping Back: Some Problems](#stepping-back-some-problems)
   - [The Pillar Ignored](#the-pillar-ignored)
@@ -15,22 +16,27 @@
   - [Paths Forward](#paths-forward)
   - [Humility](#humility)
 
+## Acknowledgements
+
 ![National Science Foundation Logo](./images/480px-NSF_Official_logo_Med_Res.png "National Science Foundation" =100x)
 
-Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
+This course was developed with support provided in part by a research grant from the National Science Foundation, #1909414, SHF: Small: Explicating and Exploiting the Physical Semantics of Code.
+
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
 The views expressed in this article are those of the author(s) and do not necessarily reflect the views, policies, or positions of the University of Virginia.
 
-This work expresses cetain technical juddgments by the author based on observation and experience but not on outcomes of scientific testing. No IRBs have been needed orsought. No student data in any form has been reported outside of official reporting channels. It was an experience of figuring out just how much of the ____ could be cut as distraction while revealing all of the required context of the course, in better ways that can be done in CS2: first-order discrete math courses.
+This work expresses cetain technical juddgments by the author based on observation and experience but not always on outcomes of scientific testing. No IRBs have been needed or sought. No student or other human subjects data is reported here or has been reported outside of official reporting channels. 
 
 ## Two Pillars of Computer Science
 
-Computation and reasoning are two great partially intertwined pillars of computer science. Consequently we have languages for expressing *conputations*, namely *programming* languages, and languages for expressing *propositions* over diverse structures and for reasoning about their properties: of being unsatisfiable, satisfiable, or valid.  
+Computation and reasoning are two great partially intertwined pillars of computer science. Consequently we have languages for expressing *conputations*, namely *programming* languages, and languages for expressing *propositions* over diverse structures (or *worlds*) and for *reasoning* about (1) their logical properties, of being unsatisfiable, satisfiable, or valid, and (2) whether they are true or not for any given  structures (in any given world).  
 
-The use of programming langauges to specify computations is familiar territory even to the earliest computer science students. Expressions in reasoning languages, by contrast, express propositions about given *worlds* along with valid forms of reasoning about the truth, or satisfiability, or validity of such propositions in particular worlds. 
-Two connected linguistic pillars of the field are *programming* Languages and *reasoning* languages.
+The use of programming langauges to specify computations is familiar territory even to the earliest computer science students. Expressions in reasoning languages, by contrast, express propositions about given *worlds* along with valid forms of reasoning about the truth in particular worlds, or unsatisfiability, satisfiability, or validity in the space of all possible worlds. The wwo pillars of the field, then, are *computation* enabled by *programming* Languages and *reasoning* enabled by what may call *reasoning languages*.
 
-In languages like the one we use in this coures, they are interwoven intricately into a unified linguistic whole enabled by an amazing conceptual unification, the Curry-Howard correspondence. It names the insight that formalized reasoning of fundamental kinds can be cast as programming. Proofs are programs! That idea is the hook for engaging computer scientists: explain it in terms they they already understand and love.
+In languages like the one we use in this course, these two forms of language are interwoven intricately into a unified linguistic whole enabled by an amazing conceptual unification called the the Curry-Howard Correspondence (CHC). The CHC is the insight that formalized deductive reasoning of certains kinds (namely natural deduction) can be cast as computation, but with propositions and proofs rather than ordinary data and function  types.
+
+This idea, of the CHC, is the principle that this book attempts to exploit to engage computer scientists, in particular, in the topic of formal expression and reasoning. We aim to teach logic, proof, and automated mathematical reasoning in terms that computer science students and practitioners already understand and love. We have thus adopted Lean 4 as both the unified *programming and reasoning* language for this course.
 
 ## Stepping Back: Some Problems
 
@@ -54,7 +60,7 @@ In this author's experience, few if any incoming graduate students have any degr
 
 ## The Radical Purpose of This Course
 
-With support provided in part by a research grant from the National Science Foundation (#1909414, SHF: Small: Explicating and Exploiting the Physical Semantics of Code), the author has developed this course as a model for full-out replacement for the traditional undergraduate course in discrete mathematics and theory, and as a first major unit of a graduate course for students with little prior experience with formal langauges and reasoning. Several big changes in in circumstances make right now a great time to consider this significant transition in CS pedagogy. They include the following:
+The author has developed this course as a model for full-out replacement for the traditional undergraduate course in discrete mathematics and theory, and as a first major unit of a graduate course for students with little prior experience with formal langauges and reasoning. Several big changes in in circumstances make right now a great time to consider this significant transition in CS pedagogy. They include the following:
 
 - Rapidly increasing industrial demand for formal reasoning about systems that undergird our society
 - The emergence of type-theory-based formalisms with exceptional expressiveness and broad applications
